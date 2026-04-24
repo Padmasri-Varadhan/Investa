@@ -1,0 +1,6 @@
+{
+  "name": "investa-backend",
+  "env": ["MONGO_URI", "JWT_SECRET", "PORT", "CORS_ORIGIN", "NODE_ENV"],
+  "startCommand": "node server.js",
+  "healthCheckPath": "/"
+}

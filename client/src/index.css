@@ -1,0 +1,110 @@
+/* Global styles for Investa App */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #007DA3;
+  --primary-dark: #005b7a;
+  --primary-light: #e6f5fa;
+  --bg: #f0f4f8;
+  --surface: #ffffff;
+  --text-primary: #1a2332;
+}
+
+[data-theme='dark'] {
+  --bg: #0a1929;
+  --surface: #1a2027;
+  --text-primary: #ffffff;
+  --primary-light: rgba(0, 125, 163, 0.2);
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #F8FAFC;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Transitions and Interactive Elements */
+a, 
+button, 
+[role="button"],
+.MuiButton-root,
+.MuiIconButton-root,
+.MuiMenuItem-root,
+.MuiTab-root,
+.MuiListItem-button,
+.MuiListItemButton-root,
+.interactive-chip {
+  cursor: pointer !important;
+}
+
+input,
+textarea,
+[contenteditable="true"],
+.MuiInputBase-input {
+  cursor: text !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0bec5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #78909c;
+}
+
+/* Smooth transitions */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide Google Translate Banner and Popup */
+.VIpgJd-Zvi9od-ORHb-OEVmcd,
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body,
+html {
+  top: 0px !important;
+  margin-top: 0px !important;
+}

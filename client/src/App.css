@@ -1,0 +1,127 @@
+/* Investa Premium Styles & Utilities */
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-premium: 0 20px 40px -10px rgba(0, 125, 163, 0.2);
+}
+
+/* =============================================
+   GLOBAL CURSOR FIX
+   Prevent I-beam text cursor on non-input elements
+   ============================================= */
+
+/* Default arrow cursor for all elements */
+* {
+  cursor: default;
+}
+
+/* Restore text cursor inside inputs */
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  cursor: text;
+}
+
+/* Pointer for clickable elements */
+button,
+a,
+[role="button"],
+.MuiButton-root,
+.MuiIconButton-root,
+.MuiMenuItem-root,
+.MuiTab-root,
+.MuiChip-root {
+  cursor: pointer;
+}
+
+/* Prevent text selection on all non-input elements */
+body:not(input):not(textarea):not(select) {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* =============================================
+   GLOBAL BUTTON STYLE — Rounded buttons
+   ============================================= */
+.MuiButton-root {
+  border-radius: 12px !important; /* Modern rounded look */
+  text-transform: none !important;
+  font-weight: 700 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ============================================= */
+
+.glass-morphism {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.premium-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid #f1f5f9 !important;
+  border-radius: 20px !important;
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-premium) !important;
+  border-color: #007DA3 !important;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #007DA3 0%, #00b4db 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #007DA3 0%, #005b7a 100%) !important;
+}
+
+.interactive-chip {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.interactive-chip:hover {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mesh Background for specialized pages */
+.mesh-bg {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(199,89%,91%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(187,92%,90%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(199,89%,91%,1) 0, transparent 50%);
+}
