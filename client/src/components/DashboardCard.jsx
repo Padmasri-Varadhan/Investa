@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, Box } from '@mui/material';
 
-const DashboardCard = ({ title, value, change, icon, children }) => {
+const DashboardCard = ({ title, value, change, icon, children, titleColor }) => {
     return (
         <Card
             sx={{
@@ -19,7 +19,7 @@ const DashboardCard = ({ title, value, change, icon, children }) => {
         >
             <CardContent sx={{ p: 2 }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                    <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#4B5563', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: 600, color: titleColor || '#4B5563', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                         {title}
                     </Typography>
                     {icon && <Box sx={{ color: '#6B7280' }}>{icon}</Box>}

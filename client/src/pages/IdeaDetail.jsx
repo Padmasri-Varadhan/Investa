@@ -6,12 +6,13 @@ import {
 } from '@mui/material';
 import {
     ArrowForward, Shield, Warning, Bolt,
-    CheckCircle, Cancel, AccessTime, TrendingUp,
+    AccessTime, TrendingUp,
     Bookmark, BookmarkBorder, Share, OpenInNew,
     CalendarToday, Category,
 } from '@mui/icons-material';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getIdeaById } from '../services/api';
+import StructuredContent from '../components/StructuredContent';
 
 /**
  * IdeaDetail Page
@@ -47,33 +48,37 @@ const formatDate = (d) =>
 
 // ─── Related Idea Mini-Card ───────────────────────────────────────────────────
 function RelatedCard({ idea, onNavigate }) {
+    if (!idea) return null;
     const risk = riskConfig[idea.riskLevel] || riskConfig.medium;
     return (
         <Card
             onClick={() => onNavigate(idea._id)}
             sx={{
                 cursor: 'pointer',
-                transition: 'transform 0.2s, box-shadow 0.2s',
-                '&:hover': { transform: 'translateY(-3px)', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' },
-                border: `1px solid ${risk.bg}`,
+                borderRadius: '24px',
+                bgcolor: '#fff',
+                border: '1px solid #e2e8f0',
+                boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
+                transition: 'all 0.3s',
+                '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)' },
             }}
         >
-            <CardContent sx={{ p: 2 }}>
+            <CardContent sx={{ p: 3 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
                     <Box sx={{ width: 36, height: 36, bgcolor: risk.bg, borderRadius: 1.5, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, flexShrink: 0 }}>
                         {categoryLabels[idea.category]?.split(' ')[0] || '💡'}
                     </Box>
-                    <Typography variant="body2" fontWeight={800} sx={{ lineHeight: 1.3 }}>
+                    <Typography variant="body2" fontWeight={800} sx={{ lineHeight: 1.3, color: '#1a2332' }}>
                         {idea.title}
                     </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 2 }}>
                     <Chip
                         label={risk.label} size="small"
                         sx={{ bgcolor: risk.bg, color: risk.color, fontWeight: 700, fontSize: 10 }}
                     />
-                    <Typography variant="caption" color="primary" fontWeight={700}>
-                        {idea.expectedReturn}
+                    <Typography variant="caption" sx={{ color: '#007DA3', fontWeight: 800 }}>
+                        {idea.expectedReturn || idea.expectedReturns}
                     </Typography>
                 </Box>
             </CardContent>
@@ -99,9 +104,10 @@ function IdeaDetail() {
             setError('');
             try {
                 const res = await getIdeaById(id);
-                setIdea(res.data.idea);
+                // The API returns the idea object directly as res.data
+                const ideaData = res.data.idea || res.data;
+                setIdea(ideaData);
                 setRelated(res.data.related || []);
-                // Restore bookmark state from localStorage
                 const saved = JSON.parse(localStorage.getItem('investaBookmarks') || '[]');
                 setBookmarked(saved.includes(id));
             } catch (err) {
@@ -140,11 +146,10 @@ function IdeaDetail() {
         }
     };
 
-    // ── Loading state ──────────────────────────────────────────────────────────
     if (loading) {
         return (
             <Box textAlign="center" py={16}>
-                <CircularProgress size={52} thickness={5} />
+                <CircularProgress size={52} thickness={5} sx={{ color: '#007DA3' }} />
                 <Typography mt={3} color="text.secondary" fontWeight={600}>
                     Loading investment details...
                 </Typography>
@@ -152,14 +157,13 @@ function IdeaDetail() {
         );
     }
 
-    // ── Error state ────────────────────────────────────────────────────────────
     if (error) {
         return (
-            <Box className="fade-in">
+            <Box className="fade-in" sx={{ p: 4, minHeight: '100vh', bgcolor: '#F5F9FC', overflowY: 'auto' }}>
                 <Button
                     startIcon={<ArrowForward sx={{ transform: 'rotate(180deg)' }} />}
                     onClick={() => navigate('/investment-ideas')}
-                    sx={{ mb: 3, color: '#546e7a', fontWeight: 700 }}
+                    sx={{ mb: 3, color: '#007DA3', fontWeight: 700 }}
                 >
                     Back to Ideas
                 </Button>
@@ -170,56 +174,68 @@ function IdeaDetail() {
         );
     }
 
+    if (!idea) {
+        return (
+            <Box className="fade-in" sx={{ p: 4, minHeight: '100vh', bgcolor: '#F5F9FC', overflowY: 'auto' }}>
+                <Button
+                    startIcon={<ArrowForward sx={{ transform: 'rotate(180deg)' }} />}
+                    onClick={() => navigate('/investment-ideas')}
+                    sx={{ mb: 3, color: '#007DA3', fontWeight: 700 }}
+                >
+                    Back to Ideas
+                </Button>
+                <Alert severity="warning" variant="filled" sx={{ borderRadius: 3, fontWeight: 700 }}>
+                    Investment idea content is unavailable.
+                </Alert>
+            </Box>
+        );
+    }
+
     const risk = riskConfig[idea.riskLevel] || riskConfig.medium;
     const catLabel = categoryLabels[idea.category] || idea.category;
-    const horizonLabel = horizonLabels[idea.investmentHorizon] || idea.timeHorizon || '—';
+    const horizonLabel = horizonLabels[idea.horizon || idea.investmentHorizon || idea.timeHorizon] || idea.horizon || idea.timeHorizon || '—';
 
     return (
-        <Box className="fade-in">
-            {/* ── Back Navigation ── */}
+        <Box className="fade-in" sx={{ minHeight: '100vh', overflowY: 'auto', bgcolor: '#F5F9FC', p: { xs: 2, md: 4, lg: 6 } }}>
             <Button
                 startIcon={<ArrowForward sx={{ transform: 'rotate(180deg)' }} />}
                 onClick={() => navigate('/investment-ideas')}
-                sx={{ mb: 3, color: '#546e7a', fontWeight: 700 }}
+                sx={{ mb: 4, color: '#007DA3', fontWeight: 800 }}
             >
                 Back to Investment Ideas
             </Button>
 
-            <Grid container spacing={3}>
-                {/* ── LEFT COLUMN: Main Content ── */}
-                <Grid item xs={12} lg={8}>
-
-                    {/* Hero Card */}
-                    <Card sx={{ mb: 3, overflow: 'hidden' }}>
-                        {/* Cover image */}
-                        {idea.imageUrl && (
+            <Grid container spacing={4}>
+                {/* ── Main Content Full Width ── */}
+                <Grid item xs={12}>
+                    <Card sx={{ mb: 4, borderRadius: '24px', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', overflow: 'hidden' }}>
+                        {(idea.image || idea.imageUrl) && (
                             <Box
                                 sx={{
-                                    height: 240,
-                                    background: `linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(${idea.imageUrl}) center/cover no-repeat`,
+                                    height: 300,
+                                    background: `linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url(${idea.image || idea.imageUrl}) center/cover no-repeat`,
                                     display: 'flex',
                                     alignItems: 'flex-end',
-                                    p: 3,
+                                    p: 4,
                                 }}
                             >
-                                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                                <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
                                     <Chip
                                         label={catLabel}
-                                        sx={{ bgcolor: 'rgba(255,255,255,0.92)', fontWeight: 800, fontSize: 12 }}
+                                        sx={{ bgcolor: 'rgba(255,255,255,0.92)', fontWeight: 800, fontSize: 13, px: 1 }}
                                     />
                                     <Chip
                                         icon={React.cloneElement(risk.icon, { fontSize: 'small', sx: { color: risk.color } })}
                                         label={risk.label}
-                                        sx={{ bgcolor: risk.bg, color: risk.color, fontWeight: 800 }}
+                                        sx={{ bgcolor: risk.bg, color: risk.color, fontWeight: 800, px: 1 }}
                                     />
                                 </Box>
                             </Box>
                         )}
 
-                        <CardContent sx={{ p: { xs: 2.5, md: 4 } }}>
-                            {/* Title row */}
-                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 2, gap: 2 }}>
-                                <Typography variant="h4" fontWeight={900} sx={{ color: '#1a2332', lineHeight: 1.2, flex: 1 }}>
+                        <CardContent sx={{ p: { xs: 3, md: 5 } }}>
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 3, gap: 2 }}>
+                                <Typography variant="h3" fontWeight={900} sx={{ color: '#007DA3', lineHeight: 1.2, flex: 1, fontSize: { xs: '2rem', md: '2.5rem' } }}>
                                     {idea.title}
                                 </Typography>
                                 <Box sx={{ display: 'flex', gap: 1, flexShrink: 0 }}>
@@ -231,9 +247,9 @@ function IdeaDetail() {
                                             onClick={handleBookmark}
                                             sx={{
                                                 borderRadius: 3,
-                                                fontWeight: 700,
-                                                color: bookmarked ? '#007DA3' : undefined,
-                                                borderColor: bookmarked ? '#007DA3' : undefined,
+                                                fontWeight: 800,
+                                                color: bookmarked ? '#007DA3' : '#64748b',
+                                                borderColor: bookmarked ? '#007DA3' : '#cbd5e1',
                                             }}
                                         >
                                             {bookmarked ? 'Saved' : 'Save'}
@@ -245,7 +261,7 @@ function IdeaDetail() {
                                             variant="outlined"
                                             startIcon={<Share />}
                                             onClick={handleShare}
-                                            sx={{ borderRadius: 3, fontWeight: 700 }}
+                                            sx={{ borderRadius: 3, fontWeight: 800, color: '#64748b', borderColor: '#cbd5e1' }}
                                         >
                                             Share
                                         </Button>
@@ -253,58 +269,48 @@ function IdeaDetail() {
                                 </Box>
                             </Box>
 
-                            {/* Tags */}
                             {idea.tags?.length > 0 && (
-                                <Box sx={{ display: 'flex', gap: 0.75, flexWrap: 'wrap', mb: 3 }}>
+                                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 4 }}>
                                     {idea.tags.map((tag) => (
-                                        <Chip key={tag} label={`#${tag}`} size="small" variant="outlined" sx={{ fontWeight: 600, fontSize: 11 }} />
+                                        <Chip key={tag} label={`#${tag}`} size="small" sx={{ fontWeight: 700, fontSize: 12, bgcolor: '#f1f5f9', color: '#475569' }} />
                                     ))}
                                 </Box>
                             )}
 
-                            {/* Short description */}
-                            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 3, fontStyle: 'italic', fontSize: '1.05rem', borderLeft: '3px solid #007DA3', pl: 2 }}>
-                                {idea.description}
+                            <Typography variant="body1" sx={{ color: '#374151', lineHeight: 1.75, mb: 4, fontSize: '1rem', fontWeight: 400 }}>
+                                {idea.overview || idea.description}
                             </Typography>
 
-                            <Divider sx={{ mb: 3 }} />
+                            <Divider sx={{ mb: 4 }} />
 
-                            {/* Full content */}
-                            {idea.content && (
-                                <Box mb={2}>
-                                    {idea.content.split('\n\n').map((para, idx) => (
-                                        <Typography key={idx} variant="body1" mb={2.5} sx={{ lineHeight: 1.9, color: '#334155', fontSize: '1rem' }}>
-                                            {para}
-                                        </Typography>
-                                    ))}
-                                </Box>
-                            )}
+                            {/* Detailed content renderer */}
+                            <StructuredContent content={idea.detailedContent || idea.content} />
                         </CardContent>
                     </Card>
 
                     {/* Pros & Cons Card */}
                     {(idea.pros?.length > 0 || idea.cons?.length > 0) && (
-                        <Card sx={{ mb: 3 }}>
-                            <CardContent sx={{ p: { xs: 2.5, md: 4 } }}>
-                                <Typography variant="h6" fontWeight={800} mb={3} sx={{ color: '#1a2332' }}>
+                        <Card sx={{ mb: 4, borderRadius: '24px', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
+                            <CardContent sx={{ p: { xs: 3, md: 5 } }}>
+                                <Typography variant="h5" fontWeight={900} mb={4} sx={{ color: '#007DA3' }}>
                                     Pros &amp; Cons
                                 </Typography>
-                                <Grid container spacing={3}>
+                                <Grid container spacing={4}>
                                     {/* Pros */}
                                     <Grid item xs={12} sm={6}>
-                                        <Box sx={{ bgcolor: '#f0fdf4', borderRadius: 2, p: 2 }}>
-                                            <Typography variant="subtitle2" fontWeight={800} color="#2e7d32" mb={1.5} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                                                <CheckCircle fontSize="small" /> Advantages
+                                        <Box sx={{ bgcolor: '#f8fafc', borderRadius: '16px', p: 4, border: '1px solid #e2e8f0', height: '100%' }}>
+                                            <Typography variant="h6" fontWeight={800} color="#0f172a" mb={3}>
+                                                Advantages
                                             </Typography>
                                             <List dense disablePadding>
                                                 {idea.pros.map((pro, i) => (
-                                                    <ListItem key={i} disableGutters sx={{ alignItems: 'flex-start', py: 0.4 }}>
-                                                        <ListItemIcon sx={{ minWidth: 28, mt: 0.2 }}>
-                                                            <CheckCircle fontSize="small" sx={{ color: '#4caf50' }} />
+                                                    <ListItem key={i} disableGutters sx={{ alignItems: 'flex-start', py: 1 }}>
+                                                        <ListItemIcon sx={{ minWidth: 24, mt: 0.5 }}>
+                                                            <Box component="span" sx={{ color: '#007DA3', fontWeight: 900, fontSize: '1.2rem' }}>•</Box>
                                                         </ListItemIcon>
                                                         <ListItemText
                                                             primary={pro}
-                                                            primaryTypographyProps={{ variant: 'body2', fontWeight: 500, color: '#2d4a2d' }}
+                                                            primaryTypographyProps={{ variant: 'body1', fontWeight: 600, color: '#374151' }}
                                                         />
                                                     </ListItem>
                                                 ))}
@@ -314,19 +320,19 @@ function IdeaDetail() {
 
                                     {/* Cons */}
                                     <Grid item xs={12} sm={6}>
-                                        <Box sx={{ bgcolor: '#fff5f5', borderRadius: 2, p: 2 }}>
-                                            <Typography variant="subtitle2" fontWeight={800} color="#c62828" mb={1.5} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                                                <Cancel fontSize="small" /> Risks &amp; Drawbacks
+                                        <Box sx={{ bgcolor: '#f8fafc', borderRadius: '16px', p: 4, border: '1px solid #e2e8f0', height: '100%' }}>
+                                            <Typography variant="h6" fontWeight={800} color="#0f172a" mb={3}>
+                                                Risks &amp; Drawbacks
                                             </Typography>
                                             <List dense disablePadding>
                                                 {idea.cons.map((con, i) => (
-                                                    <ListItem key={i} disableGutters sx={{ alignItems: 'flex-start', py: 0.4 }}>
-                                                        <ListItemIcon sx={{ minWidth: 28, mt: 0.2 }}>
-                                                            <Cancel fontSize="small" sx={{ color: '#f44336' }} />
+                                                    <ListItem key={i} disableGutters sx={{ alignItems: 'flex-start', py: 1 }}>
+                                                        <ListItemIcon sx={{ minWidth: 24, mt: 0.5 }}>
+                                                            <Box component="span" sx={{ color: '#007DA3', fontWeight: 900, fontSize: '1.2rem' }}>•</Box>
                                                         </ListItemIcon>
                                                         <ListItemText
                                                             primary={con}
-                                                            primaryTypographyProps={{ variant: 'body2', fontWeight: 500, color: '#4a1f1f' }}
+                                                            primaryTypographyProps={{ variant: 'body1', fontWeight: 600, color: '#374151' }}
                                                         />
                                                     </ListItem>
                                                 ))}
@@ -339,112 +345,115 @@ function IdeaDetail() {
                     )}
                 </Grid>
 
-                {/* ── RIGHT COLUMN: Stats + Related ── */}
-                <Grid item xs={12} lg={4}>
+                {/* ── BOTTOM 2-COLUMN GRID: Stats + Related ── */}
+                <Grid item xs={12}>
+                    <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: 'repeat(2, 1fr)' }, gap: 4 }}>
+                        {/* Key Metrics Card */}
+                        <Card sx={{ borderRadius: '24px', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', height: '100%' }}>
+                            <CardContent sx={{ p: { xs: 3, md: 5 } }}>
+                                <Typography variant="h5" fontWeight={900} mb={4} sx={{ color: '#007DA3' }}>
+                                    Key Metrics
+                                </Typography>
 
-                    {/* Key Metrics Card */}
-                    <Card sx={{ mb: 3, position: { lg: 'sticky' }, top: { lg: 80 } }}>
-                        <CardContent sx={{ p: 3 }}>
-                            <Typography variant="h6" fontWeight={800} mb={2.5} sx={{ color: '#1a2332' }}>
-                                Key Metrics
-                            </Typography>
-
-                            {/* Risk Level */}
-                            <Box sx={{ mb: 2.5 }}>
-                                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.75 }}>
-                                    <Typography variant="caption" color="text.secondary" fontWeight={700}>RISK LEVEL</Typography>
-                                    <Chip
-                                        icon={React.cloneElement(risk.icon, { fontSize: 'small' })}
-                                        label={risk.label}
-                                        size="small"
-                                        sx={{ bgcolor: risk.bg, color: risk.color, fontWeight: 800 }}
-                                    />
-                                </Box>
-                                <LinearProgress
-                                    variant="determinate"
-                                    value={idea.riskLevel === 'low' ? 33 : idea.riskLevel === 'medium' ? 66 : 100}
-                                    sx={{ height: 6, borderRadius: 3, bgcolor: '#f0f4f8', '& .MuiLinearProgress-bar': { bgcolor: risk.barColor } }}
-                                />
-                            </Box>
-
-                            <Divider sx={{ mb: 2 }} />
-
-                            {/* Stat rows */}
-                            {[
-                                { icon: <TrendingUp sx={{ color: '#007DA3', fontSize: 20 }} />, label: 'Expected Returns', value: idea.expectedReturn || idea.expectedReturns || '—' },
-                                { icon: <AccessTime sx={{ color: '#007DA3', fontSize: 20 }} />, label: 'Time Horizon', value: horizonLabel },
-                                { icon: <Category sx={{ color: '#007DA3', fontSize: 20 }} />, label: 'Category', value: catLabel },
-                                { icon: <CalendarToday sx={{ color: '#007DA3', fontSize: 20 }} />, label: 'Published', value: formatDate(idea.createdAt) },
-                            ].map(({ icon, label, value }) => (
-                                <Box key={label} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, mb: 2 }}>
-                                    <Box sx={{ mt: 0.1 }}>{icon}</Box>
-                                    <Box>
-                                        <Typography variant="caption" color="text.secondary" fontWeight={700} display="block">
-                                            {label.toUpperCase()}
-                                        </Typography>
-                                        <Typography variant="body2" fontWeight={700} sx={{ color: '#1a2332' }}>
-                                            {value}
-                                        </Typography>
-                                    </Box>
-                                </Box>
-                            ))}
-
-                            <Divider sx={{ mb: 2 }} />
-
-                            {/* Allocation bar */}
-                            {idea.allocation && (
-                                <Box>
-                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.75 }}>
-                                        <Typography variant="caption" color="text.secondary" fontWeight={700}>SUGGESTED ALLOCATION</Typography>
-                                        <Typography variant="caption" fontWeight={800} color="primary">{idea.allocation}%</Typography>
+                                {/* Risk Level */}
+                                <Box sx={{ mb: 4 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1.5 }}>
+                                        <Typography variant="subtitle2" color="text.secondary" fontWeight={800}>RISK LEVEL</Typography>
+                                        <Chip
+                                            icon={React.cloneElement(risk.icon, { fontSize: 'small' })}
+                                            label={risk.label}
+                                            size="small"
+                                            sx={{ bgcolor: risk.bg, color: risk.color, fontWeight: 800 }}
+                                        />
                                     </Box>
                                     <LinearProgress
-                                        variant="determinate" value={idea.allocation}
-                                        sx={{ height: 8, borderRadius: 4, bgcolor: '#e6f5fa', '& .MuiLinearProgress-bar': { bgcolor: '#007DA3' } }}
+                                        variant="determinate"
+                                        value={idea.riskLevel === 'low' ? 33 : idea.riskLevel === 'medium' ? 66 : 100}
+                                        sx={{ height: 8, borderRadius: 4, bgcolor: '#f1f5f9', '& .MuiLinearProgress-bar': { bgcolor: risk.barColor } }}
                                     />
-                                    <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: 'block' }}>
-                                        of total portfolio
-                                    </Typography>
                                 </Box>
-                            )}
 
-                            {/* Suitable For */}
-                            <Box sx={{ mt: 2, p: 1.5, bgcolor: '#f8fafc', borderRadius: 2 }}>
-                                <Typography variant="caption" color="text.secondary" fontWeight={700} display="block" mb={0.5}>SUITABLE FOR</Typography>
-                                <Typography variant="body2" fontWeight={700} sx={{ textTransform: 'capitalize' }}>
-                                    {idea.suitableFor === 'all' ? 'All Investor Levels' : idea.suitableFor?.replace('_', ' ') || '—'}
-                                </Typography>
-                            </Box>
-                        </CardContent>
-                    </Card>
+                                <Divider sx={{ mb: 4 }} />
 
-                    {/* Related Ideas Card */}
-                    {related.length > 0 && (
-                        <Card>
-                            <CardContent sx={{ p: 3 }}>
-                                <Typography variant="h6" fontWeight={800} mb={2} sx={{ color: '#1a2332' }}>
-                                    Related Ideas
-                                </Typography>
-                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                                    {related.map((r) => (
-                                        <RelatedCard
-                                            key={r._id}
-                                            idea={r}
-                                            onNavigate={(rid) => navigate(`/idea/${rid}`)}
-                                        />
+                                {/* Stat rows */}
+                                <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 3, mb: 4 }}>
+                                    {[
+                                        { icon: <TrendingUp sx={{ color: '#007DA3', fontSize: 24 }} />, label: 'Expected Returns', value: idea.expectedReturn || idea.expectedReturns || '—' },
+                                        { icon: <AccessTime sx={{ color: '#007DA3', fontSize: 24 }} />, label: 'Time Horizon', value: horizonLabel },
+                                        { icon: <Category sx={{ color: '#007DA3', fontSize: 24 }} />, label: 'Category', value: catLabel },
+                                        { icon: <CalendarToday sx={{ color: '#007DA3', fontSize: 24 }} />, label: 'Published', value: formatDate(idea.createdAt) },
+                                    ].map(({ icon, label, value }) => (
+                                        <Box key={label} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                                            <Box sx={{ mt: 0.5 }}>{icon}</Box>
+                                            <Box>
+                                                <Typography variant="caption" color="text.secondary" fontWeight={800} display="block" sx={{ textTransform: 'uppercase', mb: 0.5 }}>
+                                                    {label}
+                                                </Typography>
+                                                <Typography variant="body1" fontWeight={800} sx={{ color: '#1a2332' }}>
+                                                    {value}
+                                                </Typography>
+                                            </Box>
+                                        </Box>
                                     ))}
                                 </Box>
-                                <Button
-                                    fullWidth variant="outlined"
-                                    endIcon={<OpenInNew />}
-                                    onClick={() => navigate('/investment-ideas')}
-                                    sx={{ mt: 2, borderRadius: 2, fontWeight: 700 }}
-                                >
-                                    View All Ideas
-                                </Button>
+
+                                <Divider sx={{ mb: 4 }} />
+
+                                {/* Allocation bar */}
+                                {idea.allocation && (
+                                    <Box sx={{ mb: 4 }}>
+                                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1.5 }}>
+                                            <Typography variant="subtitle2" color="text.secondary" fontWeight={800}>SUGGESTED ALLOCATION</Typography>
+                                            <Typography variant="subtitle2" fontWeight={900} color="#007DA3">{idea.allocation}%</Typography>
+                                        </Box>
+                                        <LinearProgress
+                                            variant="determinate" value={idea.allocation}
+                                            sx={{ height: 10, borderRadius: 5, bgcolor: '#e6f5fa', '& .MuiLinearProgress-bar': { bgcolor: '#007DA3' } }}
+                                        />
+                                        <Typography variant="body2" color="text.secondary" sx={{ mt: 1, display: 'block', fontWeight: 600 }}>
+                                            of total portfolio
+                                        </Typography>
+                                    </Box>
+                                )}
+
+                                {/* Suitable For */}
+                                <Box sx={{ p: 3, bgcolor: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+                                    <Typography variant="subtitle2" color="text.secondary" fontWeight={800} display="block" mb={1}>SUITABLE FOR</Typography>
+                                    <Typography variant="h6" fontWeight={800} sx={{ textTransform: 'capitalize', color: '#0f172a' }}>
+                                        {idea.suitableFor === 'all' ? 'All Investor Levels' : idea.suitableFor?.replace('_', ' ') || '—'}
+                                    </Typography>
+                                </Box>
                             </CardContent>
                         </Card>
-                    )}
+
+                        {/* Related Ideas Card */}
+                        {related.length > 0 && (
+                            <Card sx={{ borderRadius: '24px', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                <CardContent sx={{ p: { xs: 3, md: 5 }, flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                    <Typography variant="h5" fontWeight={900} mb={4} sx={{ color: '#007DA3' }}>
+                                        Related Ideas
+                                    </Typography>
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 'auto' }}>
+                                        {related.map((r) => (
+                                            <RelatedCard
+                                                key={r._id}
+                                                idea={r}
+                                                onNavigate={(rid) => navigate(`/idea/${rid}`)}
+                                            />
+                                        ))}
+                                    </Box>
+                                    <Button
+                                        fullWidth variant="outlined"
+                                        endIcon={<OpenInNew />}
+                                        onClick={() => navigate('/investment-ideas')}
+                                        sx={{ mt: 4, borderRadius: 3, fontWeight: 800, color: '#007DA3', borderColor: '#007DA3', py: 1.5 }}
+                                    >
+                                        View All Ideas
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        )}
+                    </Box>
                 </Grid>
             </Grid>
 

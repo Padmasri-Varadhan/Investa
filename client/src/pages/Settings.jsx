@@ -1,25 +1,47 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import {
     Container, Typography, Box, Card, CardContent, Grid,
-    TextField, Button, Switch, FormControlLabel, Divider,
-    Select, MenuItem, InputLabel, FormControl, Avatar,
-    IconButton, List, ListItem, ListItemText, ListItemSecondaryAction,
-    Alert, CircularProgress, Stack, Dialog, DialogTitle, DialogContent, DialogActions
+    TextField, Button, Switch, Divider, Stack, Alert, 
+    CircularProgress, Dialog, DialogTitle, DialogContent, 
+    DialogActions, FormControl, InputLabel, Select, MenuItem,
+    List, ListItem, ListItemText
 } from '@mui/material';
 import {
-    PhotoCamera, Lock, Notifications, Language,
-    Security, ExitToApp, VolumeUp, Category, Edit,
-    SmartToy, Mic, Settings as SettingsIcon
+    Save, Logout, DeleteForever
 } from '@mui/icons-material';
 import { updateUserProfile, changePassword } from '../services/api';
-import PageHeader from '../components/PageHeader';
+
+/**
+ * Settings Page - Refined Unified Version
+ * Improved spacing, uppercase headings, and expanded options.
+ */
 
 function Settings({ user, onLogout, onUpdateUser }) {
-    const fileInputRef = useRef(null);
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState({ type: '', msg: '' });
-    
-    // Password state
+
+    // Profile State
+    const nameParts = (user?.name || '').split(' ');
+    const fName = nameParts[0] || '';
+    const lName = nameParts.slice(1).join(' ') || '';
+
+    const [formData, setFormData] = useState({
+        firstName: fName,
+        lastName: lName,
+        email: user?.email || '',
+        riskTolerance: user?.riskProfile || 'moderate',
+        investmentGoal: 'wealth',
+        investmentHorizon: 'long',
+        language: 'en',
+        currency: 'INR',
+        emailNotifications: true,
+        investmentAlerts: true,
+        articleUpdates: false,
+        twoFactor: false,
+        darkMode: false
+    });
+
+    // Password Dialog State
     const [openPasswordDialog, setOpenPasswordDialog] = useState(false);
     const [passwordData, setPasswordData] = useState({
         currentPassword: '',
@@ -28,58 +50,25 @@ function Settings({ user, onLogout, onUpdateUser }) {
     });
     const [passStatus, setPassStatus] = useState({ type: '', msg: '' });
 
-    const [formData, setFormData] = useState({
-        name: user?.name || '',
-        email: user?.email || '',
-        avatar: user?.avatar || '',
-        bio: user?.bio || '',
-        preferredLanguage: user?.preferredLanguage || 'English',
-        interests: user?.interests || [],
-        notifications: {
-            blogUpdates: true,
-            marketNews: true,
-            aiSuggestions: true
-        },
-        voiceSearch: user?.voiceSearch || false,
-        aiAssistant: user?.aiAssistant || false
-    });
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSwitch = (e) => {
-        const { name, checked } = e.target;
-        if (name in formData.notifications) {
-            setFormData({
-                ...formData,
-                notifications: { ...formData.notifications, [name]: checked }
-            });
-        } else {
-            setFormData({ ...formData, [name]: checked });
-        }
+    const handleToggle = (name) => {
+        setFormData(prev => ({ ...prev, [name]: !prev[name] }));
     };
 
-    const handleFileUpload = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setFormData({ ...formData, avatar: reader.result });
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-
-    const handleSave = async () => {
+    const handleSaveProfile = async () => {
         setLoading(true);
         setStatus({ type: '', msg: '' });
-
-
-
         try {
-            const res = await updateUserProfile(formData);
+            const payload = {
+                name: `${formData.firstName} ${formData.lastName}`.trim(),
+                email: formData.email,
+                riskProfile: formData.riskTolerance
+            };
+            const res = await updateUserProfile(payload);
             if (onUpdateUser) onUpdateUser(res.data);
             setStatus({ type: 'success', msg: 'Settings updated successfully!' });
         } catch (err) {
@@ -107,8 +96,11 @@ function Settings({ user, onLogout, onUpdateUser }) {
                 newPassword: passwordData.newPassword
             });
             setPassStatus({ type: 'success', msg: 'Password changed successfully!' });
-            setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
-            setTimeout(() => setOpenPasswordDialog(false), 2000);
+            setTimeout(() => {
+                setOpenPasswordDialog(false);
+                setPassStatus({ type: '', msg: '' });
+                setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
+            }, 2000);
         } catch (err) {
             setPassStatus({ type: 'error', msg: err.response?.data?.message || 'Failed to change password' });
         } finally {
@@ -116,213 +108,252 @@ function Settings({ user, onLogout, onUpdateUser }) {
         }
     };
 
+    const SectionHeading = ({ title }) => (
+        <Typography 
+            variant="h6" 
+            fontWeight={800} 
+            color="#007DA3" 
+            sx={{ 
+                mt: 6, 
+                mb: 2.5, 
+                display: 'block',
+                letterSpacing: 0.2,
+                fontSize: '1.1rem'
+            }}
+        >
+            {title}
+        </Typography>
+    );
+
     return (
-        <Container maxWidth="lg" sx={{ py: 4, fontFamily: "'Noto Sans', sans-serif" }}>
-            <PageHeader 
-                title="Settings" 
-                subtitle="Manage your account preferences and security settings"
-                icon={<SettingsIcon />}
-            />
+        <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 }, px: { xs: 1, sm: 2 } }}>
+            <Box sx={{ mb: 3 }}>
+                <Typography variant="h4" fontWeight={900} color="#007DA3">Settings</Typography>
+            </Box>
 
-            {status.msg && <Alert severity={status.type} sx={{ mb: 3, borderRadius: 2 }}>{status.msg}</Alert>}
+            {status.msg && <Alert severity={status.type} sx={{ mb: 4, borderRadius: 2 }}>{status.msg}</Alert>}
 
-            <Grid container spacing={4}>
-                {/* Profile and Security - Side by Side */}
-                <Grid item xs={12} md={6}>
-                    <Card sx={{ height: '100%', borderRadius: 1.5, boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}>
-                        <CardContent sx={{ p: 4 }}>
-                            <Typography variant="h6" fontWeight={700} mb={3} display="flex" alignItems="center" gap={1} sx={{ fontFamily: "'Noto Sans', sans-serif" }}>
-                                <Edit color="primary" /> Edit Profile
-                            </Typography>
-                            
-                            <Stack spacing={3}>
-                                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                    <Box sx={{ position: 'relative', mb: 1 }}>
-                                        <Avatar src={formData.avatar} sx={{ width: 100, height: 100, bgcolor: '#007DA3', fontSize: 32, fontWeight: 700, border: '4px solid #fff', boxShadow: '0 4px 14px rgba(0,0,0,0.1)' }}>
-                                            {user?.name?.[0]?.toUpperCase()}
-                                        </Avatar>
-                                        <IconButton 
-                                            size="small" 
-                                            onClick={() => fileInputRef.current.click()}
-                                            sx={{ 
-                                                position: 'absolute', bottom: 0, right: 0, 
-                                                bgcolor: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.15)', 
-                                                '&:hover': { bgcolor: '#f5f5f5' } 
-                                            }}
-                                        >
-                                            <PhotoCamera fontSize="small" color="primary" />
-                                        </IconButton>
-                                        <input
-                                            type="file"
-                                            ref={fileInputRef}
-                                            onChange={handleFileUpload}
-                                            style={{ display: 'none' }}
-                                            accept="image/*"
-                                        />
-                                    </Box>
-                                    <Typography variant="caption" color="text.secondary" fontWeight={600}>Change Photo</Typography>
-                                </Box>
+            <Card variant="outlined" sx={{ borderRadius: 4, border: '1px solid #e2e8f0', boxShadow: 'none' }}>
+                <CardContent sx={{ p: { xs: 3, md: 6 } }}>
+                    
+                    {/* Account Details */}
+                    <SectionHeading title="Account Details" />
+                    <Grid container spacing={4}>
+                        <Grid item xs={12} sm={6}>
+                            <TextField 
+                                fullWidth label="First Name" name="firstName" 
+                                value={formData.firstName} onChange={handleChange} 
+                                variant="outlined" size="small"
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <TextField 
+                                fullWidth label="Last Name" name="lastName" 
+                                value={formData.lastName} onChange={handleChange} 
+                                variant="outlined" size="small"
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField 
+                                fullWidth label="Email Address" name="email" 
+                                value={formData.email} onChange={handleChange} 
+                                variant="outlined" size="small"
+                            />
+                        </Grid>
+                    </Grid>
 
+                    <Divider sx={{ my: 4 }} />
 
-                                <TextField fullWidth label="Full Name" name="name" value={formData.name} onChange={handleChange} />
-                                <TextField fullWidth label="Email ID" name="email" value={formData.email} disabled />
-                                <TextField fullWidth label="Bio" name="bio" value={formData.bio} onChange={handleChange} multiline rows={3} placeholder="Tell us about yourself..." />
-                            </Stack>
-                        </CardContent>
-                    </Card>
-                </Grid>
-
-                <Grid item xs={12} md={6}>
-                    <Card sx={{ height: '100%', borderRadius: 1.5, boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}>
-                        <CardContent sx={{ p: 4 }}>
-                            <Typography variant="h6" fontWeight={700} mb={3} display="flex" alignItems="center" gap={1} sx={{ fontFamily: "'Noto Sans', sans-serif" }}>
-                                <Lock color="primary" /> Security
-                            </Typography>
-                            
-                            <Box sx={{ mb: 4 }}>
-                                <Typography variant="subtitle1" fontWeight={700} gutterBottom>Password Management</Typography>
-                                <Typography variant="body2" color="text.secondary" mb={2}>Secure your account by updating your password regularly.</Typography>
-                                <Button 
-                                    variant="contained" 
-                                    onClick={() => setOpenPasswordDialog(true)}
-                                    sx={{ borderRadius: 2, textTransform: 'none', bgcolor: '#007DA3' }}
+                    {/* Investment Preferences */}
+                    <SectionHeading title="Investment Preferences" />
+                    <Grid container spacing={4}>
+                        <Grid item xs={12} md={4}>
+                            <FormControl fullWidth variant="outlined">
+                                <InputLabel id="risk-label" sx={{ fontSize: '1rem', fontWeight: 600 }}>Risk</InputLabel>
+                                <Select 
+                                    labelId="risk-label"
+                                    id="risk-select"
+                                    name="riskTolerance" 
+                                    value={formData.riskTolerance} 
+                                    label="Risk" 
+                                    onChange={handleChange}
+                                    sx={{ bgcolor: '#fff', fontSize: '1rem', borderRadius: 2 }}
                                 >
-                                    Change Password
-                                </Button>
-                            </Box>
+                                    <MenuItem value="low" sx={{ fontSize: '1rem' }}>Conservative (Low Risk)</MenuItem>
+                                    <MenuItem value="moderate" sx={{ fontSize: '1rem' }}>Moderate (Balanced)</MenuItem>
+                                    <MenuItem value="high" sx={{ fontSize: '1rem' }}>Aggressive (High Growth)</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <FormControl fullWidth variant="outlined">
+                                <InputLabel id="goal-label" sx={{ fontSize: '1rem', fontWeight: 600 }}>Primary Goal</InputLabel>
+                                <Select 
+                                    labelId="goal-label"
+                                    id="goal-select"
+                                    name="investmentGoal" 
+                                    value={formData.investmentGoal} 
+                                    label="Primary Goal" 
+                                    onChange={handleChange}
+                                    sx={{ bgcolor: '#fff', fontSize: '1rem', borderRadius: 2 }}
+                                >
+                                    <MenuItem value="wealth" sx={{ fontSize: '1rem' }}>Wealth Creation</MenuItem>
+                                    <MenuItem value="retirement" sx={{ fontSize: '1rem' }}>Retirement Planning</MenuItem>
+                                    <MenuItem value="income" sx={{ fontSize: '1rem' }}>Passive Income</MenuItem>
+                                    <MenuItem value="tax" sx={{ fontSize: '1rem' }}>Tax Saving</MenuItem>
+                                    <MenuItem value="education" sx={{ fontSize: '1rem' }}>Education</MenuItem>
+                                    <MenuItem value="emergency" sx={{ fontSize: '1rem' }}>Emergency Fund</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <FormControl fullWidth variant="outlined">
+                                <InputLabel id="horizon-label" sx={{ fontSize: '1rem', fontWeight: 600 }}>Time Horizon</InputLabel>
+                                <Select 
+                                    labelId="horizon-label"
+                                    id="horizon-select"
+                                    name="investmentHorizon" 
+                                    value={formData.investmentHorizon} 
+                                    label="Time Horizon" 
+                                    onChange={handleChange}
+                                    sx={{ bgcolor: '#fff', fontSize: '1rem', borderRadius: 2 }}
+                                >
+                                    <MenuItem value="short" sx={{ fontSize: '1rem' }}>Short-term (0-3 years)</MenuItem>
+                                    <MenuItem value="mid" sx={{ fontSize: '1rem' }}>Mid-term (3-7 years)</MenuItem>
+                                    <MenuItem value="long" sx={{ fontSize: '1rem' }}>Long-term (7+ years)</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
 
-                            <Divider sx={{ my: 3 }} />
+                    <Divider sx={{ my: 4 }} />
 
+                    {/* Security */}
+                    <SectionHeading title="Security" />
+                    <List disablePadding>
+                        <ListItem sx={{ px: 0, py: 2 }}>
+                            <ListItemText 
+                                primary={<Typography fontWeight={700}>Password</Typography>} 
+                                secondary="Add a strong password to keep your account safe" 
+                            />
+                            <Button variant="outlined" size="small" onClick={() => setOpenPasswordDialog(true)} sx={{ color: '#007DA3', borderColor: '#007DA3', fontWeight: 700, textTransform: 'none', px: 3 }}>Change Password</Button>
+                        </ListItem>
+                        <Divider sx={{ opacity: 0.6 }} />
+                        <ListItem sx={{ px: 0, py: 2 }}>
+                            <ListItemText 
+                                primary={<Typography fontWeight={700}>Two-Factor Authentication</Typography>} 
+                                secondary="Secure your account with an extra verification step" 
+                            />
+                            <Switch checked={formData.twoFactor} onChange={() => handleToggle('twoFactor')} color="primary" />
+                        </ListItem>
+                        <Divider sx={{ opacity: 0.6 }} />
+                        <ListItem sx={{ px: 0, py: 2 }}>
+                            <ListItemText 
+                                primary={<Typography fontWeight={700}>Last Activity</Typography>} 
+                                secondary="Logged in from Mumbai, IN (Current Device)" 
+                            />
+                            <Typography variant="caption" color="text.secondary" fontWeight={600}>Active Now</Typography>
+                        </ListItem>
+                    </List>
+
+                    <Divider sx={{ my: 4 }} />
+
+                    {/* Notifications */}
+                    <SectionHeading title="Notifications" />
+                    <List disablePadding>
+                        <ListItem sx={{ px: 0, py: 1 }}>
+                            <ListItemText primary={<Typography fontWeight={600}>Email Notifications</Typography>} secondary="Weekly summaries and security alerts" />
+                            <Switch checked={formData.emailNotifications} onChange={() => handleToggle('emailNotifications')} color="primary" />
+                        </ListItem>
+                        <ListItem sx={{ px: 0, py: 1 }}>
+                            <ListItemText primary={<Typography fontWeight={600}>Investment Alerts</Typography>} secondary="Real-time alerts for price movements" />
+                            <Switch checked={formData.investmentAlerts} onChange={() => handleToggle('investmentAlerts')} color="primary" />
+                        </ListItem>
+                    </List>
+
+                    <Divider sx={{ my: 4 }} />
+
+                    {/* Preferences */}
+                    <SectionHeading title="Preferences" />
+                    <Grid container spacing={4} alignItems="center">
+                        <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <Box>
-                                <Typography variant="subtitle1" fontWeight={700} gutterBottom>Privacy & Sessions</Typography>
-                                <Typography variant="body2" color="text.secondary">Manage your two-factor authentication and active login sessions to keep your account safe.</Typography>
-                                <Button size="small" sx={{ mt: 1, p: 0, textTransform: 'none', fontWeight: 600 }}>Privacy Settings & Policy</Button>
+                                <Typography variant="body1" fontWeight={700}>Dark Mode</Typography>
+                                <Typography variant="caption" color="text.secondary">Switch between light and dark interface</Typography>
                             </Box>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                            <Switch checked={formData.darkMode} onChange={() => handleToggle('darkMode')} color="primary" />
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <FormControl fullWidth size="small">
+                                <InputLabel>Language</InputLabel>
+                                <Select name="language" value={formData.language} label="Language" onChange={handleChange}>
+                                    <MenuItem value="en">English (US)</MenuItem>
+                                    <MenuItem value="hi">Hindi (हिन्दी)</MenuItem>
+                                    <MenuItem value="ta">Tamil (தமிழ்)</MenuItem>
+                                    <MenuItem value="te">Telugu (తెలుగు)</MenuItem>
+                                    <MenuItem value="kn">Kannada (ಕನ್ನಡ)</MenuItem>
+                                    <MenuItem value="es">Spanish (Español)</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <FormControl fullWidth size="small">
+                                <InputLabel>Currency</InputLabel>
+                                <Select name="currency" value={formData.currency} label="Currency" onChange={handleChange}>
+                                    <MenuItem value="INR">INR (₹) - Indian Rupee</MenuItem>
+                                    <MenuItem value="USD">USD ($) - US Dollar</MenuItem>
+                                    <MenuItem value="EUR">EUR (€) - Euro</MenuItem>
+                                    <MenuItem value="GBP">GBP (£) - British Pound</MenuItem>
+                                    <MenuItem value="JPY">JPY (¥) - Japanese Yen</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
 
-                {/* Preferences Section */}
-                <Grid item xs={12}>
-                    <Card sx={{ borderRadius: 3, boxShadow: '0 2px 12px rgba(0,0,0,0.05)' }}>
-                        <CardContent sx={{ p: 4 }}>
-                            <Typography variant="h6" fontWeight={700} mb={4} display="flex" alignItems="center" gap={1.5} sx={{ fontFamily: "'Noto Sans', sans-serif" }}>
-                                <Category color="primary" /> Preferences & Customization
-                            </Typography>
-                            
-                            <Grid container spacing={4} sx={{ mb: 4 }}>
-                                <Grid item xs={12} md={6}>
-                                    <FormControl fullWidth variant="outlined">
-                                        <InputLabel id="lang-label" sx={{ bgcolor: 'white', px: 1 }}>Preferred Language</InputLabel>
-                                        <Select 
-                                            labelId="lang-label"
-                                            name="preferredLanguage" 
-                                            value={formData.preferredLanguage} 
-                                            onChange={handleChange}
-                                            label="Preferred Language"
-                                            sx={{ borderRadius: 2 }}
-                                        >
-                                            <MenuItem value="English">English</MenuItem>
-                                            <MenuItem value="Spanish">Spanish</MenuItem>
-                                            <MenuItem value="French">French</MenuItem>
-                                            <MenuItem value="Hindi">Hindi</MenuItem>
-                                        </Select>
-                                    </FormControl>
-                                </Grid>
-                                <Grid item xs={12} md={6}>
-                                    <FormControl fullWidth variant="outlined">
-                                        <InputLabel id="interests-label" sx={{ bgcolor: 'white', px: 1 }}>Investment Categories</InputLabel>
-                                        <Select 
-                                            labelId="interests-label"
-                                            multiple 
-                                            value={formData.interests} 
-                                            label="Investment Categories" 
-                                            onChange={(e) => setFormData({...formData, interests: e.target.value})}
-                                            sx={{ borderRadius: 2 }}
-                                        >
-                                            <MenuItem value="Stocks">Stocks</MenuItem>
-                                            <MenuItem value="Mutual Funds">Mutual Funds</MenuItem>
-                                            <MenuItem value="Gold">Gold</MenuItem>
-                                            <MenuItem value="Crypto">Crypto</MenuItem>
-                                            <MenuItem value="Real Estate">Real Estate</MenuItem>
-                                        </Select>
-                                    </FormControl>
-                                </Grid>
-                            </Grid>
+                    <Divider sx={{ my: 6 }} />
 
-                            <Divider sx={{ my: 4 }} />
-
-                            <Grid container spacing={4}>
-                                <Grid item xs={12} md={6}>
-                                    <Typography variant="subtitle1" fontWeight={700} mb={2} display="flex" alignItems="center" gap={1}>
-                                        <Notifications fontSize="small" color="primary" /> Notification Preferences
-                                    </Typography>
-                                    <Stack spacing={1}>
-                                        <FormControlLabel control={<Switch checked={formData.notifications.blogUpdates} onChange={handleSwitch} name="blogUpdates" />} label="New Blog Updates" />
-                                        <FormControlLabel control={<Switch checked={formData.notifications.marketNews} onChange={handleSwitch} name="marketNews" />} label="Market News Alerts" />
-                                        <FormControlLabel control={<Switch checked={formData.notifications.aiSuggestions} onChange={handleSwitch} name="aiSuggestions" />} label="AI Investment Suggestions" />
-                                    </Stack>
-                                </Grid>
-                                
-                                <Grid item xs={12} md={6}>
-                                    <Typography variant="subtitle1" fontWeight={700} mb={2} display="flex" alignItems="center" gap={2}>
-                                        <SmartToy fontSize="small" color="primary" /> AI & Voice Features
-                                    </Typography>
-                                    <Stack spacing={1}>
-                                        <FormControlLabel 
-                                            control={<Switch checked={formData.voiceSearch} onChange={handleSwitch} name="voiceSearch" />} 
-                                            label={
-                                                <Box display="flex" alignItems="center" gap={1}>
-                                                    <Mic fontSize="small" sx={{ opacity: 0.7 }} /> Enable Voice Search
-                                                </Box>
-                                            } 
-                                        />
-                                        <FormControlLabel 
-                                            control={<Switch checked={formData.aiAssistant} onChange={handleSwitch} name="aiAssistant" />} 
-                                            label={
-                                                <Box display="flex" alignItems="center" gap={1}>
-                                                    <SmartToy fontSize="small" sx={{ opacity: 0.7 }} /> Enable AI Personalized Assistant
-                                                </Box>
-                                            } 
-                                        />
-                                    </Stack>
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </Card>
-                </Grid>
-
-                {/* Save all button */}
-                <Grid item xs={12}>
-                    <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 2 }}>
+                    {/* FOOTER ACTIONS */}
+                    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3, justifyContent: 'space-between', alignItems: 'center' }}>
+                        <Box sx={{ display: 'flex', gap: 2, width: { xs: '100%', sm: 'auto' } }}>
+                            <Button 
+                                fullWidth
+                                variant="contained" 
+                                onClick={handleSaveProfile} 
+                                disabled={loading}
+                                startIcon={<Save />}
+                                sx={{ bgcolor: '#007DA3', borderRadius: 2, px: 5, py: 1.2, fontWeight: 700, textTransform: 'none', '&:hover': { bgcolor: '#005b7a' } }}
+                            >
+                                Save Changes
+                            </Button>
+                            <Button 
+                                variant="outlined" 
+                                color="error" 
+                                onClick={onLogout}
+                                startIcon={<Logout />}
+                                sx={{ borderRadius: 2, px: 4, fontWeight: 700, textTransform: 'none' }}
+                            >
+                                Logout
+                            </Button>
+                        </Box>
                         <Button 
-                            variant="outlined" 
+                            variant="text" 
                             color="error" 
-                            startIcon={<ExitToApp />} 
-                            onClick={onLogout}
-                            sx={{ borderRadius: 2, px: 4, textTransform: 'none' }}
+                            startIcon={<DeleteForever />} 
+                            sx={{ textTransform: 'none', fontWeight: 700, fontSize: '0.85rem' }}
                         >
-                            Logout
-                        </Button>
-                        <Button 
-                            variant="contained" 
-                            size="large" 
-                            onClick={handleSave}
-                            disabled={loading}
-                            sx={{ bgcolor: '#007DA3', borderRadius: 2, px: 8, fontWeight: 700, textTransform: 'none' }}
-                        >
-                            {loading ? <CircularProgress size={24} color="inherit" /> : 'Save All Changes'}
+                            Delete My Account
                         </Button>
                     </Box>
-                </Grid>
-            </Grid>
 
-            {/* Change Password Dialog */}
+                </CardContent>
+            </Card>
+
+            {/* Password Dialog */}
             <Dialog open={openPasswordDialog} onClose={() => setOpenPasswordDialog(false)} fullWidth maxWidth="xs">
-                <DialogTitle fontWeight={700}>Change Password</DialogTitle>
+                <DialogTitle sx={{ fontWeight: 800, color: '#007DA3', pt: 3 }}>Change Password</DialogTitle>
                 <DialogContent>
                     {passStatus.msg && <Alert severity={passStatus.type} sx={{ mb: 2, mt: 1 }}>{passStatus.msg}</Alert>}
-                    <Stack spacing={2} sx={{ mt: 1 }}>
+                    <Stack spacing={3} sx={{ mt: 1 }}>
                         <TextField 
                             label="Current Password" type="password" fullWidth 
                             value={passwordData.currentPassword}
@@ -332,7 +363,6 @@ function Settings({ user, onLogout, onUpdateUser }) {
                             label="New Password" type="password" fullWidth 
                             value={passwordData.newPassword}
                             onChange={(e) => setPasswordData({...passwordData, newPassword: e.target.value})}
-                            helperText="Minimum 8 characters"
                         />
                         <TextField 
                             label="Confirm New Password" type="password" fullWidth 
@@ -341,15 +371,15 @@ function Settings({ user, onLogout, onUpdateUser }) {
                         />
                     </Stack>
                 </DialogContent>
-                <DialogActions sx={{ p: 3 }}>
-                    <Button onClick={() => setOpenPasswordDialog(false)} color="inherit">Cancel</Button>
+                <DialogActions sx={{ p: 4 }}>
+                    <Button onClick={() => setOpenPasswordDialog(false)} color="inherit" sx={{ fontWeight: 700 }}>Cancel</Button>
                     <Button 
                         variant="contained" 
                         onClick={handlePasswordChange} 
                         disabled={loading}
-                        sx={{ bgcolor: '#007DA3' }}
+                        sx={{ bgcolor: '#007DA3', fontWeight: 700, borderRadius: 2, px: 4 }}
                     >
-                        Update Password
+                        Update
                     </Button>
                 </DialogActions>
             </Dialog>

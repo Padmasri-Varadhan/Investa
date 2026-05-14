@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const TitleCard = ({ title, subtitle, action }) => {
+const TitleCard = ({ title, subtitle, action, titleColor = '#111827' }) => {
     return (
         <Box 
             sx={{ 
@@ -22,7 +22,7 @@ const TitleCard = ({ title, subtitle, action }) => {
                     variant="h3" 
                     sx={{ 
                         fontWeight: 700, 
-                        color: '#111827',
+                        color: titleColor,
                         fontSize: { xs: '1.5rem', md: '1.875rem' } 
                     }}
                 >

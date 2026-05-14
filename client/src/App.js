@@ -15,6 +15,7 @@ import Dashboard from './pages/Dashboard';
 import GuidedJourney from './pages/GuidedJourney';
 import InvestmentIdeas from './pages/InvestmentIdeas';
 import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
 import MyGoals from './pages/MyGoals';
 import VideoAdvisory from './pages/VideoAdvisory';
 import Chatbot from './pages/Chatbot';
@@ -31,19 +32,22 @@ function AppLayout({ children, user, onLogout, onUpdateUser, currentPage, setCur
   const toggleSidebar = () => setIsSidebarCollapsed(!isSidebarCollapsed);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overflowX: 'hidden' }}>
       <Navbar user={user} onLogout={onLogout} onUpdateUser={onUpdateUser} toggleSidebar={toggleSidebar} />
-      <Box sx={{ display: 'flex', flex: 1, pt: '64px' }}>
+      <Box sx={{ display: 'flex', flex: 1, pt: '64px', overflowX: 'hidden' }}>
         <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} isCollapsed={isSidebarCollapsed} />
         <Box
           component="main"
           sx={{
             flex: 1,
             ml: isSidebarCollapsed ? '64px' : '220px',
-            p: 3,
+            p: 2,
             minHeight: 'calc(100vh - 64px)',
             bgcolor: 'background.default',
             transition: 'margin-left 0.2s ease',
+            width: isSidebarCollapsed ? 'calc(100vw - 64px)' : 'calc(100vw - 220px)',
+            maxWidth: '100%',
+            overflowX: 'hidden',
           }}
         >
           {children}
@@ -109,6 +113,10 @@ function App() {
                   : '0 4px 20px rgba(0,0,0,0.4)',
                 borderRadius: '24px',
                 border: mode === 'light' ? '1px solid #F1F5F9' : '1px solid rgba(255,255,255,0.05)',
+                transition: 'transform 0.2s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.01)',
+                },
               },
             },
           },
@@ -188,7 +196,7 @@ function App() {
               element={user ? <Navigate to="/guided-journey" /> : <Login onLogin={handleLogin} />}
             />
             <Route
-              path="/register"
+              path="/signup"
               element={user ? <Navigate to="/guided-journey" /> : <Register onLogin={handleLogin} />}
             />
 
@@ -244,6 +252,16 @@ function App() {
               }
             />
             <Route
+              path="/article/:id"
+              element={
+                user ? (
+                  <AppLayout user={user} onLogout={handleLogout} onUpdateUser={handleUpdateUser} currentPage="Articles" setCurrentPage={setCurrentPage}>
+                    <ArticleDetail />
+                  </AppLayout>
+                ) : <Navigate to="/login" />
+              }
+            />
+            <Route
               path="/blogs"
               element={
                 user ? (
@@ -288,7 +306,7 @@ function App() {
               element={
                 user ? (
                   <AppLayout user={user} onLogout={handleLogout} onUpdateUser={handleUpdateUser} currentPage="Profile" setCurrentPage={setCurrentPage}>
-                    <Profile user={user} onUpdateUser={handleUpdateUser} />
+                    <Profile user={user} onUpdateUser={handleUpdateUser} onLogout={handleLogout} />
                   </AppLayout>
                 ) : <Navigate to="/login" />
               }

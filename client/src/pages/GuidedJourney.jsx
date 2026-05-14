@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Box, Button, Card, CardContent, Typography, LinearProgress,
     Grid, Chip, Stepper, Step, StepLabel, Alert, Snackbar
 } from '@mui/material';
-import { ArrowBack, ArrowForward, CheckCircle, TrendingUp } from '@mui/icons-material';
+import { ArrowBack, ArrowForward, CheckCircle, TrendingUp, Check } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import { getInvestmentIdeas } from '../services/api';
 
 /**
  * Guided Journey Page
@@ -67,45 +68,120 @@ const questions = [
     },
 ];
 
-const getRecommendation = (answers) => {
+const getRecommendation = (answers, ideasPool = []) => {
     const { experience, risk } = answers;
+    
+    let level, color, description, nextStep;
+    let minCount, maxCount;
+    let targetRisk;
+
     if (experience === 'beginner' || risk === 'low') {
-        return {
-            level: 'Beginner',
-            color: '#007DA3',
-            description: 'You\'re ready to start your investment journey! We recommend starting with index funds and bonds to build a solid foundation.',
-            suggestions: ['S&P 500 Index Fund', 'US Treasury Bonds', 'Dividend Stocks'],
-            nextStep: 'Start with our Beginner Investment Guides',
-        };
+        level = 'Beginner';
+        color = '#007DA3';
+        description = 'You\'re ready to start your investment journey! We recommend starting with index funds and bonds to build a solid foundation.';
+        nextStep = 'Start with our Beginner Investment Guides';
+        minCount = 3;
+        maxCount = 5;
+        targetRisk = 'low';
     } else if (experience === 'some_experience' || risk === 'medium') {
-        return {
-            level: 'Intermediate',
-            color: '#00897b',
-            description: 'You have a good foundation! Consider diversifying with ETFs, sector funds, and some real estate exposure.',
-            suggestions: ['Technology ETF', 'Real Estate REITs', 'Emerging Markets Fund'],
-            nextStep: 'Explore our Intermediate Investment Strategies',
-        };
+        level = 'Intermediate';
+        color = '#00897b';
+        description = 'You have a good foundation! Consider diversifying with ETFs, sector funds, and some real estate exposure.';
+        nextStep = 'Explore our Intermediate Investment Strategies';
+        minCount = 5;
+        maxCount = 7;
+        targetRisk = 'medium';
     } else {
-        return {
-            level: 'Advanced',
-            color: '#7b1fa2',
-            description: 'You\'re an experienced investor! Explore advanced strategies including individual stocks, crypto, and alternative investments.',
-            suggestions: ['Small-Cap Value Stocks', 'Cryptocurrency (BTC/ETH)', 'Options Strategies'],
-            nextStep: 'Access Advanced Market Analysis Tools',
-        };
+        level = 'Advanced';
+        color = '#7b1fa2';
+        description = 'You\'re an experienced investor! Explore advanced strategies including individual stocks, crypto, and alternative investments.';
+        nextStep = 'Access Advanced Market Analysis Tools';
+        minCount = 7;
+        maxCount = 10;
+        targetRisk = 'high';
     }
+
+    // Dynamic suggestions logic
+    let pool = [...ideasPool];
+    
+    // Sort logic: 
+    // 1. Matches target risk level
+    const scoredPool = pool.map(idea => {
+        let score = 0;
+        // Simple score based on risk match
+        if (idea.riskLevel === targetRisk) score += 10;
+        
+        return { ...idea, score };
+    });
+
+    // Sort by score descending
+    scoredPool.sort((a, b) => b.score - a.score);
+
+    // Pick top suggestions (titles only)
+    const suggestions = scoredPool
+        .slice(0, Math.floor(Math.random() * (maxCount - minCount + 1)) + minCount)
+        .map(i => i.title);
+
+    // Fallback if pool is empty
+    const fallbackSuggestions = {
+        'Beginner': ['S&P 500 Index Fund', 'US Treasury Bond Ladder', 'Dividend Aristocrats Portfolio'],
+        'Intermediate': ['Technology Sector ETF', 'Global Real Estate (REIT)', 'Emerging Markets Fund', 'Sustainable ESG Fund', 'Global Healthcare ETF'],
+        'Advanced': ['Small-Cap Value Stocks', 'Bitcoin & Ethereum Core Position', 'Options Strategies', 'AI & Robotics Growth Fund', 'Emerging Tech Venture Fund']
+    };
+
+    return {
+        level,
+        color,
+        description,
+        suggestions: suggestions.length > 0 ? suggestions : fallbackSuggestions[level],
+        nextStep,
+    };
 };
 
 function GuidedJourney({ user }) {
     const navigate = useNavigate();
-    const [step, setStep] = useState(0);
-    const [answers, setAnswers] = useState({});
+    const [step, setStep] = useState(() => {
+        const saved = localStorage.getItem('investa_guided_journey');
+        return saved ? JSON.parse(saved).step : 0;
+    });
+    const [answers, setAnswers] = useState(() => {
+        const saved = localStorage.getItem('investa_guided_journey');
+        return saved ? JSON.parse(saved).answers : {};
+    });
+
+    const [ideas, setIdeas] = useState([]);
+
+    useEffect(() => {
+        localStorage.setItem('investa_guided_journey', JSON.stringify({ step, answers }));
+    }, [step, answers]);
+
+    useEffect(() => {
+        const fetchIdeas = async () => {
+            try {
+                const res = await getInvestmentIdeas({ limit: 100 }); // Fetch enough ideas for the pool
+                setIdeas(res.data.data || []);
+            } catch (err) {
+                console.error("Error fetching ideas for navigation:", err);
+            }
+        };
+        fetchIdeas();
+    }, []);
+
+    const handleRecommendationClick = (suggestion) => {
+        const match = ideas.find(i => i.title.toLowerCase() === suggestion.toLowerCase());
+        if (match) {
+            navigate(`/idea/${match._id}`);
+        } else {
+            // Fallback to search in investment ideas
+            navigate(`/investment-ideas?search=${encodeURIComponent(suggestion)}`);
+        }
+    };
 
     const currentQ = questions[step];
+    const recommendation = getRecommendation(answers, ideas);
     const progress = Math.min(Math.round((step / questions.length) * 100), 100);
     const isLast = step === questions.length;
     const isQuestioning = step > 0 && step < questions.length;
-    const recommendation = isLast ? getRecommendation(answers) : null;
 
     const handleSelect = (key, value) => {
         setAnswers((prev) => ({ ...prev, [key]: value }));
@@ -123,11 +199,18 @@ function GuidedJourney({ user }) {
 
     return (
         <Box className="fade-in" sx={{ p: { xs: 2, md: 4 }, maxWidth: 1600, mx: 'auto', pb: 6 }}>
-            <PageHeader 
-                title="Guided Journey" 
-                subtitle="Start your personalized learning and investment roadmap"
-                icon={<TrendingUp />}
-            />
+            <Typography 
+                variant="h4" 
+                sx={{ 
+                    fontWeight: 900, 
+                    color: '#007DA3',
+                    mb: 4,
+                    letterSpacing: -1,
+                    fontSize: { xs: '1.75rem', md: '2.5rem' }
+                }}
+            >
+                Guided Journey
+            </Typography>
 
             {/* Intro Card */}
             {step === 0 && (
@@ -189,11 +272,23 @@ function GuidedJourney({ user }) {
                                                 cursor: 'pointer', border: selected ? '2px solid #007DA3' : '2px solid #e0e8f0',
                                                 bgcolor: selected ? '#e6f5fa' : '#fff',
                                                 transition: 'all 0.2s',
+                                                position: 'relative',
                                                 '&:hover': { border: '2px solid #007DA3', bgcolor: '#e6f5fa' },
                                             }}
                                         >
-                                            <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                                                {selected && <CheckCircle sx={{ color: '#007DA3', mb: 1 }} />}
+                                            {selected && (
+                                                <Check 
+                                                    sx={{ 
+                                                        color: '#007DA3', 
+                                                        position: 'absolute',
+                                                        top: 8,
+                                                        right: 8,
+                                                        fontSize: 24,
+                                                        fontWeight: 900
+                                                    }} 
+                                                />
+                                            )}
+                                            <CardContent sx={{ textAlign: 'center', py: 4 }}>
                                                 <Typography variant="subtitle1" fontWeight={700} color="primary">{opt.label}</Typography>
                                                 <Typography variant="caption" color="text.secondary">{opt.sublabel}</Typography>
                                             </CardContent>
@@ -211,7 +306,13 @@ function GuidedJourney({ user }) {
                             <Button
                                 variant="contained" endIcon={<ArrowForward />} onClick={handleNext}
                                 disabled={!answers[keys[step]]}
-                                sx={{ px: 4, borderRadius: 2, fontWeight: 700 }}
+                                sx={{ 
+                                    px: 4, 
+                                    borderRadius: 2, 
+                                    fontWeight: 700,
+                                    bgcolor: '#007DA3',
+                                    '&:hover': { bgcolor: '#005b7a' }
+                                }}
                             >
                                 NEXT
                             </Button>
@@ -223,11 +324,13 @@ function GuidedJourney({ user }) {
             {/* Result */}
             {isLast && recommendation && (
                 <Card>
-                    <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                        <CheckCircle sx={{ fontSize: 64, color: recommendation.color, mb: 2 }} />
+                    <CardContent sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', mb: 3 }}>
+                            <CheckCircle sx={{ fontSize: 72, color: '#008000' }} />
+                        </Box>
                         <Chip
                             label={`Your Level: ${recommendation.level} Investor`}
-                            sx={{ bgcolor: recommendation.color, color: '#fff', fontWeight: 700, fontSize: 15, px: 2, py: 0.5, mb: 2 }}
+                            sx={{ bgcolor: '#008000', color: '#fff', fontWeight: 700, fontSize: 16, px: 3, py: 2.5, mb: 3, borderRadius: '12px' }}
                         />
                         <Typography variant="h6" fontWeight={700} mb={1}>Your Personalized Investment Plan is Ready!</Typography>
                         <Typography variant="body2" color="text.secondary" mb={4} maxWidth={500} mx="auto">
@@ -240,20 +343,57 @@ function GuidedJourney({ user }) {
                                 <Chip 
                                     key={s} 
                                     label={s} 
-                                    onClick={() => navigate(`/articles?search=${encodeURIComponent(s)}`)}
+                                    onClick={() => handleRecommendationClick(s)}
                                     sx={{ bgcolor: '#e6f5fa', color: '#007DA3', fontWeight: 600, cursor: 'pointer', transition: '0.2s', '&:hover': { bgcolor: '#007DA3', color: '#fff' } }} 
                                 />
                             ))}
                         </Box>
 
-                        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Button variant="contained" onClick={() => navigate('/investment-ideas')} sx={{ borderRadius: 2, fontWeight: 700 }}>
+                        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap', mt: 2 }}>
+                            <Button 
+                                variant="contained" 
+                                onClick={() => navigate('/investment-ideas')} 
+                                sx={{ 
+                                    borderRadius: 3, 
+                                    fontWeight: 700, 
+                                    bgcolor: '#007DA3',
+                                    px: 4,
+                                    py: 1.5,
+                                    '&:hover': { bgcolor: '#005b7a' }
+                                }}
+                            >
                                 View Investment Ideas
                             </Button>
-                            <Button variant="outlined" onClick={() => navigate('/articles')} sx={{ borderRadius: 2 }}>
+                            <Button 
+                                variant="contained" 
+                                onClick={() => navigate('/articles')} 
+                                sx={{ 
+                                    borderRadius: 3, 
+                                    fontWeight: 700, 
+                                    bgcolor: '#007DA3',
+                                    px: 4,
+                                    py: 1.5,
+                                    '&:hover': { bgcolor: '#005b7a' }
+                                }}
+                            >
                                 Read Articles
                             </Button>
-                            <Button variant="text" onClick={() => { setStep(0); setAnswers({}); }}>
+                            <Button 
+                                variant="contained" 
+                                onClick={() => { 
+                                    setStep(0); 
+                                    setAnswers({}); 
+                                    localStorage.removeItem('investa_guided_journey');
+                                }}
+                                sx={{ 
+                                    borderRadius: 3, 
+                                    fontWeight: 700, 
+                                    bgcolor: '#007DA3',
+                                    px: 4,
+                                    py: 1.5,
+                                    '&:hover': { bgcolor: '#005b7a' }
+                                }}
+                            >
                                 Retake Journey
                             </Button>
                         </Box>

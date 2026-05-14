@@ -63,7 +63,7 @@ function Login({ onLogin }) {
         <Box
             sx={{
                 minHeight: '100vh',
-                background: 'linear-gradient(135deg, #007DA3 0%, #005b7a 60%, #003c72 100%)',
+                backgroundColor: '#007DA3',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2,
             }}
         >
@@ -75,8 +75,7 @@ function Login({ onLogin }) {
                             <TrendingUp sx={{ color: '#007DA3', fontSize: 32 }} />
                             <Typography variant="h5" fontWeight={800} color="primary">Investa</Typography>
                         </Box>
-                        <Typography variant="h6" fontWeight={700} mb={0.5}>Welcome back! 👋</Typography>
-                        <Typography variant="body2" color="text.secondary">Sign in to continue your investment journey</Typography>
+                        <Typography variant="body2" color="text.secondary">Login to continue your investment journey</Typography>
                     </Box>
 
                     {error && <Alert severity="error" sx={{ mb: 2, borderRadius: 2 }}>{error}</Alert>}
@@ -106,7 +105,17 @@ function Login({ onLogin }) {
                         />
                         <FormControl fullWidth sx={{ mb: 3 }}>
                             <InputLabel>Preferred Language</InputLabel>
-                            <Select name="preferredLanguage" value={form.preferredLanguage} onChange={handleChange} label="Preferred Language">
+                            <Select 
+                                name="preferredLanguage" 
+                                value={form.preferredLanguage} 
+                                onChange={handleChange} 
+                                label="Preferred Language"
+                                sx={{ 
+                                    cursor: 'pointer',
+                                    '& .MuiSelect-select': { cursor: 'pointer' },
+                                    '& .MuiSelect-icon': { cursor: 'pointer' }
+                                }}
+                            >
                                 <MenuItem value="English">English</MenuItem>
                                 <MenuItem value="Spanish">Spanish</MenuItem>
                                 <MenuItem value="French">French</MenuItem>
@@ -121,7 +130,7 @@ function Login({ onLogin }) {
                             disabled={loading}
                             sx={{ py: 1.5, borderRadius: 2, fontWeight: 700, mb: 1.5 }}
                         >
-                            {loading ? <CircularProgress size={22} color="inherit" /> : 'Sign In'}
+                            {loading ? <CircularProgress size={22} color="inherit" /> : 'Login'}
                         </Button>
                     </form>
 
@@ -136,7 +145,7 @@ function Login({ onLogin }) {
                     <Divider sx={{ my: 2 }} />
                     <Typography variant="body2" textAlign="center" color="text.secondary">
                         Don't have an account?{' '}
-                        <Link component="button" onClick={() => navigate('/register')} sx={{ fontWeight: 700, color: '#007DA3' }}>
+                        <Link component="button" onClick={() => navigate('/signup')} sx={{ fontWeight: 700, color: '#007DA3' }}>
                             Sign up for free
                         </Link>
                     </Typography>

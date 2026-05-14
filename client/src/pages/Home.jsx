@@ -60,21 +60,22 @@ function Home() {
                 <Stack direction="row" spacing={1} alignItems="center">
                     <Button
                         variant="text"
-                        sx={{ color: '#64748b', fontWeight: 600, px: 3, '&:hover': { color: '#007DA3', bgcolor: 'transparent' } }}
+                        sx={{ color: '#007DA3', fontWeight: 600, px: 3, '&:hover': { bgcolor: 'rgba(0, 125, 163, 0.04)' } }}
                         onClick={() => navigate('/login')}
                     >
-                        Sign In
+                        Login
                     </Button>
                     <Button
                         variant="contained"
                         sx={{
-                            bgcolor: '#1e293b',
+                            bgcolor: '#007DA3',
                             color: '#fff',
                             px: 3,
                             borderRadius: '12px',
-                            '&:hover': { bgcolor: '#0f172a' }
+                            fontWeight: 700,
+                            '&:hover': { bgcolor: '#006a8a' }
                         }}
-                        onClick={() => navigate('/register')}
+                        onClick={() => navigate('/signup')}
                     >
                         Get Started
                     </Button>
@@ -85,86 +86,59 @@ function Home() {
             <Box className="mesh-bg" sx={{ pt: { xs: 10, md: 15 }, pb: { xs: 10, md: 20 }, position: 'relative', overflow: 'hidden' }}>
                 <Container maxWidth="lg">
                     <Grid container spacing={8} alignItems="center">
-                        <Grid item xs={12} md={7}>
-                            <Box sx={{ position: 'relative', zIndex: 1 }}>
+                        <Grid item xs={12} md={10} lg={8} sx={{ mx: 'auto', textAlign: 'center' }}>
+                            <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <Chip 
-                                    label="NEW: VERSION 2.0 IS LIVE" 
+                                    label="LIVE: MARKET DATA INTEGRATED" 
                                     size="small" 
                                     sx={{ 
-                                        bgcolor: '#e0f2fe', color: '#0369a1', fontWeight: 800, 
-                                        mb: 3, px: 1, border: '1px solid #bae6fd' 
+                                        bgcolor: 'rgba(0, 125, 163, 0.1)', 
+                                        color: '#007DA3', 
+                                        fontWeight: 900, 
+                                        mb: 3, 
+                                        borderRadius: '8px',
+                                        border: '1px solid rgba(0, 125, 163, 0.2)'
                                     }} 
                                 />
                                 <Typography 
                                     variant="h1" 
                                     sx={{ 
-                                        fontWeight: 900, fontSize: { xs: '3rem', md: '5rem' }, 
-                                        lineHeight: 1, letterSpacing: -2, color: '#1e293b', mb: 3 
+                                        fontWeight: 900, fontSize: { xs: '2.5rem', md: '4rem' }, 
+                                        lineHeight: 1.2, letterSpacing: -1.5, color: '#1e293b', mb: 3 
                                     }}
                                 >
-                                    Master Your <br />
-                                    <span className="gradient-text">Financial Future</span>
+                                    The fully dynamic investment platform for the modern era.
                                 </Typography>
-                                <Typography variant="h6" sx={{ color: '#64748b', mb: 6, maxWidth: 540, lineHeight: 1.6, fontWeight: 500 }}>
-                                    Investa combines expert guidance with real-time data to help you build a portfolio that stands the test of time. No jargon, just results.
+                                <Typography variant="h6" sx={{ color: '#64748b', mb: 6, maxWidth: 640, lineHeight: 1.6, fontWeight: 500 }}>
+                                    Experience real-time portfolio tracking, AI-driven market news, and personalized financial strategies all in one place.
                                 </Typography>
                                 
-                                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+                                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
                                     <Button
                                         variant="contained" size="large" endIcon={<ArrowForward />}
                                         sx={{
                                             bgcolor: '#007DA3', px: 5, py: 2, borderRadius: '16px',
                                             boxShadow: '0 10px 20px -5px rgba(0, 125, 163, 0.4)',
-                                            fontSize: '1.1rem'
+                                            fontSize: '1.1rem',
+                                            fontWeight: 800,
+                                            '&:hover': { bgcolor: '#006a8a' }
                                         }}
-                                        onClick={() => navigate('/register')}
+                                        onClick={() => navigate('/signup')}
                                     >
-                                        Start Your Journey
+                                        Get Started Free
                                     </Button>
                                     <Button
                                         variant="outlined" size="large" startIcon={<PlayCircleOutline />}
                                         sx={{
-                                            borderColor: '#e2e8f0', color: '#1e293b', px: 4, py: 2, borderRadius: '16px',
-                                            bgcolor: '#fff', '&:hover': { bgcolor: '#f8fafc', borderColor: '#cbd5e1' },
-                                            fontSize: '1.1rem'
+                                            px: 4, py: 2, borderRadius: '16px',
+                                            borderColor: '#e2e8f0', color: '#64748b',
+                                            fontSize: '1.1rem', fontWeight: 700,
+                                            '&:hover': { borderColor: '#cbd5e1', bgcolor: '#f8fafc' }
                                         }}
                                     >
-                                        How it Works
+                                        Watch Demo
                                     </Button>
                                 </Stack>
-                            </Box>
-                        </Grid>
-                        
-                        <Grid item xs={12} md={5} sx={{ display: { xs: 'none', md: 'block' } }}>
-                            <Box 
-                                sx={{ 
-                                    position: 'relative',
-                                    '&::before': {
-                                        content: '""', position: 'absolute', top: -40, left: -40, 
-                                        width: 200, height: 200, borderRadius: '50%', 
-                                        background: 'rgba(0,125,163,0.05)', zIndex: 0
-                                    }
-                                }}
-                            >
-                                <Card sx={{ borderRadius: '32px', boxShadow: '0 50px 100px -20px rgba(0,0,0,0.12)', border: '1px solid #f1f5f9' }}>
-                                    <CardContent sx={{ p: 4 }}>
-                                        <Typography variant="subtitle2" fontWeight={900} mb={3} color="#94a3b8" sx={{ textTransform: 'uppercase', letterSpacing: 1 }}>Live Markets</Typography>
-                                        {[
-                                            { name: 'S&P 500', val: '4,800.50', up: true },
-                                            { name: 'Nasdaq 100', val: '15,210.12', up: true },
-                                            { name: 'US 10Y Bond', val: '4.12%', up: false }
-                                        ].map((m) => (
-                                            <Stack key={m.name} direction="row" justifyContent="space-between" mb={2.5}>
-                                                <Typography variant="body1" fontWeight={700} color="#1e293b">{m.name}</Typography>
-                                                <Typography variant="body1" fontWeight={900} color={m.up ? '#10b981' : '#ef4444'}>{m.val}</Typography>
-                                            </Stack>
-                                        ))}
-                                        <Divider sx={{ my: 3 }} />
-                                        <Typography variant="body2" color="#64748b" sx={{ fontStyle: 'italic' }}>
-                                            "The best time to start was yesterday, the second best is now."
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
                             </Box>
                         </Grid>
                     </Grid>
@@ -173,7 +147,7 @@ function Home() {
 
             {/* ── LOGO CLOUD / TRUST ── */}
             <Container maxWidth="lg" sx={{ mt: -8, mb: 15, position: 'relative', zIndex: 10 }}>
-                <Card sx={{ borderRadius: '24px', p: 4, boxShadow: '0 10px 40px rgba(0,0,0,0.05)', border: 'none' }}>
+                <Card sx={{ borderRadius: '24px', p: 4, boxShadow: '0 20px 40px rgba(0,0,0,0.08)', border: 'none', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)' }}>
                     <Stack 
                         direction={{ xs: 'column', md: 'row' }} 
                         spacing={{ xs: 5, md: 2 }} 
@@ -183,7 +157,10 @@ function Home() {
                     >
                         {stats.map((s) => (
                             <Box key={s.label} sx={{ textAlign: 'center' }}>
-                                <Typography variant="h3" fontWeight={900} color="#1e293b">{s.value}</Typography>
+                                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mb: 0.5 }}>
+                                    <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#10b981', boxShadow: '0 0 10px #10b981' }} />
+                                    <Typography variant="h3" fontWeight={900} color="#1e293b">{s.value}</Typography>
+                                </Box>
                                 <Typography variant="body2" color="#94a3b8" fontWeight={700} sx={{ textTransform: 'uppercase', letterSpacing: 1 }}>{s.label}</Typography>
                             </Box>
                         ))}
@@ -228,30 +205,40 @@ function Home() {
             </Box>
 
             {/* ── CTA ── */}
-            <Box sx={{ py: 15 }}>
+            <Box sx={{ py: 6 }}>
                 <Container maxWidth="md">
                     <Box 
                         sx={{ 
-                            background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', 
-                            borderRadius: '40px', p: { xs: 6, md: 10 }, 
+                            bgcolor: '#007DA3', 
+                            borderRadius: '40px', p: { xs: 4, md: 8 }, 
                             color: '#fff', textAlign: 'center',
-                            position: 'relative', overflow: 'hidden'
+                            position: 'relative', overflow: 'hidden',
+                            boxShadow: '0 20px 40px -10px rgba(0, 125, 163, 0.3)'
                         }}
                     >
-                        <Typography variant="h3" fontWeight={900} mb={3} sx={{ letterSpacing: -1 }}>
+                        <Typography variant="h3" fontWeight={900} mb={3} sx={{ letterSpacing: -1, color: '#fff' }}>
                             Ready to take control?
                         </Typography>
-                        <Typography variant="h6" sx={{ opacity: 0.8, mb: 5, maxWidth: 480, mx: 'auto' }}>
+                        <Typography variant="h6" sx={{ opacity: 0.9, mb: 4, maxWidth: 480, mx: 'auto', color: '#fff' }}>
                             Join 10,000+ investors building wealth with Investa. Register now and get your first guided plan for free.
                         </Typography>
                         <Button
                             variant="contained" size="large"
                             sx={{
-                                bgcolor: '#007DA3', px: 6, py: 2, borderRadius: '16px',
+                                bgcolor: '#fff', 
+                                color: '#007DA3',
+                                px: 6, py: 2, borderRadius: '16px',
                                 fontWeight: 800, fontSize: '1.1rem',
-                                '&:hover': { bgcolor: '#00b4db' }
+                                boxShadow: '0 10px 20px -5px rgba(0,0,0,0.1)',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease-in-out',
+                                '&:hover': { 
+                                    bgcolor: '#f3f4f6',
+                                    transform: 'scale(1.05)',
+                                    boxShadow: '0 15px 30px -5px rgba(0,0,0,0.15)'
+                                }
                             }}
-                            onClick={() => navigate('/register')}
+                            onClick={() => navigate('/signup')}
                         >
                             Create Account
                         </Button>
@@ -260,7 +247,7 @@ function Home() {
             </Box>
 
             {/* ── FOOTER ── */}
-            <Box sx={{ py: 10, borderTop: '1px solid #f1f5f9' }}>
+            <Box sx={{ py: 4, borderTop: '1px solid #f1f5f9' }}>
                 <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
                     <Typography variant="body2" color="#94a3b8" fontWeight={600}>
                         © 2024 INVESTA. BUILT FOR THE FUTURE OF FINANCE.

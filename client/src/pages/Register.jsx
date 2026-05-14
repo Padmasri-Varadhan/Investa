@@ -53,7 +53,7 @@ function Register({ onLogin }) {
         <Box
             sx={{
                 minHeight: '100vh',
-                background: 'linear-gradient(135deg, #007DA3 0%, #005b7a 60%, #003c72 100%)',
+                backgroundColor: '#007DA3',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2,
             }}
         >
@@ -113,7 +113,17 @@ function Register({ onLogin }) {
                         </FormControl>
                         <FormControl fullWidth sx={{ mb: 3 }}>
                             <InputLabel>Preferred Language</InputLabel>
-                            <Select name="preferredLanguage" value={form.preferredLanguage} onChange={handleChange} label="Preferred Language">
+                            <Select 
+                                name="preferredLanguage" 
+                                value={form.preferredLanguage} 
+                                onChange={handleChange} 
+                                label="Preferred Language"
+                                sx={{ 
+                                    cursor: 'pointer',
+                                    '& .MuiSelect-select': { cursor: 'pointer' },
+                                    '& .MuiSelect-icon': { cursor: 'pointer' }
+                                }}
+                            >
                                 <MenuItem value="English">English</MenuItem>
                                 <MenuItem value="Spanish">Spanish</MenuItem>
                                 <MenuItem value="French">French</MenuItem>
@@ -135,7 +145,7 @@ function Register({ onLogin }) {
                     <Typography variant="body2" textAlign="center" color="text.secondary">
                         Already have an account?{' '}
                         <Link component="button" onClick={() => navigate('/login')} sx={{ fontWeight: 700, color: '#007DA3' }}>
-                            Sign in
+                            Login
                         </Link>
                     </Typography>
                 </CardContent>

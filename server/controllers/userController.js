@@ -15,19 +15,28 @@ const generateToken = (id) => {
  */
 const registerUser = async (req, res) => {
     try {
-        const { name, email, password, preferredLanguage, riskProfile } = req.body;
+        let { name, email, password, preferredLanguage, riskProfile } = req.body;
+
+        // Validate API response/request fields
+        if (!name || !email || !password) {
+            return res.status(400).json({ message: 'Name, email, and password are required' });
+        }
+
+        // Standardize email format to ensure consistency
+        const emailFormatted = String(email).toLowerCase().trim();
+        const pwd = String(password);
 
         // Check if user already exists
-        const userExists = await User.findOne({ email });
+        const userExists = await User.findOne({ email: emailFormatted });
         if (userExists) {
             return res.status(400).json({ message: 'User already exists with this email' });
         }
 
         // Create user
         const user = await User.create({ 
-            name, 
-            email, 
-            password, 
+            name: String(name).trim(), 
+            email: emailFormatted, 
+            password: pwd, 
             preferredLanguage,
             riskProfile,
             notifications: [
@@ -66,14 +75,21 @@ const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
 
+        if (!email || !password) {
+            return res.status(400).json({ message: 'Email and password are required' });
+        }
+
+        const emailFormatted = String(email).toLowerCase().trim();
+        const pwd = String(password);
+
         // Find user by email
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email: emailFormatted });
         if (!user) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
         // Match password
-        const isMatch = await user.matchPassword(password);
+        const isMatch = await user.matchPassword(pwd);
         if (!isMatch) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
@@ -138,8 +154,8 @@ const updateUserProfile = async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
         if (user) {
-            user.name = req.body.name || user.name;
-            user.email = req.body.email || user.email;
+            user.name = req.body.name ? String(req.body.name).trim() : user.name;
+            user.email = req.body.email ? String(req.body.email).toLowerCase().trim() : user.email;
             user.avatar = req.body.avatar !== undefined ? req.body.avatar : user.avatar;
             user.bio = req.body.bio !== undefined ? req.body.bio : user.bio;
             user.interests = req.body.interests !== undefined ? req.body.interests : user.interests;

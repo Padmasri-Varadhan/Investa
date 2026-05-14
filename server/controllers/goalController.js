@@ -21,14 +21,9 @@ const getGoals = async (req, res) => {
  */
 const createGoal = async (req, res) => {
     try {
-        const { title, targetAmount, currentAmount, deadline, category } = req.body;
         const goal = await Goal.create({
-            userId: req.user.id,
-            title,
-            targetAmount,
-            currentAmount,
-            deadline,
-            category
+            ...req.body,
+            userId: req.user.id
         });
         res.status(201).json(goal);
     } catch (error) {

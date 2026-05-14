@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use environment variable for API URL (falls back to localhost for development)
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = 'http://localhost:5001/api';
 
 // Create axios instance with default config
 const api = axios.create({
@@ -54,6 +54,10 @@ export const deleteArticle = (id) => api.delete(`/articles/${id}`);
 export const getInvestmentIdeas = (params) => api.get('/investment-ideas', { params });
 export const getIdeaById = (id) => api.get(`/investment-ideas/${id}`);
 
+// ── Video APIs ───────────────────────────────────────────────────────────────
+export const getVideos = (params) => api.get('/videos', { params });
+export const getVideoById = (id) => api.get(`/videos/${id}`);
+
 // ── Goals APIs ───────────────────────────────────────────────────────────────
 export const getGoals = () => api.get('/goals');
 export const createGoal = (data) => api.post('/goals', data);
@@ -62,5 +66,14 @@ export const deleteGoal = (id) => api.delete(`/goals/${id}`);
 
 // ── Recommendations API ──────────────────────────────────────────────────────
 export const getRecommendations = (profileType) => api.get(`/recommendations/${profileType}`);
+
+// ── Dashboard API ────────────────────────────────────────────────────────────
+export const getDashboardData = () => api.get('/dashboard');
+
+// ── News API ─────────────────────────────────────────────────────────────────
+export const getNews = () => api.get('/news');
+
+// ── Chatbot API ──────────────────────────────────────────────────────────────
+export const queryChatbot = (data) => api.post('/chatbot/query', data);
 
 export default api;

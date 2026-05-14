@@ -5,7 +5,12 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "dev": "nodemon server.js"
+        "dev": "nodemon server.js",
+        "seed:articles": "node seed/seedArticles.js",
+        "seed:ideas": "node seed/seedInvestmentIdeas.js",
+        "seed:videos": "node seed/seedVideos.js",
+        "generate:seeds": "node seed/generateSeeds.js",
+        "generate:videos": "node seed/generateVideos.js"
     },
     "dependencies": {
         "bcryptjs": "^2.4.3",
@@ -13,7 +18,9 @@
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
         "jsonwebtoken": "^9.0.2",
-        "mongoose": "^8.0.3"
+        "mongodb-memory-server": "^11.0.1",
+        "mongoose": "^8.0.3",
+        "rss-parser": "^3.13.0"
     },
     "devDependencies": {
         "nodemon": "^3.0.2"

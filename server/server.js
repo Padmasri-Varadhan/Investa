@@ -26,8 +26,12 @@ app.use(express.urlencoded({ limit: '10mb', extended: false }));
 app.use('/api', require('./routes/userRoutes'));
 app.use('/api/articles', require('./routes/articleRoutes'));
 app.use('/api/investment-ideas', require('./routes/investmentRoutes'));
+app.use('/api/videos', require('./routes/videoRoutes'));
 app.use('/api/goals', require('./routes/goalRoutes'));
 app.use('/api/recommendations', require('./routes/recommendationRoutes'));
+app.use('/api/dashboard', require('./routes/dashboardRoutes'));
+app.use('/api/news', require('./routes/newsRoutes'));
+app.use('/api/chatbot', require('./routes/chatbotRoutes'));
 
 // Health check route
 app.get('/', (req, res) => {
