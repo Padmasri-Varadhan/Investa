@@ -28,13 +28,25 @@ const riskConfig = {
 };
 
 const categoryLabels = {
-    index_fund:  '📈 Index Fund',
-    etf:         '🔗 ETF',
-    stocks:      '📊 Stocks',
-    real_estate: '🏘️ Real Estate',
-    bonds:       '💵 Bonds',
-    crypto:      '₿ Crypto',
-    mutual_fund: '💼 Mutual Fund',
+    'Savings Account': '🏦 Savings',
+    'Fixed Deposit (FD)': '🔒 Fixed Deposit',
+    'Recurring Deposit (RD)': '🔄 Recurring Deposit',
+    'Public Provident Fund (PPF)': '🏛️ PPF',
+    'Employee Provident Fund (EPF)': '🏢 EPF',
+    'National Pension System (NPS)': '👴 NPS',
+    'Gold Investment': '🥇 Gold',
+    'Government Schemes': '📜 Govt Schemes',
+    'Corporate Bonds': '🏢 Corporate Bonds',
+    'Treasury Bills': '📄 T-Bills',
+    'REITs': '🏢 REITs',
+    'International Investments': '🌍 International',
+    'Mutual Funds': '💼 Mutual Funds',
+    'SIP Investments': '🔄 SIP',
+    'Stocks': '📊 Stocks',
+    'Cryptocurrency': '₿ Crypto',
+    'Real Estate': '🏘️ Real Estate',
+    'ETFs': '🔗 ETFs',
+    'Index Funds': '📈 Index Funds'
 };
 
 const horizonLabels = {
@@ -454,6 +466,47 @@ function IdeaDetail() {
                             </Card>
                         )}
                     </Box>
+                </Grid>
+
+                {/* ── INTELLIGENT RECOMMENDATIONS ── */}
+                <Grid item xs={12}>
+                    <Card sx={{ borderRadius: '24px', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', bgcolor: '#007DA3', color: '#fff' }}>
+                        <CardContent sx={{ p: { xs: 3, md: 5 }, display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', gap: 4 }}>
+                            <Box sx={{ flex: 1 }}>
+                                <Typography variant="h5" fontWeight={900} mb={2}>
+                                    Take the next step in learning
+                                </Typography>
+                                <Typography variant="body1" sx={{ opacity: 0.9, mb: 3 }}>
+                                    {idea.category === 'Stocks' || idea.category === 'ETFs' || idea.category === 'Index Funds' ? 
+                                        'Ready to dive deeper into equity markets? Check out our Video Advisory on Stock Market Basics or read related articles to build a stronger portfolio.' :
+                                    idea.category === 'Real Estate' || idea.category === 'REITs' ?
+                                        'Property investment requires deep understanding of market trends. Read our comprehensive guides on Real Estate investing.' :
+                                    idea.category === 'Mutual Funds' || idea.category === 'SIP Investments' ?
+                                        'Harness the power of compounding. Explore our SIP learning content and start your journey towards automated wealth creation.' :
+                                        'Expand your financial knowledge by exploring our extensive library of articles and expert videos tailored to your interests.'}
+                                </Typography>
+                                <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+                                    <Button 
+                                        variant="contained" 
+                                        sx={{ bgcolor: '#fff', color: '#007DA3', fontWeight: 800, borderRadius: 3, '&:hover': { bgcolor: '#f8fafc' } }}
+                                        onClick={() => navigate('/articles')}
+                                    >
+                                        Explore Articles
+                                    </Button>
+                                    <Button 
+                                        variant="outlined" 
+                                        sx={{ borderColor: '#fff', color: '#fff', fontWeight: 800, borderRadius: 3, '&:hover': { bgcolor: 'rgba(255,255,255,0.1)', borderColor: '#fff' } }}
+                                        onClick={() => navigate('/video-advisory')}
+                                    >
+                                        Watch Videos
+                                    </Button>
+                                </Box>
+                            </Box>
+                            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                                <Bolt sx={{ fontSize: 100, opacity: 0.2 }} />
+                            </Box>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
 

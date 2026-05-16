@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography, TextField, InputAdornment, Chip, Pagination } from '@mui/material';
+import { Box, Grid, Typography, TextField, InputAdornment, Chip, Pagination, Autocomplete } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { getArticles } from '../services/api';
@@ -8,8 +8,9 @@ import InvestmentCard from '../components/InvestmentCard';
 const Articles = () => {
     const navigate = useNavigate();
     const [articles, setArticles] = useState([]);
-    const [tab, setTab] = useState('all');
+    const [tab, setTab] = useState(() => sessionStorage.getItem('investaArticleCategory') || 'All');
     const [search, setSearch] = useState('');
+    const [difficultyFilter, setDifficultyFilter] = useState(() => sessionStorage.getItem('investaArticleDifficulty') || 'All');
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -23,8 +24,9 @@ const Articles = () => {
                     page,
                     limit: itemsPerPage,
                 };
-                if (tab !== 'all') params.category = tab;
+                if (tab !== 'All') params.category = tab;
                 if (search) params.search = search;
+                if (difficultyFilter !== 'All') params.difficulty = difficultyFilter;
                 
                 const res = await getArticles(params);
                 setArticles(res.data.data || []);
@@ -36,74 +38,98 @@ const Articles = () => {
             }
         };
         fetchArticles();
-    }, [page, tab, search]);
+    }, [page, tab, search, difficultyFilter]);
 
     // Reset page when filter/search changes
     useEffect(() => {
         setPage(1);
-    }, [tab, search]);
+    }, [tab, search, difficultyFilter]);
 
 
 
-    const categories = [
-        'all', 'stocks', 'etf', 'index_fund', 'mutual_fund', 'bonds', 'crypto', 'real_estate', 
-        'savings_account', 'fixed_deposit', 'recurring_deposit', 'ppf', 'epf', 'nps', 
-        'gold_investment', 'government_schemes', 'corporate_bonds', 'treasury_bills', 
-        'reits', 'international_investments'
+    const categoryOptions = [
+        { label: 'All Categories', value: 'All', icon: '🌐' },
+        { label: 'Stock Market Basics', value: 'Stock Market Basics', icon: '📈' },
+        { label: 'Mutual Funds', value: 'Mutual Funds', icon: '💼' },
+        { label: 'SIP Investments', value: 'SIP Investments', icon: '🔄' },
+        { label: 'Real Estate', value: 'Real Estate', icon: '🏘️' },
+        { label: 'Cryptocurrency', value: 'Cryptocurrency', icon: '₿' },
+        { label: 'Gold Investment', value: 'Gold Investment', icon: '🥇' },
+        { label: 'Personal Finance', value: 'Personal Finance', icon: '💳' },
+        { label: 'Budgeting', value: 'Budgeting', icon: '📊' },
+        { label: 'Retirement Planning', value: 'Retirement Planning', icon: '🌴' },
+        { label: 'Tax Saving', value: 'Tax Saving', icon: '📑' },
+        { label: 'Wealth Building', value: 'Wealth Building', icon: '🏰' },
+        { label: 'Trading Basics', value: 'Trading Basics', icon: '⚡' },
+        { label: 'Fundamental Analysis', value: 'Fundamental Analysis', icon: '🔍' },
+        { label: 'Technical Analysis', value: 'Technical Analysis', icon: '📉' },
+        { label: 'Risk Management', value: 'Risk Management', icon: '🛡️' },
+        { label: 'Passive Income', value: 'Passive Income', icon: '🛋️' },
+        { label: 'ETFs and Index Funds', value: 'ETFs and Index Funds', icon: '🔗' },
+        { label: 'Bonds and Government Securities', value: 'Bonds and Government Securities', icon: '🏛️' },
+        { label: 'International Investing', value: 'International Investing', icon: '🌍' },
+        { label: 'Financial Planning', value: 'Financial Planning', icon: '🎯' }
     ];
 
     return (
-        <Box sx={{ px: { xs: 2, md: 4 }, py: 6, bgcolor: '#F9FAFB', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
+        <Box className="fade-in" sx={{ px: { xs: 2, md: 4 }, py: 6, bgcolor: '#F9FAFB', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
             <Typography 
                 variant="h4" 
                 sx={{ 
                     fontWeight: 900, 
                     color: '#007DA3', 
-                    mb: 6, 
+                    mb: 2, 
                     letterSpacing: '-0.5px' 
                 }}
             >
                 Investment Insights
             </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 6, maxWidth: 800 }}>
+                Master your financial future with 200+ expert articles ranging from beginner basics to advanced strategies.
+            </Typography>
 
-            {/* Filter and Search Bar */}
-            <Box sx={{ mb: 6, display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 3 }}>
-                <Box 
-                    sx={{ 
-                        display: 'flex', 
-                        gap: 1, 
-                        overflowX: 'auto', 
-                        pb: 1,
-                        width: { xs: '100%', md: '70%' },
-                        '&::-webkit-scrollbar': { height: '6px' },
-                        '&::-webkit-scrollbar-thumb': { bgcolor: '#cbd5e1', borderRadius: '3px' },
-                        '&::-webkit-scrollbar-track': { bgcolor: 'transparent' }
-                    }}
-                >
-                    {categories.map(cat => (
-                        <Chip 
-                            key={cat}
-                            label={cat.replace(/_/g, ' ').toUpperCase()}
-                            onClick={() => setTab(cat)}
-                            sx={{ 
-                                bgcolor: tab === cat ? '#007DA3' : 'white',
-                                color: tab === cat ? 'white' : '#4B5563',
-                                fontWeight: 700,
-                                px: 1,
-                                height: 36,
-                                flexShrink: 0,
-                                border: '1px solid #E5E7EB',
-                                '&:hover': { bgcolor: tab === cat ? '#005b7a' : '#F3F4F6' }
-                            }}
-                        />
-                    ))}
-                </Box>
+            {/* Sticky Filter and Search Bar */}
+            <Box 
+                sx={{ 
+                    position: 'sticky', 
+                    top: 0, 
+                    zIndex: 10, 
+                    bgcolor: 'rgba(249, 250, 251, 0.95)', 
+                    backdropFilter: 'blur(10px)',
+                    pt: 2,
+                    pb: 3,
+                    mb: 5,
+                    borderBottom: '1px solid #e2e8f0',
+                    display: 'flex', 
+                    flexWrap: { xs: 'wrap', lg: 'nowrap' },
+                    gap: 2.5,
+                    alignItems: 'center',
+                    mx: { xs: -2, md: -4 },
+                    px: { xs: 2, md: 4 }
+                }}
+            >
                 <TextField
                     placeholder="Search articles..."
-                    size="small"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    sx={{ width: { xs: '100%', md: 320 }, bgcolor: 'white', borderRadius: '8px', '& .MuiOutlinedInput-root': { borderRadius: '8px' } }}
+                    sx={{ 
+                        flexGrow: 1, 
+                        minWidth: { xs: '100%', lg: '250px' }, 
+                        bgcolor: 'white', 
+                        borderRadius: '12px', 
+                        '& .MuiOutlinedInput-root': { 
+                            borderRadius: '12px',
+                            height: 56, 
+                            transition: 'all 0.3s',
+                            '&:hover': {
+                                boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+                            },
+                            '&.Mui-focused': {
+                                boxShadow: '0 4px 6px -1px rgba(0, 125, 163, 0.2)',
+                                borderColor: '#007DA3'
+                            }
+                        } 
+                    }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
@@ -112,6 +138,92 @@ const Articles = () => {
                         ),
                     }}
                 />
+                
+                <Autocomplete
+                    options={categoryOptions}
+                    getOptionLabel={(option) => option.label || ''}
+                    value={categoryOptions.find(c => c.value === tab) || categoryOptions[0]}
+                    onChange={(event, newValue) => {
+                        if (newValue) {
+                            setTab(newValue.value);
+                            sessionStorage.setItem('investaArticleCategory', newValue.value);
+                        }
+                    }}
+                    disableClearable
+                    sx={{ 
+                        width: { xs: '100%', md: '300px', lg: '280px' },
+                        flexShrink: 0,
+                        '& .MuiOutlinedInput-root': { 
+                            borderRadius: '12px',
+                            bgcolor: 'white',
+                            height: 56,
+                            transition: 'all 0.3s',
+                            '&:hover': {
+                                boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+                            },
+                            '&.Mui-focused': {
+                                boxShadow: '0 4px 6px -1px rgba(0, 125, 163, 0.2)',
+                                borderColor: '#007DA3'
+                            }
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField 
+                            {...params} 
+                            placeholder="All Categories"
+                        />
+                    )}
+                    renderOption={(props, option) => (
+                        <Box 
+                            component="li" 
+                            {...props} 
+                            sx={{ 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                gap: 2, 
+                                py: 1.5,
+                                px: 2,
+                                borderBottom: '1px solid #f1f5f9',
+                                transition: 'all 0.2s',
+                                '&:hover': {
+                                    bgcolor: '#e6f5fa !important',
+                                    color: '#007DA3'
+                                },
+                                '&.Mui-selected': {
+                                    bgcolor: 'rgba(0, 125, 163, 0.1) !important',
+                                    color: '#007DA3',
+                                    fontWeight: 800
+                                }
+                            }}
+                        >
+                            <Typography variant="h6" sx={{ minWidth: 32, textAlign: 'center' }}>{option.icon}</Typography>
+                            <Typography variant="body1" fontWeight={600}>{option.label}</Typography>
+                        </Box>
+                    )}
+                />
+
+                <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', flexShrink: 0, overflowX: 'auto', pb: { xs: 1, lg: 0 }, '&::-webkit-scrollbar': { display: 'none' } }}>
+                    <Typography variant="body2" fontWeight={700} color="text.secondary" sx={{ mr: 0.5, whiteSpace: 'nowrap' }}>Level:</Typography>
+                    {['All', 'Beginner', 'Intermediate', 'Advanced'].map(r => (
+                        <Chip 
+                            key={r} label={r}
+                            onClick={() => {
+                                setDifficultyFilter(r);
+                                sessionStorage.setItem('investaArticleDifficulty', r);
+                            }}
+                            sx={{ 
+                                fontWeight: 700, 
+                                height: 40,
+                                borderRadius: '12px',
+                                bgcolor: difficultyFilter === r ? '#007DA3' : 'white', 
+                                color: difficultyFilter === r ? 'white' : '#4B5563',
+                                border: '1px solid #e2e8f0',
+                                '&:hover': { bgcolor: difficultyFilter === r ? '#007DA3' : '#f1f5f9', color: difficultyFilter === r ? 'white' : '#007DA3' },
+                                transition: 'all 0.2s'
+                            }} 
+                        />
+                    ))}
+                </Box>
             </Box>
 
             {/* Article Grid */}

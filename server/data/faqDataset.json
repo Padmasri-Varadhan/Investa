@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "topic": "SIP",
+    "question": "What is a Systematic Investment Plan (SIP)?",
+    "content": "A SIP is a method of investing a fixed amount regularly (e.g., monthly) into a mutual fund. It leverages the power of compounding and rupee cost averaging, meaning you buy more units when prices are low and fewer when prices are high, which reduces overall risk over time.",
+    "complexity": "beginner"
+  },
+  {
+    "id": "2",
+    "topic": "Long-Term Investments",
+    "question": "What are the best long-term investments?",
+    "content": "For a long-term horizon (5+ years), Equity Mutual Funds, Index ETFs, and high-quality blue-chip stocks are historically proven to beat inflation. Real estate is also an option, but it requires significant capital and lacks liquidity. Diversifying across these asset classes reduces portfolio risk.",
+    "complexity": "intermediate"
+  },
+  {
+    "id": "3",
+    "topic": "Real Estate",
+    "question": "Should I invest in Real Estate or Stocks?",
+    "content": "Real estate offers tangible assets and potential rental income, but has low liquidity and high entry costs. Stocks/Mutual funds offer high liquidity, easier diversification, and historically higher returns, but come with higher short-term volatility. Many investors balance both through REITs (Real Estate Investment Trusts).",
+    "complexity": "intermediate"
+  },
+  {
+    "id": "4",
+    "topic": "Cryptocurrency",
+    "question": "Is cryptocurrency a good investment?",
+    "content": "Cryptocurrency (like Bitcoin) is a high-risk, high-reward digital asset class. Because it is highly volatile and lacks fundamental intrinsic value like a company's earnings, it should only form a very small portion (e.g., 1-5%) of a well-diversified portfolio. It is not suitable for conservative investors.",
+    "complexity": "advanced"
+  },
+  {
+    "id": "5",
+    "topic": "Beginner Guide",
+    "question": "How to start investing?",
+    "content": "To start investing: 1. Build an emergency fund (3-6 months of expenses). 2. Pay off high-interest debt. 3. Define your financial goals (e.g., retirement, buying a home). 4. Start small using a SIP in an Index Mutual Fund or ETF. 5. Educate yourself on risk management.",
+    "complexity": "beginner"
+  },
+  {
+    "id": "6",
+    "topic": "Risk Management",
+    "question": "What is portfolio diversification and why is it important?",
+    "content": "Diversification is the practice of spreading your investments around so that your exposure to any one type of asset is limited. This is designed to help reduce the volatility of your portfolio over time. By investing across different asset classes (equities, bonds, gold, real estate), a drop in one market might be offset by stability in another.",
+    "complexity": "intermediate"
+  }
+]

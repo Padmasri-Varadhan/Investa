@@ -1,1892 +1,3402 @@
 [
   {
-    "title": "How The Economic Machine Works",
-    "category": "Economics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/PHe0bXAIuk0/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/PHe0bXAIuk0",
-    "duration": "5:00",
-    "description": "Ray Dalio explains how the economy works in simple terms — debt cycles, credit, and productivity.",
+    "title": "Stock Market For Beginners 2024",
+    "category": "Stock Market Basics",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Stock Market For Beginners 2024. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "15:38",
+    "advisor": "Investa Academy",
+    "views": "31K",
+    "tags": [
+      "stock_market_basics",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How Does the Stock Market Work?",
+    "category": "Stock Market Basics",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about How Does the Stock Market Work?. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "13:56",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "81K",
     "tags": [
-      "economics",
+      "stock_market_basics",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.765Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "What is the Stock Market?",
-    "category": "Stocks",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/ZCFkWDdmXG8/mqdefault.jpg",
+    "title": "What is a Stock?",
+    "category": "Stock Market Basics",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/Xn7KWR9EOGQ",
+    "thumbnail": "https://img.youtube.com/vi/Xn7KWR9EOGQ/maxresdefault.jpg",
+    "description": "Learn about What is a Stock?. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "7:43",
+    "advisor": "Priya Desai",
+    "views": "55K",
+    "tags": [
+      "stock_market_basics",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Invest in Stocks for Beginners",
+    "category": "Stock Market Basics",
+    "level": "Intermediate",
     "videoUrl": "https://www.youtube.com/embed/ZCFkWDdmXG8",
-    "duration": "6:07",
-    "description": "A clear introduction to how stock markets function and why companies list publicly.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "thumbnail": "https://img.youtube.com/vi/ZCFkWDdmXG8/maxresdefault.jpg",
+    "description": "Learn about How to Invest in Stocks for Beginners. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "10:38",
+    "advisor": "Arjun Patel",
+    "views": "34K",
     "tags": [
-      "stocks",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "stock_market_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Index Funds Explained for Beginners",
-    "category": "Index Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/f5yd9eKfVAE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/f5yd9eKfVAE",
-    "duration": "7:14",
-    "description": "Why low-cost index funds outperform most actively managed funds over the long term.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
+    "title": "Bull vs Bear Markets Explained",
+    "category": "Stock Market Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/86rPBT8-9wY",
+    "thumbnail": "https://img.youtube.com/vi/86rPBT8-9wY/maxresdefault.jpg",
+    "description": "Learn about Bull vs Bear Markets Explained. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "12:43",
+    "advisor": "Investa Academy",
+    "views": "69K",
     "tags": [
-      "index_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "stock_market_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Mutual Funds vs ETFs",
+    "title": "Stock Market Basics – Index Funds",
+    "category": "Stock Market Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Stock Market Basics – Index Funds. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "6:56",
+    "advisor": "Rahul Sharma",
+    "views": "87K",
+    "tags": [
+      "stock_market_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Understanding Market Capitalization",
+    "category": "Stock Market Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Understanding Market Capitalization. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "12:29",
+    "advisor": "Priya Desai",
+    "views": "90K",
+    "tags": [
+      "stock_market_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Read Stock Charts",
+    "category": "Stock Market Basics",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/lNdOtlpmH5M",
+    "thumbnail": "https://img.youtube.com/vi/lNdOtlpmH5M/maxresdefault.jpg",
+    "description": "Learn about How to Read Stock Charts. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "12:55",
+    "advisor": "Arjun Patel",
+    "views": "45K",
+    "tags": [
+      "stock_market_basics",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Understanding Dividends",
+    "category": "Stock Market Basics",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Understanding Dividends. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "14:44",
+    "advisor": "Investa Academy",
+    "views": "73K",
+    "tags": [
+      "stock_market_basics",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Common Stock Market Mistakes",
+    "category": "Stock Market Basics",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Common Stock Market Mistakes. This video covers core concepts of Stock Market Basics in a beginner-friendly and practical way.",
+    "duration": "13:56",
+    "advisor": "Rahul Sharma",
+    "views": "54K",
+    "tags": [
+      "stock_market_basics",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What Are Mutual Funds?",
     "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/HQzoZfc3GwQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/HQzoZfc3GwQ",
-    "duration": "8:21",
-    "description": "Key differences between mutual funds and ETFs — costs, liquidity, and tax efficiency.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about What Are Mutual Funds?. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "16:53",
+    "advisor": "Investa Academy",
+    "views": "56K",
     "tags": [
       "mutual_funds",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Power of Compound Interest",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/3kVPWdGMNQ0/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/3kVPWdGMNQ0",
-    "duration": "9:28",
-    "description": "How compound interest turns small regular investments into significant wealth over time.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
+    "title": "SIP vs Lump Sum Investment",
+    "category": "Mutual Funds",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about SIP vs Lump Sum Investment. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "16:28",
+    "advisor": "Rahul Sharma",
+    "views": "42K",
     "tags": [
-      "basics",
+      "mutual_funds",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "What is a SIP? Systematic Investment Plan",
-    "category": "SIP",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/p7HKvqRI_Bo/mqdefault.jpg",
+    "title": "Types of Mutual Funds Explained",
+    "category": "Mutual Funds",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Types of Mutual Funds Explained. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "6:42",
+    "advisor": "Priya Desai",
+    "views": "30K",
+    "tags": [
+      "mutual_funds",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How NAV Works in Mutual Funds",
+    "category": "Mutual Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about How NAV Works in Mutual Funds. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "12:52",
+    "advisor": "Arjun Patel",
+    "views": "47K",
+    "tags": [
+      "mutual_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Best Mutual Funds for Beginners",
+    "category": "Mutual Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/lzlKU7-Jy6s",
+    "thumbnail": "https://img.youtube.com/vi/lzlKU7-Jy6s/maxresdefault.jpg",
+    "description": "Learn about Best Mutual Funds for Beginners. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "16:25",
+    "advisor": "Investa Academy",
+    "views": "94K",
+    "tags": [
+      "mutual_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "ELSS Tax Saving Funds",
+    "category": "Mutual Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/w4aZQjMG5YY",
+    "thumbnail": "https://img.youtube.com/vi/w4aZQjMG5YY/maxresdefault.jpg",
+    "description": "Learn about ELSS Tax Saving Funds. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "7:52",
+    "advisor": "Rahul Sharma",
+    "views": "25K",
+    "tags": [
+      "mutual_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Debt vs Equity Mutual Funds",
+    "category": "Mutual Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ZijKzE3RMQM",
+    "thumbnail": "https://img.youtube.com/vi/ZijKzE3RMQM/maxresdefault.jpg",
+    "description": "Learn about Debt vs Equity Mutual Funds. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "14:36",
+    "advisor": "Priya Desai",
+    "views": "33K",
+    "tags": [
+      "mutual_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Mutual Fund Expense Ratio Explained",
+    "category": "Mutual Funds",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/wSs3-OFGgaM",
+    "thumbnail": "https://img.youtube.com/vi/wSs3-OFGgaM/maxresdefault.jpg",
+    "description": "Learn about Mutual Fund Expense Ratio Explained. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "16:49",
+    "advisor": "Arjun Patel",
+    "views": "66K",
+    "tags": [
+      "mutual_funds",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Build a Mutual Fund Portfolio",
+    "category": "Mutual Funds",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/HhGKpM-QKeo",
+    "thumbnail": "https://img.youtube.com/vi/HhGKpM-QKeo/maxresdefault.jpg",
+    "description": "Learn about How to Build a Mutual Fund Portfolio. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "6:56",
+    "advisor": "Investa Academy",
+    "views": "84K",
+    "tags": [
+      "mutual_funds",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Common Mutual Fund Mistakes",
+    "category": "Mutual Funds",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/rPqHJTTQ73A",
+    "thumbnail": "https://img.youtube.com/vi/rPqHJTTQ73A/maxresdefault.jpg",
+    "description": "Learn about Common Mutual Fund Mistakes. This video covers core concepts of Mutual Funds in a beginner-friendly and practical way.",
+    "duration": "15:24",
+    "advisor": "Rahul Sharma",
+    "views": "11K",
+    "tags": [
+      "mutual_funds",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What is SIP?",
+    "category": "SIP Investments",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about What is SIP?. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "6:54",
+    "advisor": "Investa Academy",
+    "views": "38K",
+    "tags": [
+      "sip_investments",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Power of Compounding in SIP",
+    "category": "SIP Investments",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Power of Compounding in SIP. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "10:47",
+    "advisor": "Rahul Sharma",
+    "views": "73K",
+    "tags": [
+      "sip_investments",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Start a SIP",
+    "category": "SIP Investments",
+    "level": "Beginner",
     "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
-    "duration": "10:35",
-    "description": "Everything you need to know about starting a SIP and how rupee cost averaging works.",
-    "advisor": "Anita Desai",
-    "views": "62K",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about How to Start a SIP. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "6:35",
+    "advisor": "Priya Desai",
+    "views": "60K",
     "tags": [
-      "sip",
+      "sip_investments",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "SIP Returns Calculator Explained",
+    "category": "SIP Investments",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about SIP Returns Calculator Explained. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "12:46",
+    "advisor": "Arjun Patel",
+    "views": "35K",
+    "tags": [
+      "sip_investments",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Top SIP Funds to Invest",
+    "category": "SIP Investments",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Top SIP Funds to Invest. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "7:22",
+    "advisor": "Investa Academy",
+    "views": "70K",
+    "tags": [
+      "sip_investments",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "SIP vs RD Comparison",
+    "category": "SIP Investments",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about SIP vs RD Comparison. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "11:59",
+    "advisor": "Rahul Sharma",
+    "views": "51K",
+    "tags": [
+      "sip_investments",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "SIP Investment Strategy",
+    "category": "SIP Investments",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about SIP Investment Strategy. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "16:49",
+    "advisor": "Priya Desai",
+    "views": "36K",
+    "tags": [
+      "sip_investments",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Rupee Cost Averaging in SIP",
+    "category": "SIP Investments",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Rupee Cost Averaging in SIP. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "8:17",
+    "advisor": "Arjun Patel",
+    "views": "97K",
+    "tags": [
+      "sip_investments",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Step-up SIP Explained",
+    "category": "SIP Investments",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Step-up SIP Explained. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "7:38",
+    "advisor": "Investa Academy",
+    "views": "81K",
+    "tags": [
+      "sip_investments",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "SIP for Long-Term Wealth",
+    "category": "SIP Investments",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about SIP for Long-Term Wealth. This video covers core concepts of SIP Investments in a beginner-friendly and practical way.",
+    "duration": "16:19",
+    "advisor": "Rahul Sharma",
+    "views": "97K",
+    "tags": [
+      "sip_investments",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Cryptocurrency Explained for Beginners",
+    "category": "Cryptocurrency",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/rYQgy8QDEBI",
+    "thumbnail": "https://img.youtube.com/vi/rYQgy8QDEBI/maxresdefault.jpg",
+    "description": "Learn about Cryptocurrency Explained for Beginners. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "10:26",
+    "advisor": "Investa Academy",
+    "views": "38K",
+    "tags": [
+      "cryptocurrency",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What is Bitcoin?",
+    "category": "Cryptocurrency",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/SSo_EIwHSd4",
+    "thumbnail": "https://img.youtube.com/vi/SSo_EIwHSd4/maxresdefault.jpg",
+    "description": "Learn about What is Bitcoin?. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "8:42",
+    "advisor": "Rahul Sharma",
+    "views": "58K",
+    "tags": [
+      "cryptocurrency",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How Blockchain Works",
+    "category": "Cryptocurrency",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/bBC-nXj3Ng4",
+    "thumbnail": "https://img.youtube.com/vi/bBC-nXj3Ng4/maxresdefault.jpg",
+    "description": "Learn about How Blockchain Works. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "10:52",
+    "advisor": "Priya Desai",
+    "views": "33K",
+    "tags": [
+      "cryptocurrency",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What is Ethereum?",
+    "category": "Cryptocurrency",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/Gc2en3nHxA4",
+    "thumbnail": "https://img.youtube.com/vi/Gc2en3nHxA4/maxresdefault.jpg",
+    "description": "Learn about What is Ethereum?. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "5:44",
+    "advisor": "Arjun Patel",
+    "views": "38K",
+    "tags": [
+      "cryptocurrency",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Invest in Cryptocurrency",
+    "category": "Cryptocurrency",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ySHNPVOFAMo",
+    "thumbnail": "https://img.youtube.com/vi/ySHNPVOFAMo/maxresdefault.jpg",
+    "description": "Learn about How to Invest in Cryptocurrency. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "7:35",
+    "advisor": "Investa Academy",
+    "views": "46K",
+    "tags": [
+      "cryptocurrency",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Crypto Wallets Explained",
+    "category": "Cryptocurrency",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/VnYa3pBrIXo",
+    "thumbnail": "https://img.youtube.com/vi/VnYa3pBrIXo/maxresdefault.jpg",
+    "description": "Learn about Crypto Wallets Explained. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "6:27",
+    "advisor": "Rahul Sharma",
+    "views": "94K",
+    "tags": [
+      "cryptocurrency",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "DeFi: Decentralized Finance Explained",
+    "category": "Cryptocurrency",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/xf0RdfE73jM",
+    "thumbnail": "https://img.youtube.com/vi/xf0RdfE73jM/maxresdefault.jpg",
+    "description": "Learn about DeFi: Decentralized Finance Explained. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "9:14",
+    "advisor": "Priya Desai",
+    "views": "86K",
+    "tags": [
+      "cryptocurrency",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "NFTs Explained Simply",
+    "category": "Cryptocurrency",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/E3BG_K5GUB4",
+    "thumbnail": "https://img.youtube.com/vi/E3BG_K5GUB4/maxresdefault.jpg",
+    "description": "Learn about NFTs Explained Simply. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "5:58",
+    "advisor": "Arjun Patel",
+    "views": "70K",
+    "tags": [
+      "cryptocurrency",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Crypto Risks and Volatility",
+    "category": "Cryptocurrency",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/kCMFjlLF0mU",
+    "thumbnail": "https://img.youtube.com/vi/kCMFjlLF0mU/maxresdefault.jpg",
+    "description": "Learn about Crypto Risks and Volatility. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "14:47",
+    "advisor": "Investa Academy",
+    "views": "16K",
+    "tags": [
+      "cryptocurrency",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Top Crypto Investment Mistakes",
+    "category": "Cryptocurrency",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/JIFCNTBeN_4",
+    "thumbnail": "https://img.youtube.com/vi/JIFCNTBeN_4/maxresdefault.jpg",
+    "description": "Learn about Top Crypto Investment Mistakes. This video covers core concepts of Cryptocurrency in a beginner-friendly and practical way.",
+    "duration": "14:33",
+    "advisor": "Rahul Sharma",
+    "views": "17K",
+    "tags": [
+      "cryptocurrency",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Real Estate Investing for Beginners",
+    "category": "Real Estate",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/eMOBn6JfFhE",
+    "thumbnail": "https://img.youtube.com/vi/eMOBn6JfFhE/maxresdefault.jpg",
+    "description": "Learn about Real Estate Investing for Beginners. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "16:32",
+    "advisor": "Investa Academy",
+    "views": "14K",
+    "tags": [
+      "real_estate",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Buy Your First Investment Property",
+    "category": "Real Estate",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/3DJKhKt9zog",
+    "thumbnail": "https://img.youtube.com/vi/3DJKhKt9zog/maxresdefault.jpg",
+    "description": "Learn about How to Buy Your First Investment Property. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "10:20",
+    "advisor": "Rahul Sharma",
+    "views": "22K",
+    "tags": [
+      "real_estate",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "REITs Explained",
+    "category": "Real Estate",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/DxmDFBJFVJg",
+    "thumbnail": "https://img.youtube.com/vi/DxmDFBJFVJg/maxresdefault.jpg",
+    "description": "Learn about REITs Explained. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "15:56",
+    "advisor": "Priya Desai",
+    "views": "77K",
+    "tags": [
+      "real_estate",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Rental Property Cash Flow Basics",
+    "category": "Real Estate",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Rental Property Cash Flow Basics. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "11:39",
+    "advisor": "Arjun Patel",
+    "views": "64K",
+    "tags": [
+      "real_estate",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Real Estate vs Stock Market",
+    "category": "Real Estate",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Real Estate vs Stock Market. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "12:57",
+    "advisor": "Investa Academy",
+    "views": "76K",
+    "tags": [
+      "real_estate",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Commercial Real Estate Basics",
+    "category": "Real Estate",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Commercial Real Estate Basics. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "6:43",
+    "advisor": "Rahul Sharma",
+    "views": "94K",
+    "tags": [
+      "real_estate",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Analyze a Real Estate Deal",
+    "category": "Real Estate",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about How to Analyze a Real Estate Deal. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "11:21",
+    "advisor": "Priya Desai",
+    "views": "19K",
+    "tags": [
+      "real_estate",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Real Estate Market Trends",
+    "category": "Real Estate",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Real Estate Market Trends. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "7:54",
+    "advisor": "Arjun Patel",
+    "views": "70K",
+    "tags": [
+      "real_estate",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Passive Income from Real Estate",
+    "category": "Real Estate",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Passive Income from Real Estate. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "7:32",
+    "advisor": "Investa Academy",
+    "views": "59K",
+    "tags": [
+      "real_estate",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Common Real Estate Mistakes",
+    "category": "Real Estate",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Common Real Estate Mistakes. This video covers core concepts of Real Estate in a beginner-friendly and practical way.",
+    "duration": "8:10",
+    "advisor": "Rahul Sharma",
+    "views": "27K",
+    "tags": [
+      "real_estate",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Why Invest in Gold?",
+    "category": "Gold Investment",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Why Invest in Gold?. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "16:58",
+    "advisor": "Investa Academy",
+    "views": "51K",
+    "tags": [
+      "gold_investment",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Gold ETF vs Physical Gold",
+    "category": "Gold Investment",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Gold ETF vs Physical Gold. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "12:34",
+    "advisor": "Rahul Sharma",
+    "views": "17K",
+    "tags": [
+      "gold_investment",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Sovereign Gold Bonds Explained",
+    "category": "Gold Investment",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Sovereign Gold Bonds Explained. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "10:48",
+    "advisor": "Priya Desai",
+    "views": "24K",
+    "tags": [
+      "gold_investment",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Gold as a Hedge Against Inflation",
+    "category": "Gold Investment",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Gold as a Hedge Against Inflation. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "14:50",
+    "advisor": "Arjun Patel",
+    "views": "43K",
+    "tags": [
+      "gold_investment",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Buy Digital Gold",
+    "category": "Gold Investment",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about How to Buy Digital Gold. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "15:39",
+    "advisor": "Investa Academy",
+    "views": "38K",
+    "tags": [
+      "gold_investment",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Gold Mutual Funds Explained",
+    "category": "Gold Investment",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Gold Mutual Funds Explained. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "9:29",
+    "advisor": "Rahul Sharma",
+    "views": "70K",
+    "tags": [
+      "gold_investment",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Best Way to Invest in Gold in India",
+    "category": "Gold Investment",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Best Way to Invest in Gold in India. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "11:10",
+    "advisor": "Priya Desai",
+    "views": "55K",
+    "tags": [
+      "gold_investment",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Historical Performance of Gold",
+    "category": "Gold Investment",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Historical Performance of Gold. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "11:47",
+    "advisor": "Arjun Patel",
+    "views": "59K",
+    "tags": [
+      "gold_investment",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Gold vs Bitcoin: Which is Better?",
+    "category": "Gold Investment",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Gold vs Bitcoin: Which is Better?. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "13:34",
+    "advisor": "Investa Academy",
+    "views": "36K",
+    "tags": [
+      "gold_investment",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Portfolio Allocation for Gold",
+    "category": "Gold Investment",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Portfolio Allocation for Gold. This video covers core concepts of Gold Investment in a beginner-friendly and practical way.",
+    "duration": "10:40",
+    "advisor": "Rahul Sharma",
+    "views": "94K",
+    "tags": [
+      "gold_investment",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Personal Finance 101",
+    "category": "Personal Finance",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/HQzoZfc3GwQ",
+    "thumbnail": "https://img.youtube.com/vi/HQzoZfc3GwQ/maxresdefault.jpg",
+    "description": "Learn about Personal Finance 101. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "5:28",
+    "advisor": "Investa Academy",
+    "views": "76K",
+    "tags": [
+      "personal_finance",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "50/30/20 Budget Rule Explained",
+    "category": "Personal Finance",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/syyv9GQkn78",
+    "thumbnail": "https://img.youtube.com/vi/syyv9GQkn78/maxresdefault.jpg",
+    "description": "Learn about 50/30/20 Budget Rule Explained. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "7:23",
+    "advisor": "Rahul Sharma",
+    "views": "92K",
+    "tags": [
+      "personal_finance",
+      "beginner",
+      "finance",
+      "investing"
+    ]
   },
   {
     "title": "How to Build an Emergency Fund",
-    "category": "Emergency Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/SS-9y0H3Si8/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/SS-9y0H3Si8",
-    "duration": "11:42",
-    "description": "Why 3-6 months of expenses as a liquid safety net is your first financial priority.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
+    "category": "Personal Finance",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/K28JqKPzFrU",
+    "thumbnail": "https://img.youtube.com/vi/K28JqKPzFrU/maxresdefault.jpg",
+    "description": "Learn about How to Build an Emergency Fund. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "15:38",
+    "advisor": "Priya Desai",
+    "views": "71K",
     "tags": [
-      "emergency_funds",
+      "personal_finance",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Understanding Risk and Return",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/6ETGGgkCHgc/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/6ETGGgkCHgc",
-    "duration": "12:49",
-    "description": "The fundamental trade-off every investor must understand before putting money to work.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
+    "title": "Getting Out of Debt Fast",
+    "category": "Personal Finance",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/wHHfPHiIXrI",
+    "thumbnail": "https://img.youtube.com/vi/wHHfPHiIXrI/maxresdefault.jpg",
+    "description": "Learn about Getting Out of Debt Fast. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "5:54",
+    "advisor": "Arjun Patel",
+    "views": "11K",
     "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "personal_finance",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Stocks vs Bonds Explained",
-    "category": "Bonds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/_FuuYSM7yOo/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/_FuuYSM7yOo",
-    "duration": "13:56",
-    "description": "How equities and fixed income differ in risk, return, and role within a portfolio.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
+    "title": "Credit Score Explained",
+    "category": "Personal Finance",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/oA26JGpMZjE",
+    "thumbnail": "https://img.youtube.com/vi/oA26JGpMZjE/maxresdefault.jpg",
+    "description": "Learn about Credit Score Explained. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "10:18",
+    "advisor": "Investa Academy",
+    "views": "28K",
     "tags": [
-      "bonds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "personal_finance",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "ETF Introduction — What Are ETFs?",
-    "category": "ETFs",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/glmGpVuHGu0/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/glmGpVuHGu0",
-    "duration": "14:03",
-    "description": "Exchange-Traded Funds explained from scratch — structure, benefits and how to buy them.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "etfs",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Dividend Investing for Beginners",
-    "category": "Dividend Stocks",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/2qYQhsG5-Ow/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/2qYQhsG5-Ow",
-    "duration": "15:10",
-    "description": "How dividends work and how to build a growing passive income stream from dividend stocks.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "dividend_stocks",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "What is Inflation and How to Beat It",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/YBjvnCZMEac/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/YBjvnCZMEac",
-    "duration": "16:17",
-    "description": "How rising prices erode purchasing power and which assets historically outpace inflation.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Gold as an Investment — Is It Worth It?",
-    "category": "Gold",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/UkpiM4qcSLo/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/UkpiM4qcSLo",
-    "duration": "17:24",
-    "description": "Comparing gold returns against equities over 20 years — when gold makes sense in a portfolio.",
+    "title": "How to Save Money Every Month",
+    "category": "Personal Finance",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about How to Save Money Every Month. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "10:40",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "10K",
     "tags": [
-      "gold",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "personal_finance",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Fixed Deposits vs Mutual Funds",
-    "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/bDEFkYxwfN4/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/bDEFkYxwfN4",
-    "duration": "18:31",
-    "description": "Data-driven comparison of FD returns vs equity mutual funds over a 10-year horizon.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "title": "Financial Goals Setting",
+    "category": "Personal Finance",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Financial Goals Setting. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "10:29",
+    "advisor": "Priya Desai",
+    "views": "34K",
     "tags": [
-      "mutual_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "personal_finance",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "What is a Demat Account?",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/iKgE2bRRlmI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/iKgE2bRRlmI",
-    "duration": "19:38",
-    "description": "Step-by-step guide to opening a Demat account and making your very first investment.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
+    "title": "Insurance Basics for Beginners",
+    "category": "Personal Finance",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Insurance Basics for Beginners. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "16:52",
+    "advisor": "Arjun Patel",
+    "views": "63K",
     "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "personal_finance",
+      "advanced",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Large Cap vs Mid Cap vs Small Cap",
-    "category": "Stocks",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/GbkxTXPKLMI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/GbkxTXPKLMI",
-    "duration": "20:45",
-    "description": "Understanding market capitalisation categories and matching them to your risk profile.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
+    "title": "Net Worth: What It Is and How to Grow It",
+    "category": "Personal Finance",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Net Worth: What It Is and How to Grow It. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "9:42",
+    "advisor": "Investa Academy",
+    "views": "56K",
     "tags": [
-      "stocks",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "personal_finance",
+      "advanced",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Sovereign Gold Bonds (SGB) Explained",
-    "category": "Gold",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/Q6M8yMfpMwI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Q6M8yMfpMwI",
-    "duration": "21:52",
-    "description": "How SGBs give gold exposure plus government-backed interest — better than physical gold.",
-    "advisor": "Priya Mehra",
+    "title": "Compound Interest Explained",
+    "category": "Personal Finance",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Compound Interest Explained. This video covers core concepts of Personal Finance in a beginner-friendly and practical way.",
+    "duration": "14:20",
+    "advisor": "Rahul Sharma",
+    "views": "87K",
+    "tags": [
+      "personal_finance",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Make a Budget",
+    "category": "Budgeting",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/syyv9GQkn78",
+    "thumbnail": "https://img.youtube.com/vi/syyv9GQkn78/maxresdefault.jpg",
+    "description": "Learn about How to Make a Budget. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "16:56",
+    "advisor": "Investa Academy",
     "views": "48K",
     "tags": [
-      "gold",
+      "budgeting",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "NAV — Net Asset Value Explained",
-    "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/q5eCMCiKJ98/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/q5eCMCiKJ98",
-    "duration": "22:59",
-    "description": "What NAV is, why it changes daily, and why a lower NAV is not always a better deal.",
-    "advisor": "Anita Desai",
-    "views": "62K",
-    "tags": [
-      "mutual_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "PPF vs ELSS Tax Saving Comparison",
-    "category": "Tax",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/B07hGtR0L3A/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/B07hGtR0L3A",
-    "duration": "5:06",
-    "description": "Comparing Public Provident Fund and ELSS under Section 80C for best tax-saving returns.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "tax",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Debt Funds for Beginners",
-    "category": "Bonds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/wlP1JD4XKQM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/wlP1JD4XKQM",
-    "duration": "6:13",
-    "description": "Categories of debt mutual funds, taxation rules, and when to choose them over FDs.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "bonds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "How SIP Returns Are Calculated (XIRR)",
-    "category": "SIP",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/VyHV0BRtdxo/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/VyHV0BRtdxo",
-    "duration": "7:20",
-    "description": "XIRR vs CAGR — which metric correctly measures your SIP performance and why it matters.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "sip",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Expense Ratio — The Silent Return Killer",
-    "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/tSugYFiSMRQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/tSugYFiSMRQ",
-    "duration": "8:27",
-    "description": "How even a 1% expense ratio difference costs lakhs over a 20-year investment horizon.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "mutual_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Life Insurance vs Investment",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/klvY1sPkMDk/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/klvY1sPkMDk",
-    "duration": "9:34",
-    "description": "Why mixing life cover with investment (ULIPs) is almost always a financial mistake.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Real Estate vs Stocks: 20 Year Data",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/J3NCnJXHMag/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/J3NCnJXHMag",
-    "duration": "10:41",
-    "description": "Data-driven comparison of real estate and equity returns over two decades in India.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Portfolio Diversification Basics",
-    "category": "Diversification",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/nGoYgekFBrs/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/nGoYgekFBrs",
-    "duration": "11:48",
-    "description": "Why spreading investments across assets, sectors and geographies reduces overall risk.",
+    "title": "Zero-Based Budgeting Explained",
+    "category": "Budgeting",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/HQzoZfc3GwQ",
+    "thumbnail": "https://img.youtube.com/vi/HQzoZfc3GwQ/maxresdefault.jpg",
+    "description": "Learn about Zero-Based Budgeting Explained. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "6:50",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "13K",
     "tags": [
-      "diversification",
+      "budgeting",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "How to Set Financial Goals",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/z3IchZ0WEtY/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/z3IchZ0WEtY",
+    "title": "Budget Apps for Beginners",
+    "category": "Budgeting",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/K28JqKPzFrU",
+    "thumbnail": "https://img.youtube.com/vi/K28JqKPzFrU/maxresdefault.jpg",
+    "description": "Learn about Budget Apps for Beginners. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "11:33",
+    "advisor": "Priya Desai",
+    "views": "59K",
+    "tags": [
+      "budgeting",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "50/30/20 Rule",
+    "category": "Budgeting",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/oA26JGpMZjE",
+    "thumbnail": "https://img.youtube.com/vi/oA26JGpMZjE/maxresdefault.jpg",
+    "description": "Learn about 50/30/20 Rule. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "6:58",
+    "advisor": "Arjun Patel",
+    "views": "90K",
+    "tags": [
+      "budgeting",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Saving Money on a Low Income",
+    "category": "Budgeting",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/wHHfPHiIXrI",
+    "thumbnail": "https://img.youtube.com/vi/wHHfPHiIXrI/maxresdefault.jpg",
+    "description": "Learn about Saving Money on a Low Income. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "7:39",
+    "advisor": "Investa Academy",
+    "views": "42K",
+    "tags": [
+      "budgeting",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Monthly Budget Template",
+    "category": "Budgeting",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Monthly Budget Template. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "6:34",
+    "advisor": "Rahul Sharma",
+    "views": "92K",
+    "tags": [
+      "budgeting",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Budget vs Forecast",
+    "category": "Budgeting",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Budget vs Forecast. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "5:54",
+    "advisor": "Priya Desai",
+    "views": "48K",
+    "tags": [
+      "budgeting",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Cut Expenses and Save More",
+    "category": "Budgeting",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Cut Expenses and Save More. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "15:20",
+    "advisor": "Arjun Patel",
+    "views": "36K",
+    "tags": [
+      "budgeting",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Budget for Young Adults",
+    "category": "Budgeting",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Budget for Young Adults. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "11:17",
+    "advisor": "Investa Academy",
+    "views": "13K",
+    "tags": [
+      "budgeting",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Family Budget Planning",
+    "category": "Budgeting",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Family Budget Planning. This video covers core concepts of Budgeting in a beginner-friendly and practical way.",
+    "duration": "8:17",
+    "advisor": "Rahul Sharma",
+    "views": "93K",
+    "tags": [
+      "budgeting",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Retirement Planning for Beginners",
+    "category": "Retirement Planning",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/tDmjLqDkLqU",
+    "thumbnail": "https://img.youtube.com/vi/tDmjLqDkLqU/maxresdefault.jpg",
+    "description": "Learn about Retirement Planning for Beginners. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "13:47",
+    "advisor": "Investa Academy",
+    "views": "68K",
+    "tags": [
+      "retirement_planning",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How Much to Save for Retirement",
+    "category": "Retirement Planning",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about How Much to Save for Retirement. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "10:17",
+    "advisor": "Rahul Sharma",
+    "views": "36K",
+    "tags": [
+      "retirement_planning",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "NPS vs EPF vs PPF Comparison",
+    "category": "Retirement Planning",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about NPS vs EPF vs PPF Comparison. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "13:12",
+    "advisor": "Priya Desai",
+    "views": "81K",
+    "tags": [
+      "retirement_planning",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Early Retirement Guide",
+    "category": "Retirement Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Early Retirement Guide. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "10:55",
+    "advisor": "Arjun Patel",
+    "views": "72K",
+    "tags": [
+      "retirement_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Retirement Corpus Calculation",
+    "category": "Retirement Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Retirement Corpus Calculation. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "14:27",
+    "advisor": "Investa Academy",
+    "views": "34K",
+    "tags": [
+      "retirement_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Retire at 45",
+    "category": "Retirement Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about How to Retire at 45. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "10:21",
+    "advisor": "Rahul Sharma",
+    "views": "20K",
+    "tags": [
+      "retirement_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Pension Plans in India",
+    "category": "Retirement Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Pension Plans in India. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "13:41",
+    "advisor": "Priya Desai",
+    "views": "85K",
+    "tags": [
+      "retirement_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Social Security Planning",
+    "category": "Retirement Planning",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Social Security Planning. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "13:13",
+    "advisor": "Arjun Patel",
+    "views": "51K",
+    "tags": [
+      "retirement_planning",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Annuities Explained",
+    "category": "Retirement Planning",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Annuities Explained. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "7:21",
+    "advisor": "Investa Academy",
+    "views": "86K",
+    "tags": [
+      "retirement_planning",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Retirement Portfolio Strategy",
+    "category": "Retirement Planning",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Retirement Portfolio Strategy. This video covers core concepts of Retirement Planning in a beginner-friendly and practical way.",
+    "duration": "5:56",
+    "advisor": "Rahul Sharma",
+    "views": "66K",
+    "tags": [
+      "retirement_planning",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Save Income Tax in India",
+    "category": "Tax Saving",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about How to Save Income Tax in India. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
     "duration": "12:55",
-    "description": "SMART financial goal setting for retirement, education, and home ownership — with fund mapping.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "advisor": "Investa Academy",
+    "views": "78K",
     "tags": [
-      "basics",
+      "tax_saving",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Credit Score — Why It Matters",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/1huC5zZewtw/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/1huC5zZewtw",
-    "duration": "13:02",
-    "description": "How your CIBIL score affects loan rates, credit card approvals, and your financial life.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Balanced Advantage Funds Explained",
-    "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/v-8wFh1X4mQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/v-8wFh1X4mQ",
-    "duration": "14:09",
-    "description": "How hybrid funds automatically rebalance between equity and debt based on market valuations.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
-    "tags": [
-      "mutual_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Money Market Funds — Safe Short-Term Investing",
-    "category": "Bonds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/Ud3BKaS_e7Q/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Ud3BKaS_e7Q",
-    "duration": "15:16",
-    "description": "Where to park short-term cash and earn more than a savings account interest rate safely.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
-    "tags": [
-      "bonds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Understanding KYC for Investments",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/j5f7gBJrQhQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/j5f7gBJrQhQ",
-    "duration": "16:23",
-    "description": "Why KYC is mandatory, how to complete it online, and what documents are required.",
-    "advisor": "Anita Desai",
-    "views": "62K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Gilt Funds — Government Bond Investing",
-    "category": "Bonds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/fhsHoaR98tQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/fhsHoaR98tQ",
-    "duration": "17:30",
-    "description": "The safest debt mutual fund category — returns, interest rate risk, and when to add gilts.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "bonds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Systematic Withdrawal Plan (SWP) Guide",
-    "category": "SIP",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/Qo5U3TBpKh8/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Qo5U3TBpKh8",
-    "duration": "18:37",
-    "description": "Creating a monthly income from your mutual fund portfolio using SWP in retirement.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "sip",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Budget Planning Before Investing",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/HVJSsGMRm3M/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/HVJSsGMRm3M",
-    "duration": "19:44",
-    "description": "The 50-30-20 rule and how to free up money for investment even on a modest salary.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "NFO vs Existing Funds",
-    "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/5yONMVKJGMs/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/5yONMVKJGMs",
-    "duration": "20:51",
-    "description": "Why New Fund Offers are rarely better than established funds with a proven track record.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "mutual_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Stock Market Index Explained",
-    "category": "Index Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/R4qiGMw1Z2E/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/R4qiGMw1Z2E",
-    "duration": "21:58",
-    "description": "Nifty 50, Sensex, S&P 500 — what these benchmark numbers mean and why they matter.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "index_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Why Invest at Age 22",
-    "category": "Basics",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/wQtgmqKGOTk/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/wQtgmqKGOTk",
-    "duration": "22:05",
-    "description": "The mathematical case for starting early — a real Rs 5000/month SIP simulation over 30 years.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "basics",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Dollar Cost Averaging Strategy",
-    "category": "SIP",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/gFBiRetFHMM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/gFBiRetFHMM",
-    "duration": "5:12",
-    "description": "How investing a fixed amount regularly smooths out volatility and lowers your average cost.",
+    "title": "Section 80C Investments Explained",
+    "category": "Tax Saving",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Section 80C Investments Explained. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "7:53",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "33K",
     "tags": [
-      "sip",
+      "tax_saving",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "ELSS Tax Saving with Growth Potential",
-    "category": "Tax",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/76z9S3R8o2o/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/76z9S3R8o2o",
-    "duration": "6:19",
-    "description": "The 3-year lock-in that doubles as wealth creation — how to select the best ELSS fund.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "title": "ELSS: Best Tax Saving Mutual Fund",
+    "category": "Tax Saving",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about ELSS: Best Tax Saving Mutual Fund. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "11:21",
+    "advisor": "Priya Desai",
+    "views": "67K",
     "tags": [
-      "tax",
+      "tax_saving",
       "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Inflation-Linked Bonds (IIBs) Explained",
-    "category": "Bonds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/9XvI9kF5_Ew/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/9XvI9kF5_Ew",
-    "duration": "7:26",
-    "description": "How inflation-indexed bonds protect your purchasing power and when to include them.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
+    "title": "Tax Planning for Salaried Employees",
+    "category": "Tax Saving",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Tax Planning for Salaried Employees. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "8:11",
+    "advisor": "Arjun Patel",
+    "views": "61K",
     "tags": [
-      "bonds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Stamp Duty on Mutual Funds",
-    "category": "Mutual Funds",
-    "level": "beginner",
-    "thumbnail": "https://i.ytimg.com/vi/W9l6j1vYn0Y/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/W9l6j1vYn0Y",
-    "duration": "8:33",
-    "description": "Understanding the 0.005% stamp duty impact on mutual fund purchases and net returns.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
-    "tags": [
-      "mutual_funds",
-      "beginner",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Dividend Growth Investing Strategy",
-    "category": "Dividend Stocks",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/7PM4rNDr4NI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/7PM4rNDr4NI",
-    "duration": "9:40",
-    "description": "Building a compounding dividend income machine using quality dividend-growth companies.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
-    "tags": [
-      "dividend_stocks",
+      "tax_saving",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Sector Rotation and Economic Cycles",
-    "category": "Sector Investing",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/qQpE5xk73BI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/qQpE5xk73BI",
-    "duration": "10:47",
-    "description": "How to position your portfolio as the economy moves through boom, slowdown, and recovery.",
-    "advisor": "Anita Desai",
-    "views": "62K",
+    "title": "HRA, LTA Tax Exemptions Explained",
+    "category": "Tax Saving",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about HRA, LTA Tax Exemptions Explained. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "14:41",
+    "advisor": "Investa Academy",
+    "views": "87K",
     "tags": [
-      "sector_investing",
+      "tax_saving",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "REITs — Rental Income Without Property",
-    "category": "REITs",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/mH-Tbe9o9oU/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/mH-Tbe9o9oU",
-    "duration": "11:54",
-    "description": "Real Estate Investment Trusts explained — yields, risks, and how to invest in Indian REITs.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "reits",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Core Satellite Index Strategy",
-    "category": "Index Investing",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/v-O7Vp-N4_E/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/v-O7Vp-N4_E",
-    "duration": "12:01",
-    "description": "Using index funds as core holdings and adding satellite positions for outperformance potential.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "index_investing",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Factor Investing — Smart Beta Explained",
-    "category": "Index Investing",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/8U9M8u9rV48/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/8U9M8u9rV48",
-    "duration": "13:08",
-    "description": "Value, momentum, quality, low-volatility factors — systematic alternatives to market-cap weighting.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "index_investing",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Technical Analysis — Reading Price Charts",
-    "category": "Technical Analysis",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/fSqz6S5PBOI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/fSqz6S5PBOI",
-    "duration": "14:15",
-    "description": "Support, resistance, trendlines and chart patterns every intermediate investor should know.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "technical_analysis",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "RSI and MACD Indicators Deep Dive",
-    "category": "Technical Analysis",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/Z1O6u6qO1qQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Z1O6u6qO1qQ",
-    "duration": "15:22",
-    "description": "Two powerful momentum indicators — how to combine them for better trade timing decisions.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "technical_analysis",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Fundamental Analysis — Valuing Stocks",
-    "category": "Stocks",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/1YyAzVmP9xQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/1YyAzVmP9xQ",
-    "duration": "16:29",
-    "description": "P/E, P/B, ROE, debt-to-equity — key ratios for evaluating a company's financial health.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "stocks",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Swing Trading for Part-Time Investors",
-    "category": "Trading",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/yXPenBRh_NE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/yXPenBRh_NE",
-    "duration": "17:36",
-    "description": "Capturing multi-day price swings while maintaining a day job — proven setups and rules.",
+    "title": "New vs Old Tax Regime",
+    "category": "Tax Saving",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about New vs Old Tax Regime. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "6:13",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "53K",
     "tags": [
-      "trading",
+      "tax_saving",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Building a 60/40 Portfolio in India",
-    "category": "Diversification",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/4kVL5fW0aFo/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/4kVL5fW0aFo",
-    "duration": "18:43",
-    "description": "The classic balanced portfolio adapted for Indian investors — allocation and rebalancing guide.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "title": "NPS Tax Benefits Under 80CCD",
+    "category": "Tax Saving",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about NPS Tax Benefits Under 80CCD. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "12:36",
+    "advisor": "Priya Desai",
+    "views": "90K",
     "tags": [
-      "diversification",
+      "tax_saving",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "International Fund Investing via India",
-    "category": "Diversification",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/tFBpRHXEdgE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/tFBpRHXEdgE",
-    "duration": "19:50",
-    "description": "Gaining exposure to US markets through Indian feeder funds and GIFT City ETFs.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
+    "title": "Capital Gains Tax Explained",
+    "category": "Tax Saving",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Capital Gains Tax Explained. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "12:36",
+    "advisor": "Arjun Patel",
+    "views": "84K",
     "tags": [
-      "diversification",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "tax_saving",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "PPF – Tax-Free Returns",
+    "category": "Tax Saving",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about PPF – Tax-Free Returns. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "9:29",
+    "advisor": "Investa Academy",
+    "views": "76K",
+    "tags": [
+      "tax_saving",
+      "advanced",
+      "finance",
+      "investing"
+    ]
   },
   {
     "title": "Tax Loss Harvesting Strategy",
-    "category": "Tax",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/tNPcfBB_5tE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/tNPcfBB_5tE",
-    "duration": "20:57",
-    "description": "Strategically booking losses to offset capital gains and reduce your tax bill legally.",
-    "advisor": "Sanjay Gupta",
+    "category": "Tax Saving",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Tax Loss Harvesting Strategy. This video covers core concepts of Tax Saving in a beginner-friendly and practical way.",
+    "duration": "10:21",
+    "advisor": "Rahul Sharma",
+    "views": "67K",
+    "tags": [
+      "tax_saving",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Build Wealth from Scratch",
+    "category": "Wealth Building",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about How to Build Wealth from Scratch. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "5:52",
+    "advisor": "Investa Academy",
+    "views": "57K",
+    "tags": [
+      "wealth_building",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Wealth Building Habits",
+    "category": "Wealth Building",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Wealth Building Habits. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "5:57",
+    "advisor": "Rahul Sharma",
+    "views": "97K",
+    "tags": [
+      "wealth_building",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Millionaire Mindset",
+    "category": "Wealth Building",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Millionaire Mindset. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "7:24",
+    "advisor": "Priya Desai",
+    "views": "69K",
+    "tags": [
+      "wealth_building",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Passive Income Strategies",
+    "category": "Wealth Building",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Passive Income Strategies. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "13:24",
+    "advisor": "Arjun Patel",
+    "views": "12K",
+    "tags": [
+      "wealth_building",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Asset Allocation for Wealth",
+    "category": "Wealth Building",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Asset Allocation for Wealth. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "15:54",
+    "advisor": "Investa Academy",
+    "views": "45K",
+    "tags": [
+      "wealth_building",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How the Rich Think About Money",
+    "category": "Wealth Building",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about How the Rich Think About Money. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "8:25",
+    "advisor": "Rahul Sharma",
+    "views": "36K",
+    "tags": [
+      "wealth_building",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Investing for Long-Term Wealth",
+    "category": "Wealth Building",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Investing for Long-Term Wealth. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "15:27",
+    "advisor": "Priya Desai",
+    "views": "79K",
+    "tags": [
+      "wealth_building",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Side Hustles to Build Wealth",
+    "category": "Wealth Building",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Side Hustles to Build Wealth. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "10:12",
+    "advisor": "Arjun Patel",
+    "views": "48K",
+    "tags": [
+      "wealth_building",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Compounding Wealth Over Decades",
+    "category": "Wealth Building",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Compounding Wealth Over Decades. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "12:33",
+    "advisor": "Investa Academy",
+    "views": "87K",
+    "tags": [
+      "wealth_building",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Financial Independence Roadmap",
+    "category": "Wealth Building",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Financial Independence Roadmap. This video covers core concepts of Wealth Building in a beginner-friendly and practical way.",
+    "duration": "7:20",
+    "advisor": "Rahul Sharma",
+    "views": "33K",
+    "tags": [
+      "wealth_building",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Day Trading for Beginners",
+    "category": "Trading Basics",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/lNdOtlpmH5M",
+    "thumbnail": "https://img.youtube.com/vi/lNdOtlpmH5M/maxresdefault.jpg",
+    "description": "Learn about Day Trading for Beginners. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "16:57",
+    "advisor": "Investa Academy",
+    "views": "29K",
+    "tags": [
+      "trading_basics",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Difference Between Trading and Investing",
+    "category": "Trading Basics",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/ZCFkWDdmXG8",
+    "thumbnail": "https://img.youtube.com/vi/ZCFkWDdmXG8/maxresdefault.jpg",
+    "description": "Learn about Difference Between Trading and Investing. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "12:31",
+    "advisor": "Rahul Sharma",
+    "views": "10K",
+    "tags": [
+      "trading_basics",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Read Candlestick Charts",
+    "category": "Trading Basics",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about How to Read Candlestick Charts. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "9:12",
+    "advisor": "Priya Desai",
+    "views": "57K",
+    "tags": [
+      "trading_basics",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Types of Stock Orders",
+    "category": "Trading Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Types of Stock Orders. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "16:37",
+    "advisor": "Arjun Patel",
+    "views": "74K",
+    "tags": [
+      "trading_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Swing Trading Strategy",
+    "category": "Trading Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Swing Trading Strategy. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "16:51",
+    "advisor": "Investa Academy",
+    "views": "57K",
+    "tags": [
+      "trading_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Options Trading Basics",
+    "category": "Trading Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Options Trading Basics. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "5:40",
+    "advisor": "Rahul Sharma",
+    "views": "31K",
+    "tags": [
+      "trading_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Futures and Derivatives Explained",
+    "category": "Trading Basics",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Futures and Derivatives Explained. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "14:12",
+    "advisor": "Priya Desai",
+    "views": "10K",
+    "tags": [
+      "trading_basics",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Stop Loss and Risk Management in Trading",
+    "category": "Trading Basics",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Stop Loss and Risk Management in Trading. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "5:18",
+    "advisor": "Arjun Patel",
+    "views": "49K",
+    "tags": [
+      "trading_basics",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Technical Indicators for Traders",
+    "category": "Trading Basics",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Technical Indicators for Traders. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "10:31",
+    "advisor": "Investa Academy",
+    "views": "62K",
+    "tags": [
+      "trading_basics",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Develop a Trading Plan",
+    "category": "Trading Basics",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about How to Develop a Trading Plan. This video covers core concepts of Trading Basics in a beginner-friendly and practical way.",
+    "duration": "11:14",
+    "advisor": "Rahul Sharma",
+    "views": "97K",
+    "tags": [
+      "trading_basics",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What is Fundamental Analysis?",
+    "category": "Fundamental Analysis",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about What is Fundamental Analysis?. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "14:41",
+    "advisor": "Investa Academy",
+    "views": "48K",
+    "tags": [
+      "fundamental_analysis",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Read a Balance Sheet",
+    "category": "Fundamental Analysis",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about How to Read a Balance Sheet. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "10:25",
+    "advisor": "Rahul Sharma",
+    "views": "89K",
+    "tags": [
+      "fundamental_analysis",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "P/E Ratio Explained",
+    "category": "Fundamental Analysis",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about P/E Ratio Explained. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "14:27",
+    "advisor": "Priya Desai",
+    "views": "85K",
+    "tags": [
+      "fundamental_analysis",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Understanding Cash Flow Statements",
+    "category": "Fundamental Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Understanding Cash Flow Statements. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "10:44",
+    "advisor": "Arjun Patel",
+    "views": "37K",
+    "tags": [
+      "fundamental_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Value a Stock",
+    "category": "Fundamental Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about How to Value a Stock. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "10:15",
+    "advisor": "Investa Academy",
+    "views": "40K",
+    "tags": [
+      "fundamental_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "EPS, ROE, ROA Explained",
+    "category": "Fundamental Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about EPS, ROE, ROA Explained. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "6:58",
+    "advisor": "Rahul Sharma",
+    "views": "46K",
+    "tags": [
+      "fundamental_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Top-Down vs Bottom-Up Analysis",
+    "category": "Fundamental Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Top-Down vs Bottom-Up Analysis. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "9:21",
+    "advisor": "Priya Desai",
+    "views": "19K",
+    "tags": [
+      "fundamental_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "DCF Valuation Explained",
+    "category": "Fundamental Analysis",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about DCF Valuation Explained. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "15:31",
+    "advisor": "Arjun Patel",
+    "views": "38K",
+    "tags": [
+      "fundamental_analysis",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How Warren Buffett Picks Stocks",
+    "category": "Fundamental Analysis",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about How Warren Buffett Picks Stocks. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "11:44",
+    "advisor": "Investa Academy",
+    "views": "14K",
+    "tags": [
+      "fundamental_analysis",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Sector Analysis for Investors",
+    "category": "Fundamental Analysis",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Sector Analysis for Investors. This video covers core concepts of Fundamental Analysis in a beginner-friendly and practical way.",
+    "duration": "10:44",
+    "advisor": "Rahul Sharma",
+    "views": "21K",
+    "tags": [
+      "fundamental_analysis",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Technical Analysis Basics",
+    "category": "Technical Analysis",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/lNdOtlpmH5M",
+    "thumbnail": "https://img.youtube.com/vi/lNdOtlpmH5M/maxresdefault.jpg",
+    "description": "Learn about Technical Analysis Basics. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "14:44",
+    "advisor": "Investa Academy",
+    "views": "91K",
+    "tags": [
+      "technical_analysis",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Moving Averages Explained",
+    "category": "Technical Analysis",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/ZCFkWDdmXG8",
+    "thumbnail": "https://img.youtube.com/vi/ZCFkWDdmXG8/maxresdefault.jpg",
+    "description": "Learn about Moving Averages Explained. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "10:16",
+    "advisor": "Rahul Sharma",
+    "views": "24K",
+    "tags": [
+      "technical_analysis",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "RSI Indicator Explained",
+    "category": "Technical Analysis",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about RSI Indicator Explained. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "15:27",
+    "advisor": "Priya Desai",
+    "views": "80K",
+    "tags": [
+      "technical_analysis",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "MACD Indicator Tutorial",
+    "category": "Technical Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about MACD Indicator Tutorial. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "14:13",
+    "advisor": "Arjun Patel",
+    "views": "75K",
+    "tags": [
+      "technical_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Bollinger Bands Strategy",
+    "category": "Technical Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Bollinger Bands Strategy. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "14:41",
+    "advisor": "Investa Academy",
+    "views": "69K",
+    "tags": [
+      "technical_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Support and Resistance Levels",
+    "category": "Technical Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Support and Resistance Levels. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "15:45",
+    "advisor": "Rahul Sharma",
+    "views": "32K",
+    "tags": [
+      "technical_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Chart Patterns: Head and Shoulders",
+    "category": "Technical Analysis",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Chart Patterns: Head and Shoulders. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "10:39",
+    "advisor": "Priya Desai",
+    "views": "90K",
+    "tags": [
+      "technical_analysis",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Fibonacci Retracement Explained",
+    "category": "Technical Analysis",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Fibonacci Retracement Explained. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "9:30",
+    "advisor": "Arjun Patel",
     "views": "35K",
     "tags": [
-      "tax",
+      "technical_analysis",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Volume Analysis in Trading",
+    "category": "Technical Analysis",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Volume Analysis in Trading. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "13:28",
+    "advisor": "Investa Academy",
+    "views": "65K",
+    "tags": [
+      "technical_analysis",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Trend Following Strategies",
+    "category": "Technical Analysis",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Trend Following Strategies. This video covers core concepts of Technical Analysis in a beginner-friendly and practical way.",
+    "duration": "7:13",
+    "advisor": "Rahul Sharma",
+    "views": "46K",
+    "tags": [
+      "technical_analysis",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What is Investment Risk?",
+    "category": "Risk Management",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about What is Investment Risk?. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "9:39",
+    "advisor": "Investa Academy",
+    "views": "21K",
+    "tags": [
+      "risk_management",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Manage Portfolio Risk",
+    "category": "Risk Management",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about How to Manage Portfolio Risk. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "13:54",
+    "advisor": "Rahul Sharma",
+    "views": "68K",
+    "tags": [
+      "risk_management",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Diversification Explained",
+    "category": "Risk Management",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Diversification Explained. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "9:46",
+    "advisor": "Priya Desai",
+    "views": "92K",
+    "tags": [
+      "risk_management",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Risk vs Return in Investing",
+    "category": "Risk Management",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Risk vs Return in Investing. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "14:24",
+    "advisor": "Arjun Patel",
+    "views": "31K",
+    "tags": [
+      "risk_management",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Stop Loss Strategy",
+    "category": "Risk Management",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Stop Loss Strategy. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "7:29",
+    "advisor": "Investa Academy",
+    "views": "33K",
+    "tags": [
+      "risk_management",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Asset Allocation to Reduce Risk",
+    "category": "Risk Management",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Asset Allocation to Reduce Risk. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "5:47",
+    "advisor": "Rahul Sharma",
+    "views": "46K",
+    "tags": [
+      "risk_management",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Hedging Strategies Explained",
+    "category": "Risk Management",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Hedging Strategies Explained. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "15:10",
+    "advisor": "Priya Desai",
+    "views": "22K",
+    "tags": [
+      "risk_management",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Beta and Standard Deviation",
+    "category": "Risk Management",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Beta and Standard Deviation. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "6:19",
+    "advisor": "Arjun Patel",
+    "views": "69K",
+    "tags": [
+      "risk_management",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Risk Tolerance Assessment",
+    "category": "Risk Management",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Risk Tolerance Assessment. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "6:26",
+    "advisor": "Investa Academy",
+    "views": "46K",
+    "tags": [
+      "risk_management",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Black Swan Events and Your Portfolio",
+    "category": "Risk Management",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Black Swan Events and Your Portfolio. This video covers core concepts of Risk Management in a beginner-friendly and practical way.",
+    "duration": "13:17",
+    "advisor": "Rahul Sharma",
+    "views": "85K",
+    "tags": [
+      "risk_management",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Passive Income Ideas for Beginners",
+    "category": "Passive Income",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Passive Income Ideas for Beginners. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "11:28",
+    "advisor": "Investa Academy",
+    "views": "35K",
+    "tags": [
+      "passive_income",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Dividend Investing for Passive Income",
+    "category": "Passive Income",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Dividend Investing for Passive Income. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "12:44",
+    "advisor": "Rahul Sharma",
+    "views": "89K",
+    "tags": [
+      "passive_income",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "REITs for Passive Income",
+    "category": "Passive Income",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about REITs for Passive Income. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "7:53",
+    "advisor": "Priya Desai",
+    "views": "64K",
+    "tags": [
+      "passive_income",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Rental Income Strategy",
+    "category": "Passive Income",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about Rental Income Strategy. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "5:58",
+    "advisor": "Arjun Patel",
+    "views": "69K",
+    "tags": [
+      "passive_income",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Index Funds for Passive Investors",
+    "category": "Passive Income",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Index Funds for Passive Investors. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "9:25",
+    "advisor": "Investa Academy",
+    "views": "33K",
+    "tags": [
+      "passive_income",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Bond Income Explained",
+    "category": "Passive Income",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Bond Income Explained. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "5:53",
+    "advisor": "Rahul Sharma",
+    "views": "63K",
+    "tags": [
+      "passive_income",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Creating a Passive Income Portfolio",
+    "category": "Passive Income",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Creating a Passive Income Portfolio. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "13:33",
+    "advisor": "Priya Desai",
+    "views": "10K",
+    "tags": [
+      "passive_income",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Live off Dividends",
+    "category": "Passive Income",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about How to Live off Dividends. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "9:10",
+    "advisor": "Arjun Patel",
+    "views": "75K",
+    "tags": [
+      "passive_income",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Peer-to-Peer Lending Returns",
+    "category": "Passive Income",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Peer-to-Peer Lending Returns. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "6:53",
+    "advisor": "Investa Academy",
+    "views": "22K",
+    "tags": [
+      "passive_income",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Digital Products for Passive Income",
+    "category": "Passive Income",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Digital Products for Passive Income. This video covers core concepts of Passive Income in a beginner-friendly and practical way.",
+    "duration": "11:54",
+    "advisor": "Rahul Sharma",
+    "views": "13K",
+    "tags": [
+      "passive_income",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "ETF vs Index Fund: Whats the Difference?",
+    "category": "ETFs and Index Funds",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about ETF vs Index Fund: Whats the Difference?. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "13:50",
+    "advisor": "Investa Academy",
+    "views": "40K",
+    "tags": [
+      "etfs_and_index_funds",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Best Index Funds for Long-Term Investing",
+    "category": "ETFs and Index Funds",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Best Index Funds for Long-Term Investing. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "16:53",
+    "advisor": "Rahul Sharma",
+    "views": "19K",
+    "tags": [
+      "etfs_and_index_funds",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Buy an ETF",
+    "category": "ETFs and Index Funds",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about How to Buy an ETF. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "8:13",
+    "advisor": "Priya Desai",
+    "views": "53K",
+    "tags": [
+      "etfs_and_index_funds",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Nifty 50 Index Fund Explained",
+    "category": "ETFs and Index Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Nifty 50 Index Fund Explained. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "8:32",
+    "advisor": "Arjun Patel",
+    "views": "51K",
+    "tags": [
+      "etfs_and_index_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "S&P 500 ETF Guide",
+    "category": "ETFs and Index Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about S&P 500 ETF Guide. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "8:28",
+    "advisor": "Investa Academy",
+    "views": "58K",
+    "tags": [
+      "etfs_and_index_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Expense Ratio in ETFs",
+    "category": "ETFs and Index Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Expense Ratio in ETFs. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "14:56",
+    "advisor": "Rahul Sharma",
+    "views": "29K",
+    "tags": [
+      "etfs_and_index_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Sector ETFs Explained",
+    "category": "ETFs and Index Funds",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Sector ETFs Explained. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "7:52",
+    "advisor": "Priya Desai",
+    "views": "80K",
+    "tags": [
+      "etfs_and_index_funds",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "ETF Rebalancing Strategy",
+    "category": "ETFs and Index Funds",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about ETF Rebalancing Strategy. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "15:55",
+    "advisor": "Arjun Patel",
+    "views": "98K",
+    "tags": [
+      "etfs_and_index_funds",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "International ETF Investing",
+    "category": "ETFs and Index Funds",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about International ETF Investing. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "16:40",
+    "advisor": "Investa Academy",
+    "views": "56K",
+    "tags": [
+      "etfs_and_index_funds",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Gold ETF vs Sovereign Gold Bond",
+    "category": "ETFs and Index Funds",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Gold ETF vs Sovereign Gold Bond. This video covers core concepts of ETFs and Index Funds in a beginner-friendly and practical way.",
+    "duration": "9:14",
+    "advisor": "Rahul Sharma",
+    "views": "49K",
+    "tags": [
+      "etfs_and_index_funds",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "What Are Bonds?",
+    "category": "Bonds and Government Securities",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about What Are Bonds?. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "7:59",
+    "advisor": "Investa Academy",
+    "views": "61K",
+    "tags": [
+      "bonds_and_government_securities",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Government Bonds Explained",
+    "category": "Bonds and Government Securities",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Government Bonds Explained. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "10:39",
+    "advisor": "Rahul Sharma",
+    "views": "38K",
+    "tags": [
+      "bonds_and_government_securities",
+      "beginner",
+      "finance",
+      "investing"
+    ]
   },
   {
     "title": "Corporate Bonds vs Government Bonds",
-    "category": "Bonds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/iL7Gu3mxG1E/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/iL7Gu3mxG1E",
-    "duration": "21:04",
-    "description": "Credit risk, yield spread, and when to add corporate bonds to a fixed-income portfolio.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
+    "category": "Bonds and Government Securities",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Corporate Bonds vs Government Bonds. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "14:23",
+    "advisor": "Priya Desai",
+    "views": "75K",
     "tags": [
-      "bonds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "bonds_and_government_securities",
+      "beginner",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Bond Duration and Interest Rate Risk",
-    "category": "Bonds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/eD6j1h_YN4c/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/eD6j1h_YN4c",
-    "duration": "22:11",
-    "description": "Why bond prices fall when rates rise — and how to manage duration in your portfolio.",
-    "advisor": "Anita Desai",
-    "views": "62K",
-    "tags": [
-      "bonds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "ESG Investing — Profit with Purpose",
-    "category": "ESG",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/cOeNbv1eHDM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/cOeNbv1eHDM",
-    "duration": "5:18",
-    "description": "Environmental, Social and Governance factors as risk indicators — returns data and fund options.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "esg",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Thematic Funds — High Conviction Bets",
-    "category": "Sector Investing",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/w8_SjNdFahM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/w8_SjNdFahM",
-    "duration": "6:25",
-    "description": "Infrastructure, EV, healthcare themes — position sizing and when to use thematic funds.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "sector_investing",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Portfolio Rebalancing Mechanics",
-    "category": "Diversification",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/UEWied-Eqjg/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/UEWied-Eqjg",
-    "duration": "7:32",
-    "description": "Annual rebalancing — how selling winners and buying laggards improves risk-adjusted returns.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "diversification",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Behavioural Finance — Why We Lose Money",
-    "category": "Basics",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/fUzBNqHoXPg/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/fUzBNqHoXPg",
-    "duration": "8:39",
-    "description": "Loss aversion, recency bias, herd mentality — the cognitive errors that destroy long-term wealth.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "basics",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Momentum Investing Strategy",
-    "category": "Stocks",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/8DlpBMbHdoY/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/8DlpBMbHdoY",
-    "duration": "9:46",
-    "description": "The evidence behind price momentum as a return factor and how to implement a momentum screen.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "stocks",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Flexi Cap vs Multi Cap Funds",
-    "category": "Mutual Funds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/oEUOQbWBVso/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/oEUOQbWBVso",
-    "duration": "10:53",
-    "description": "SEBI definitions, manager flexibility, and which category suits long-term investors better.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "mutual_funds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "NPS — National Pension System Deep Dive",
-    "category": "Retirement",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/vBKiQ6ZRXPI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/vBKiQ6ZRXPI",
-    "duration": "11:00",
-    "description": "Tier I vs Tier II, auto vs active choice, annuity options, and tax benefits of NPS.",
-    "advisor": "Rahul Sharma",
-    "views": "8K",
-    "tags": [
-      "retirement",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Arbitrage Funds — Low Risk, Tax Efficient",
-    "category": "Mutual Funds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/B8CiSi7xzQc/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/B8CiSi7xzQc",
-    "duration": "12:07",
-    "description": "How arbitrage funds generate equity-taxed returns with a debt-like risk profile.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
-    "tags": [
-      "mutual_funds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "STP — Systematic Transfer Plan Strategy",
-    "category": "Mutual Funds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/MkRqfZ2BFN4/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/MkRqfZ2BFN4",
-    "duration": "14:21",
-    "description": "Moving a lump sum to equity systematically — ideal for large bonuses or sudden windfalls.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
-    "tags": [
-      "mutual_funds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "FIRE Movement in India",
-    "category": "Retirement",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/VhIFjZdEKDg/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/VhIFjZdEKDg",
-    "duration": "15:28",
-    "description": "Retire early using aggressive saving rates, frugality, and smart investing in Indian markets.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
-    "tags": [
-      "retirement",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Global Macro Investing Overview",
-    "category": "Diversification",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/eTjBHfMYyNE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/eTjBHfMYyNE",
-    "duration": "16:35",
-    "description": "How top investors use macroeconomic analysis to position across asset classes and countries.",
-    "advisor": "Anita Desai",
-    "views": "62K",
-    "tags": [
-      "diversification",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Mid Cap Investing — Higher Risk, Higher Reward",
-    "category": "Stocks",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/Q2al2kDFBSI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Q2al2kDFBSI",
-    "duration": "17:42",
-    "description": "Why mid-caps outperform large-caps over 10+ years and how to select quality names.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "stocks",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Moat Investing — Durable Competitive Advantages",
-    "category": "Stocks",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/3p3-AxELJYk/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/3p3-AxELJYk",
-    "duration": "18:49",
-    "description": "Brand, network effects, switching costs — identifying companies that defend their profits.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "stocks",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Capital Gains Tax — Complete Guide India",
-    "category": "Tax",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/1iAkK9cBIv4/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/1iAkK9cBIv4",
-    "duration": "19:56",
-    "description": "STCG and LTCG on equity, debt, property, and gold — full tax guide for Indian investors.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "tax",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Silver as an Investment in 2025",
-    "category": "Gold",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/wFqhBNu0qjA/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/wFqhBNu0qjA",
-    "duration": "20:03",
-    "description": "Industrial demand, gold/silver ratio, and why silver deserves a small portfolio allocation.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "gold",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Dollar Cost Averaging vs Value Averaging",
-    "category": "SIP",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/b8YtGmbrdRo/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/b8YtGmbrdRo",
-    "duration": "21:10",
-    "description": "Comparing two systematic strategies — which generates better returns in volatile markets.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "sip",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Mutual Fund Ratings — CRISIL vs Value Research",
-    "category": "Mutual Funds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/mzIkHXiRJpY/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/mzIkHXiRJpY",
-    "duration": "22:17",
-    "description": "What fund ratings measure, their limitations, and how to use them in fund selection.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "mutual_funds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Active vs Passive Fund Management 2025",
-    "category": "Index Investing",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/A7glBOfRnMg/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/A7glBOfRnMg",
-    "duration": "5:24",
-    "description": "Updated evidence on whether active managers consistently beat their benchmarks over time.",
-    "advisor": "Rahul Sharma",
-    "views": "8K",
-    "tags": [
-      "index_investing",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Stock Screening — Finding Investment Candidates",
-    "category": "Stocks",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/CXXNUd-Vc5c/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/CXXNUd-Vc5c",
-    "duration": "6:31",
-    "description": "Using stock screeners to filter for quality — ROE, low debt, consistent earnings growth.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
-    "tags": [
-      "stocks",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "ETF Portfolio — Three Fund Strategy",
-    "category": "ETFs",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/7lFU8zJQ2OE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/7lFU8zJQ2OE",
-    "duration": "7:38",
-    "description": "Gold ETF, Nifty 50 ETF, debt ETF — building a complete, balanced portfolio using just three ETFs.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
-    "tags": [
-      "etfs",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Closed-End vs Open-End Funds",
-    "category": "Mutual Funds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/LPWtR_7zhas/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/LPWtR_7zhas",
+    "title": "How Bond Prices and Yields Work",
+    "category": "Bonds and Government Securities",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about How Bond Prices and Yields Work. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
     "duration": "8:45",
-    "description": "NAV discounts, premiums, and liquidity differences between closed and open-end fund structures.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
+    "advisor": "Arjun Patel",
+    "views": "71K",
     "tags": [
-      "mutual_funds",
+      "bonds_and_government_securities",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "International Currency Risk in Funds",
-    "category": "Diversification",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/y9mEB3_dBhY/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/y9mEB3_dBhY",
-    "duration": "9:52",
-    "description": "How currency movements affect international fund returns and available hedging strategies.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
+    "title": "RBI Bonds for Safe Returns",
+    "category": "Bonds and Government Securities",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about RBI Bonds for Safe Returns. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "10:31",
+    "advisor": "Investa Academy",
+    "views": "95K",
     "tags": [
-      "diversification",
+      "bonds_and_government_securities",
       "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Inflation-Proof Your Portfolio",
-    "category": "Bonds",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/EXmGTbF_e7A/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/EXmGTbF_e7A",
-    "duration": "10:59",
-    "description": "Asset classes that historically perform well when the purchasing power of money falls.",
-    "advisor": "Anita Desai",
-    "views": "62K",
-    "tags": [
-      "bonds",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Commodity Investing — Oil, Gold, Wheat",
-    "category": "Diversification",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/fPhSUJoAuaU/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/fPhSUJoAuaU",
-    "duration": "11:06",
-    "description": "Investing in real commodities as inflation hedges and portfolio diversifiers.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "diversification",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Value Averaging — A Smarter SIP",
-    "category": "SIP",
-    "level": "intermediate",
-    "thumbnail": "https://i.ytimg.com/vi/QKFev3-FkiE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/QKFev3-FkiE",
-    "duration": "12:13",
-    "description": "How value averaging adjusts your monthly investment amount based on portfolio performance.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "sip",
-      "intermediate",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Options Trading — Calls and Puts Explained",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/h0gYzZn5R3s/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/h0gYzZn5R3s",
-    "duration": "13:20",
-    "description": "Complete primer on options — intrinsic value, time value, in/out of the money, and basic strategies.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "options_trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Covered Call Strategy for Monthly Income",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/zVea5Aw3dZ0/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/zVea5Aw3dZ0",
-    "duration": "14:27",
-    "description": "Selling covered calls on equity holdings to generate consistent monthly premium income.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "options_trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Futures Trading — Leverage and Hedging",
-    "category": "Futures",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/mRsrfxOY5Vs/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/mRsrfxOY5Vs",
-    "duration": "15:34",
-    "description": "How futures contracts work, margin requirements, rollover, and portfolio hedging applications.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "futures",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Bitcoin Core Position Strategy",
-    "category": "Crypto",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/_kLxaFPHMkE/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/_kLxaFPHMkE",
-    "duration": "16:41",
-    "description": "Building a 5-10% Bitcoin allocation as digital gold — custody, tax, and volatility management.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "crypto",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Ethereum and Smart Contract Investing",
-    "category": "Crypto",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/TJFE_RxnMy0/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/TJFE_RxnMy0",
-    "duration": "17:48",
-    "description": "Why Ethereum's network effects make it the strongest bet in the smart contract platform space.",
+    "title": "Treasury Bills Explained",
+    "category": "Bonds and Government Securities",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Treasury Bills Explained. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "11:46",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "47K",
     "tags": [
-      "crypto",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "bonds_and_government_securities",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Value Investing — Margin of Safety",
-    "category": "Value Investing",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/lzMmg_1yR7k/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/lzMmg_1yR7k",
-    "duration": "18:55",
-    "description": "Applying Benjamin Graham's principles — screening, deep analysis, and the patience required.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "title": "Sovereign Gold Bond Returns",
+    "category": "Bonds and Government Securities",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about Sovereign Gold Bond Returns. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "5:22",
+    "advisor": "Priya Desai",
+    "views": "78K",
     "tags": [
-      "value_investing",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "bonds_and_government_securities",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Growth Investing — Finding 10X Stocks",
-    "category": "Growth Investing",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/pFT3JJZYPYM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/pFT3JJZYPYM",
-    "duration": "19:02",
-    "description": "Revenue growth rate, TAM analysis, and the Rule of 40 for identifying hyper-growth companies.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
+    "title": "Investing in PPF",
+    "category": "Bonds and Government Securities",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Investing in PPF. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "12:18",
+    "advisor": "Arjun Patel",
+    "views": "70K",
     "tags": [
-      "growth_investing",
+      "bonds_and_government_securities",
       "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Pairs Trading — Market Neutral Strategy",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/OMaDSe4SELI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/OMaDSe4SELI",
-    "duration": "20:09",
-    "description": "Exploiting relative mispricings between correlated assets using long/short equity positions.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
+    "title": "Fixed Income Portfolio Strategy",
+    "category": "Bonds and Government Securities",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Fixed Income Portfolio Strategy. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "9:42",
+    "advisor": "Investa Academy",
+    "views": "73K",
     "tags": [
-      "options_trading",
+      "bonds_and_government_securities",
       "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Quantitative Investing — Data Driven",
-    "category": "Quant",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/qGVZ6_EQHWA/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/qGVZ6_EQHWA",
-    "duration": "21:16",
-    "description": "Factor models, backtesting, mean reversion, and momentum — systematic rules-based investing.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
-    "tags": [
-      "quant",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Private Equity and Venture Capital for HNIs",
-    "category": "Alternatives",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/Y5Xgm-5sBmA/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Y5Xgm-5sBmA",
-    "duration": "22:23",
-    "description": "Accessing pre-IPO, startup, and buyout strategies through AIFs and direct co-investments.",
-    "advisor": "Anita Desai",
-    "views": "62K",
-    "tags": [
-      "alternatives",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Options Greeks — Delta Gamma Theta Vega",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/Hp1bGr_-dOI/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Hp1bGr_-dOI",
-    "duration": "5:30",
-    "description": "Understanding the sensitivity measures that govern option pricing and hedging requirements.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
-    "tags": [
-      "options_trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Iron Condor Options Strategy",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/kLQT1mhH2fs/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/kLQT1mhH2fs",
-    "duration": "6:37",
-    "description": "Profiting from low volatility using this four-leg options strategy — setup, management, exit.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
-    "tags": [
-      "options_trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "DeFi and Yield Farming in 2025",
-    "category": "Crypto",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/lc5yYjlDr2c/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/lc5yYjlDr2c",
-    "duration": "7:44",
-    "description": "Decentralised finance protocols, liquidity pools, and the risk/reward of yield farming strategies.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
-    "tags": [
-      "crypto",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Altcoin Investing Beyond BTC and ETH",
-    "category": "Crypto",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/ZbkSJknp5bA/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/ZbkSJknp5bA",
-    "duration": "8:51",
-    "description": "Layer 1 and Layer 2 protocols, DeFi tokens — framework for evaluating altcoin opportunities.",
-    "advisor": "David Miller",
-    "views": "210K",
-    "tags": [
-      "crypto",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "DCF Valuation Model Step by Step",
-    "category": "Value Investing",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/vTZ26BBDCQM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/vTZ26BBDCQM",
-    "duration": "9:58",
-    "description": "Building a complete discounted cash flow model — assumptions, WACC, terminal value, sensitivity.",
-    "advisor": "Rajesh Kumar",
-    "views": "320K",
-    "tags": [
-      "value_investing",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Portfolio Hedging with Put Options",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/HaR9n1bAFbQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/HaR9n1bAFbQ",
-    "duration": "10:05",
-    "description": "Using index puts as portfolio insurance — cost analysis and optimal hedge ratio calculation.",
-    "advisor": "Meera Das",
-    "views": "440K",
-    "tags": [
-      "options_trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
-  },
-  {
-    "title": "Statistical Arbitrage — Pairs Trading",
-    "category": "Quant",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/a_qW5H1R7oQ/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/a_qW5H1R7oQ",
-    "duration": "11:12",
-    "description": "Mean-reversion strategies using cointegration — from concept to live implementation.",
+    "title": "Credit Rating and Bond Safety",
+    "category": "Bonds and Government Securities",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about Credit Rating and Bond Safety. This video covers core concepts of Bonds and Government Securities in a beginner-friendly and practical way.",
+    "duration": "12:49",
     "advisor": "Rahul Sharma",
-    "views": "8K",
+    "views": "57K",
     "tags": [
-      "quant",
+      "bonds_and_government_securities",
       "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Global Macro Hedge Fund Strategies",
-    "category": "Alternatives",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/Y_7-O7TJwTc/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/Y_7-O7TJwTc",
-    "duration": "12:19",
-    "description": "How Ray Dalio, Soros and other macro legends read the world and position their portfolios.",
-    "advisor": "Ananya Iyer",
-    "views": "15K",
+    "title": "How to Invest Internationally",
+    "category": "International Investing",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about How to Invest Internationally. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "12:14",
+    "advisor": "Investa Academy",
+    "views": "59K",
     "tags": [
-      "alternatives",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "beginner",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Angel Investing in Indian Startups",
-    "category": "Alternatives",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/pO5lHaC7SvM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/pO5lHaC7SvM",
-    "duration": "13:26",
-    "description": "Evaluating seed-stage companies, negotiating term sheets, and managing a startup portfolio.",
-    "advisor": "Vikram Seth",
-    "views": "22K",
+    "title": "US Stocks from India",
+    "category": "International Investing",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about US Stocks from India. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "6:31",
+    "advisor": "Rahul Sharma",
+    "views": "96K",
     "tags": [
-      "alternatives",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "beginner",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Tax-Efficient Portfolio Construction",
-    "category": "Tax",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/KFBU_VHbN4c/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/KFBU_VHbN4c",
-    "duration": "14:33",
-    "description": "Asset location strategy — placing the right assets in taxable vs tax-advantaged accounts.",
-    "advisor": "Sanjay Gupta",
-    "views": "35K",
+    "title": "Global ETFs for Indian Investors",
+    "category": "International Investing",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Global ETFs for Indian Investors. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "16:21",
+    "advisor": "Priya Desai",
+    "views": "82K",
     "tags": [
-      "tax",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "beginner",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Volatility Trading — VIX and Options",
-    "category": "Options Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/k_dU1bVQtxM/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/k_dU1bVQtxM",
-    "duration": "15:40",
-    "description": "Using the fear index to trade volatility directly via VIX futures and volatility ETFs.",
-    "advisor": "Priya Mehra",
-    "views": "48K",
+    "title": "LRS – Liberalised Remittance Scheme",
+    "category": "International Investing",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/F3QpgXBtDeo",
+    "thumbnail": "https://img.youtube.com/vi/F3QpgXBtDeo/maxresdefault.jpg",
+    "description": "Learn about LRS – Liberalised Remittance Scheme. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "15:48",
+    "advisor": "Arjun Patel",
+    "views": "53K",
     "tags": [
-      "options_trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Leveraged ETFs — Opportunity and Danger",
-    "category": "ETFs",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/eFaB7YJhIIk/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/eFaB7YJhIIk",
-    "duration": "16:47",
-    "description": "2x and 3x leveraged ETFs — volatility decay, daily rebalancing, and why they are misused.",
-    "advisor": "Anita Desai",
-    "views": "62K",
+    "title": "Currency Risk in International Investing",
+    "category": "International Investing",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Currency Risk in International Investing. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "8:23",
+    "advisor": "Investa Academy",
+    "views": "38K",
     "tags": [
-      "etfs",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Merger Arbitrage — Profiting from M&A",
-    "category": "Alternatives",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/qJ6hPrST86Q/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/qJ6hPrST86Q",
-    "duration": "17:54",
-    "description": "Buying target company shares after deal announcement and capturing the spread at close.",
-    "advisor": "Nikhil Verma",
-    "views": "89K",
+    "title": "Emerging Markets vs Developed Markets",
+    "category": "International Investing",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Emerging Markets vs Developed Markets. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "11:52",
+    "advisor": "Rahul Sharma",
+    "views": "49K",
     "tags": [
-      "alternatives",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Short Selling — Profiting from Falling Stocks",
-    "category": "Trading",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/EzMZBEMoiOo/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/EzMZBEMoiOo",
-    "duration": "18:01",
-    "description": "Stock borrowing, short squeeze risk, and best practices for responsible short selling.",
-    "advisor": "Amitabh J.",
-    "views": "112K",
+    "title": "International Mutual Funds in India",
+    "category": "International Investing",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/iFBNKPiHVlM",
+    "thumbnail": "https://img.youtube.com/vi/iFBNKPiHVlM/maxresdefault.jpg",
+    "description": "Learn about International Mutual Funds in India. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "6:21",
+    "advisor": "Priya Desai",
+    "views": "44K",
     "tags": [
-      "trading",
-      "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "international_investing",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Distressed Debt Investing",
-    "category": "Alternatives",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/fKmZXWy2bRk/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/fKmZXWy2bRk",
-    "duration": "19:08",
-    "description": "Buying bonds of troubled companies at a discount and capturing restructuring recovery value.",
-    "advisor": "Sarah Khan",
-    "views": "156K",
+    "title": "Investing in Nasdaq from India",
+    "category": "International Investing",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/WEDIj9JBTC8",
+    "thumbnail": "https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg",
+    "description": "Learn about Investing in Nasdaq from India. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "10:45",
+    "advisor": "Arjun Patel",
+    "views": "66K",
     "tags": [
-      "alternatives",
+      "international_investing",
       "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
   },
   {
-    "title": "Crypto Portfolio Construction",
-    "category": "Crypto",
-    "level": "advanced",
-    "thumbnail": "https://i.ytimg.com/vi/QXBN6MFbEMA/mqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/QXBN6MFbEMA",
-    "duration": "20:15",
-    "description": "BTC/ETH core, DeFi exposure, stablecoin yield — a balanced crypto portfolio framework.",
-    "advisor": "David Miller",
-    "views": "210K",
+    "title": "Geographical Diversification Benefits",
+    "category": "International Investing",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/p7HKvqRI_Bo",
+    "thumbnail": "https://img.youtube.com/vi/p7HKvqRI_Bo/maxresdefault.jpg",
+    "description": "Learn about Geographical Diversification Benefits. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "15:28",
+    "advisor": "Investa Academy",
+    "views": "11K",
     "tags": [
-      "crypto",
+      "international_investing",
       "advanced",
-      "investing",
-      "finance"
-    ],
-    "createdAt": "2026-05-14T10:02:42.766Z"
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "FAANG Stocks for Indian Investors",
+    "category": "International Investing",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/u5OFPgLMwEo",
+    "thumbnail": "https://img.youtube.com/vi/u5OFPgLMwEo/maxresdefault.jpg",
+    "description": "Learn about FAANG Stocks for Indian Investors. This video covers core concepts of International Investing in a beginner-friendly and practical way.",
+    "duration": "8:55",
+    "advisor": "Rahul Sharma",
+    "views": "36K",
+    "tags": [
+      "international_investing",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Create a Financial Plan",
+    "category": "Financial Planning",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/HQzoZfc3GwQ",
+    "thumbnail": "https://img.youtube.com/vi/HQzoZfc3GwQ/maxresdefault.jpg",
+    "description": "Learn about How to Create a Financial Plan. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "14:26",
+    "advisor": "Investa Academy",
+    "views": "30K",
+    "tags": [
+      "financial_planning",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Financial Planning at Every Age",
+    "category": "Financial Planning",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/syyv9GQkn78",
+    "thumbnail": "https://img.youtube.com/vi/syyv9GQkn78/maxresdefault.jpg",
+    "description": "Learn about Financial Planning at Every Age. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "15:21",
+    "advisor": "Rahul Sharma",
+    "views": "10K",
+    "tags": [
+      "financial_planning",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Goal-Based Investing",
+    "category": "Financial Planning",
+    "level": "Beginner",
+    "videoUrl": "https://www.youtube.com/embed/K28JqKPzFrU",
+    "thumbnail": "https://img.youtube.com/vi/K28JqKPzFrU/maxresdefault.jpg",
+    "description": "Learn about Goal-Based Investing. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "10:10",
+    "advisor": "Priya Desai",
+    "views": "28K",
+    "tags": [
+      "financial_planning",
+      "beginner",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "How to Set Financial Goals",
+    "category": "Financial Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/oA26JGpMZjE",
+    "thumbnail": "https://img.youtube.com/vi/oA26JGpMZjE/maxresdefault.jpg",
+    "description": "Learn about How to Set Financial Goals. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "6:29",
+    "advisor": "Arjun Patel",
+    "views": "83K",
+    "tags": [
+      "financial_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Insurance in Financial Planning",
+    "category": "Financial Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/wHHfPHiIXrI",
+    "thumbnail": "https://img.youtube.com/vi/wHHfPHiIXrI/maxresdefault.jpg",
+    "description": "Learn about Insurance in Financial Planning. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "8:30",
+    "advisor": "Investa Academy",
+    "views": "17K",
+    "tags": [
+      "financial_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Emergency Fund Planning",
+    "category": "Financial Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/gFQNPmLKj1k",
+    "thumbnail": "https://img.youtube.com/vi/gFQNPmLKj1k/maxresdefault.jpg",
+    "description": "Learn about Emergency Fund Planning. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "11:30",
+    "advisor": "Rahul Sharma",
+    "views": "73K",
+    "tags": [
+      "financial_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Debt Management Strategies",
+    "category": "Financial Planning",
+    "level": "Intermediate",
+    "videoUrl": "https://www.youtube.com/embed/MmKG0F0oj70",
+    "thumbnail": "https://img.youtube.com/vi/MmKG0F0oj70/maxresdefault.jpg",
+    "description": "Learn about Debt Management Strategies. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "11:29",
+    "advisor": "Priya Desai",
+    "views": "76K",
+    "tags": [
+      "financial_planning",
+      "intermediate",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Wealth Planning for Families",
+    "category": "Financial Planning",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/szzR6T_yxPk",
+    "thumbnail": "https://img.youtube.com/vi/szzR6T_yxPk/maxresdefault.jpg",
+    "description": "Learn about Wealth Planning for Families. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "9:12",
+    "advisor": "Arjun Patel",
+    "views": "26K",
+    "tags": [
+      "financial_planning",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Estate Planning Basics",
+    "category": "Financial Planning",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/ngqFHMXqwGc",
+    "thumbnail": "https://img.youtube.com/vi/ngqFHMXqwGc/maxresdefault.jpg",
+    "description": "Learn about Estate Planning Basics. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "12:41",
+    "advisor": "Investa Academy",
+    "views": "45K",
+    "tags": [
+      "financial_planning",
+      "advanced",
+      "finance",
+      "investing"
+    ]
+  },
+  {
+    "title": "Financial Advisor vs DIY Investing",
+    "category": "Financial Planning",
+    "level": "Advanced",
+    "videoUrl": "https://www.youtube.com/embed/OjGE2YexMtQ",
+    "thumbnail": "https://img.youtube.com/vi/OjGE2YexMtQ/maxresdefault.jpg",
+    "description": "Learn about Financial Advisor vs DIY Investing. This video covers core concepts of Financial Planning in a beginner-friendly and practical way.",
+    "duration": "13:38",
+    "advisor": "Rahul Sharma",
+    "views": "69K",
+    "tags": [
+      "financial_planning",
+      "advanced",
+      "finance",
+      "investing"
+    ]
   }
 ]

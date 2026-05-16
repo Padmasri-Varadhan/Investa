@@ -28,6 +28,7 @@ api.interceptors.response.use(
             if (!isAuthRoute) {
                 localStorage.removeItem('investaToken');
                 localStorage.removeItem('investaUser');
+                window.location.href = '/login';
             }
         }
         return Promise.reject(error);
@@ -75,5 +76,9 @@ export const getNews = () => api.get('/news');
 
 // ── Chatbot API ──────────────────────────────────────────────────────────────
 export const queryChatbot = (data) => api.post('/chatbot/query', data);
+export const getConversations = () => api.get('/chatbot/conversations');
+export const getMessages = (id) => api.get(`/chatbot/conversations/${id}/messages`);
+export const deleteConversation = (id) => api.delete(`/chatbot/conversations/${id}`);
+export const renameConversation = (id, data) => api.put(`/chatbot/conversations/${id}`, data);
 
 export default api;

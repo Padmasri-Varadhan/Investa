@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography, TextField, InputAdornment, Chip, Pagination } from '@mui/material';
-import { Search } from '@mui/icons-material';
+import { Box, Grid, Typography, TextField, InputAdornment, Chip, Pagination, Autocomplete } from '@mui/material';
+import { Search, Category as CategoryIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { getInvestmentIdeas } from '../services/api';
 import InvestmentCard from '../components/InvestmentCard';
@@ -8,8 +8,9 @@ import InvestmentCard from '../components/InvestmentCard';
 const InvestmentIdeas = () => {
     const navigate = useNavigate();
     const [ideas, setIdeas] = useState([]);
-    const [tab, setTab] = useState('all');
+    const [tab, setTab] = useState(() => sessionStorage.getItem('investaSelectedCategory') || 'All');
     const [search, setSearch] = useState('');
+    const [riskFilter, setRiskFilter] = useState('All');
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const itemsPerPage = 9;
@@ -24,8 +25,9 @@ const InvestmentIdeas = () => {
                     page,
                     limit: itemsPerPage,
                 };
-                if (tab !== 'all') params.category = tab;
+                if (tab !== 'All') params.category = tab;
                 if (search) params.search = search;
+                if (riskFilter !== 'All') params.risk = riskFilter.toLowerCase();
                 
                 const res = await getInvestmentIdeas(params);
                 setIdeas(res.data.data || []);
@@ -37,18 +39,34 @@ const InvestmentIdeas = () => {
             }
         };
         fetchIdeas();
-    }, [page, tab, search]);
+    }, [page, tab, search, riskFilter]);
 
     // Reset page when filter/search changes
     useEffect(() => {
         setPage(1);
     }, [tab, search]);
 
-    const categories = [
-        'all', 'stocks', 'etf', 'index_fund', 'mutual_fund', 'bonds', 'crypto', 'real_estate', 
-        'savings_account', 'fixed_deposit', 'recurring_deposit', 'ppf', 'epf', 'nps', 
-        'gold_investment', 'government_schemes', 'corporate_bonds', 'treasury_bills', 
-        'reits', 'international_investments'
+    const categoryOptions = [
+        { label: 'All Categories', value: 'All', icon: '🌐' },
+        { label: 'Savings Account', value: 'Savings Account', icon: '🏦' },
+        { label: 'Fixed Deposit (FD)', value: 'Fixed Deposit (FD)', icon: '🔒' },
+        { label: 'Recurring Deposit (RD)', value: 'Recurring Deposit (RD)', icon: '🔄' },
+        { label: 'Public Provident Fund (PPF)', value: 'Public Provident Fund (PPF)', icon: '🏛️' },
+        { label: 'Employee Provident Fund (EPF)', value: 'Employee Provident Fund (EPF)', icon: '🏢' },
+        { label: 'National Pension System (NPS)', value: 'National Pension System (NPS)', icon: '👴' },
+        { label: 'Gold Investment', value: 'Gold Investment', icon: '🥇' },
+        { label: 'Government Schemes', value: 'Government Schemes', icon: '📜' },
+        { label: 'Corporate Bonds', value: 'Corporate Bonds', icon: '🏢' },
+        { label: 'Treasury Bills', value: 'Treasury Bills', icon: '📄' },
+        { label: 'REITs', value: 'REITs', icon: '🏢' },
+        { label: 'International Investments', value: 'International Investments', icon: '🌍' },
+        { label: 'Mutual Funds', value: 'Mutual Funds', icon: '💼' },
+        { label: 'SIP Investments', value: 'SIP Investments', icon: '🔄' },
+        { label: 'Stocks', value: 'Stocks', icon: '📊' },
+        { label: 'Cryptocurrency', value: 'Cryptocurrency', icon: '₿' },
+        { label: 'Real Estate', value: 'Real Estate', icon: '🏘️' },
+        { label: 'ETFs', value: 'ETFs', icon: '🔗' },
+        { label: 'Index Funds', value: 'Index Funds', icon: '📈' }
     ];
 
     return (
@@ -58,52 +76,58 @@ const InvestmentIdeas = () => {
                 sx={{ 
                     fontWeight: 900, 
                     color: '#007DA3', 
-                    mb: 6, 
+                    mb: 2, 
                     letterSpacing: '-0.5px' 
                 }}
             >
                 Investment Ideas
             </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 6, maxWidth: 800 }}>
+                Explore over 190 curated investment strategies across 19 categories. Find the perfect balance of risk and reward for your financial goals.
+            </Typography>
 
-            {/* Filter and Search Bar */}
-            <Box sx={{ mb: 6, display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 3 }}>
-                <Box 
-                    sx={{ 
-                        display: 'flex', 
-                        gap: 1, 
-                        overflowX: 'auto', 
-                        pb: 1,
-                        width: { xs: '100%', md: '70%' },
-                        '&::-webkit-scrollbar': { height: '6px' },
-                        '&::-webkit-scrollbar-thumb': { bgcolor: '#cbd5e1', borderRadius: '3px' },
-                        '&::-webkit-scrollbar-track': { bgcolor: 'transparent' }
-                    }}
-                >
-                    {categories.map(cat => (
-                        <Chip 
-                            key={cat}
-                            label={cat.replace(/_/g, ' ').toUpperCase()}
-                            onClick={() => setTab(cat)}
-                            sx={{ 
-                                bgcolor: tab === cat ? '#007DA3' : 'white',
-                                color: tab === cat ? 'white' : '#4B5563',
-                                fontWeight: 700,
-                                px: 1,
-                                height: 36,
-                                flexShrink: 0,
-                                border: '1px solid #E5E7EB',
-                                '&:hover': { bgcolor: tab === cat ? '#005b7a' : '#F3F4F6' },
-                                transition: 'all 0.2s',
-                            }}
-                        />
-                    ))}
-                </Box>
+            {/* Sticky Filter and Search Bar */}
+            <Box 
+                sx={{ 
+                    position: 'sticky', 
+                    top: 0, 
+                    zIndex: 10, 
+                    bgcolor: 'rgba(245, 249, 252, 0.95)', 
+                    backdropFilter: 'blur(10px)',
+                    pt: 2,
+                    pb: 3,
+                    mb: 5,
+                    borderBottom: '1px solid #e2e8f0',
+                    display: 'flex', 
+                    flexWrap: { xs: 'wrap', lg: 'nowrap' },
+                    gap: 2.5,
+                    alignItems: 'center',
+                    mx: { xs: -2, md: -4 },
+                    px: { xs: 2, md: 4 }
+                }}
+            >
                 <TextField
-                    placeholder="Search ideas..."
-                    size="small"
+                    placeholder="Search investment ideas..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    sx={{ width: { xs: '100%', md: 320 }, bgcolor: 'white', borderRadius: '8px', '& .MuiOutlinedInput-root': { borderRadius: '8px' } }}
+                    sx={{ 
+                        flexGrow: 1, 
+                        minWidth: { xs: '100%', lg: '250px' }, 
+                        bgcolor: 'white', 
+                        borderRadius: '12px', 
+                        '& .MuiOutlinedInput-root': { 
+                            borderRadius: '12px',
+                            height: 56, 
+                            transition: 'all 0.3s',
+                            '&:hover': {
+                                boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+                            },
+                            '&.Mui-focused': {
+                                boxShadow: '0 4px 6px -1px rgba(0, 125, 163, 0.2)',
+                                borderColor: '#007DA3'
+                            }
+                        } 
+                    }}
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
@@ -112,7 +136,117 @@ const InvestmentIdeas = () => {
                         ),
                     }}
                 />
+                
+                <Autocomplete
+                    options={categoryOptions}
+                    getOptionLabel={(option) => option.label || ''}
+                    value={categoryOptions.find(c => c.value === tab) || categoryOptions[0]}
+                    onChange={(event, newValue) => {
+                        if (newValue) {
+                            setTab(newValue.value);
+                            sessionStorage.setItem('investaSelectedCategory', newValue.value);
+                        }
+                    }}
+                    disableClearable
+                    sx={{ 
+                        width: { xs: '100%', md: '300px', lg: '280px' },
+                        flexShrink: 0,
+                        '& .MuiOutlinedInput-root': { 
+                            borderRadius: '12px',
+                            bgcolor: 'white',
+                            height: 56,
+                            transition: 'all 0.3s',
+                            '&:hover': {
+                                boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+                            },
+                            '&.Mui-focused': {
+                                boxShadow: '0 4px 6px -1px rgba(0, 125, 163, 0.2)',
+                                borderColor: '#007DA3'
+                            }
+                        }
+                    }}
+                    renderInput={(params) => (
+                        <TextField 
+                            {...params} 
+                            placeholder="All Categories"
+                            InputProps={{
+                                ...params.InputProps,
+                                startAdornment: (
+                                    <>
+                                        <InputAdornment position="start" sx={{ pl: 1 }}>
+                                            <CategoryIcon sx={{ color: '#007DA3' }} />
+                                        </InputAdornment>
+                                        {params.InputProps.startAdornment}
+                                    </>
+                                )
+                            }}
+                        />
+                    )}
+                    renderOption={(props, option) => (
+                        <Box 
+                            component="li" 
+                            {...props} 
+                            sx={{ 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                gap: 2, 
+                                py: 1.5,
+                                px: 2,
+                                borderBottom: '1px solid #f1f5f9',
+                                transition: 'all 0.2s',
+                                '&:hover': {
+                                    bgcolor: '#e6f5fa !important',
+                                    color: '#007DA3'
+                                },
+                                '&.Mui-selected': {
+                                    bgcolor: 'rgba(0, 125, 163, 0.1) !important',
+                                    color: '#007DA3',
+                                    fontWeight: 800
+                                }
+                            }}
+                        >
+                            <Typography variant="h6" sx={{ minWidth: 32, textAlign: 'center' }}>{option.icon}</Typography>
+                            <Typography variant="body1" fontWeight={600}>{option.label}</Typography>
+                        </Box>
+                    )}
+                />
+
+                <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', flexShrink: 0, overflowX: 'auto', pb: { xs: 1, lg: 0 }, '&::-webkit-scrollbar': { display: 'none' } }}>
+                    <Typography variant="body2" fontWeight={700} color="text.secondary" sx={{ mr: 0.5, whiteSpace: 'nowrap' }}>Risk Level:</Typography>
+                    {['All', 'Low', 'Medium', 'High'].map(r => (
+                        <Chip 
+                            key={r} label={r}
+                            onClick={() => setRiskFilter(r)}
+                            sx={{ 
+                                fontWeight: 700, 
+                                height: 40,
+                                borderRadius: '12px',
+                                bgcolor: riskFilter === r ? '#007DA3' : 'white', 
+                                color: riskFilter === r ? 'white' : '#4B5563',
+                                border: '1px solid #e2e8f0',
+                                '&:hover': { bgcolor: riskFilter === r ? '#007DA3' : '#f1f5f9', color: riskFilter === r ? 'white' : '#007DA3' },
+                                transition: 'all 0.2s'
+                            }} 
+                        />
+                    ))}
+                </Box>
             </Box>
+
+            {/* Display selected category information */}
+            {tab !== 'All' && (
+                <Box sx={{ mb: 6, p: 3, bgcolor: 'white', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1)' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
+                        <Typography variant="h3">{categoryOptions.find(c => c.value === tab)?.icon}</Typography>
+                        <Typography variant="h5" fontWeight={800} color="#007DA3">
+                            {tab}
+                        </Typography>
+                    </Box>
+                    <Typography variant="body1" color="text.secondary">
+                        Showing all specialized investment opportunities within the {tab} category. 
+                        Use the risk filter above to narrow down options based on your risk appetite.
+                    </Typography>
+                </Box>
+            )}
 
             {/* Idea Grid */}
             <Grid container spacing={3}>

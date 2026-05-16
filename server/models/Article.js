@@ -32,8 +32,22 @@ const articleSchema = new mongoose.Schema({
         type: Number,
         default: 5,
     },
+    difficultyLevel: {
+        type: String,
+        enum: ['Beginner', 'Intermediate', 'Advanced'],
+        default: 'Beginner',
+    },
+    author: {
+        type: String,
+        default: 'Investa Expert Team',
+    },
     tags: {
         type: [String],
+        default: [],
+    },
+    relatedArticles: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Article',
         default: [],
     },
 }, { timestamps: true });

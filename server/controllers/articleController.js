@@ -2,7 +2,7 @@ const Article = require('../models/Article');
 
 const getArticles = async (req, res) => {
     try {
-        const { search, risk, category, sort, page = 1, limit = 10 } = req.query;
+        const { search, risk, category, difficulty, sort, page = 1, limit = 10 } = req.query;
         let query = {};
 
         if (search) {
@@ -16,6 +16,7 @@ const getArticles = async (req, res) => {
 
         if (risk) query.riskLevel = risk;
         if (category) query.category = category;
+        if (difficulty) query.difficultyLevel = difficulty;
 
         let sortObj = { createdAt: -1 };
         if (sort) {
@@ -50,7 +51,32 @@ const getArticleById = async (req, res) => {
     try {
         const article = await Article.findById(req.params.id);
         if (!article) return res.status(404).json({ message: 'Article not found' });
-        res.json(article);
+        
+        // Intelligent Recommendations
+        const InvestmentIdea = require('../models/InvestmentIdea');
+        
+        // 1. Related Articles (same category or shared tags, excluding self)
+        const relatedArticles = await Article.find({
+            _id: { $ne: article._id },
+            $or: [
+                { category: article.category },
+                { tags: { $in: article.tags } }
+            ]
+        }).limit(3);
+
+        // 2. Related Investment Ideas (same category or riskLevel match)
+        const relatedIdeas = await InvestmentIdea.find({
+            $or: [
+                { category: article.category },
+                { riskLevel: article.riskLevel }
+            ]
+        }).limit(3);
+
+        res.json({
+            article,
+            relatedArticles,
+            relatedIdeas
+        });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

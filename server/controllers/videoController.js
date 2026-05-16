@@ -7,7 +7,9 @@ const getVideos = async (req, res) => {
 
         if (search) {
             query.$or = [
-                { title: { $regex: search, $options: 'i' } }
+                { title: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } },
+                { tags: { $in: [new RegExp(search, 'i')] } }
             ];
         }
 
@@ -47,7 +49,41 @@ const getVideoById = async (req, res) => {
     try {
         const video = await Video.findById(req.params.id);
         if (!video) return res.status(404).json({ message: 'Video not found' });
-        res.json(video);
+
+        // Intelligent Recommendations
+        const Article = require('../models/Article');
+        const InvestmentIdea = require('../models/InvestmentIdea');
+        
+        // 1. Related Videos (same category or shared tags, excluding self)
+        const relatedVideos = await Video.find({
+            _id: { $ne: video._id },
+            $or: [
+                { category: video.category },
+                { tags: { $in: video.tags } }
+            ]
+        }).limit(3);
+
+        // 2. Related Articles
+        const relatedArticles = await Article.find({
+            $or: [
+                { category: video.category },
+                { tags: { $in: video.tags } }
+            ]
+        }).limit(3);
+
+        // 3. Related Investment Ideas
+        const relatedIdeas = await InvestmentIdea.find({
+            $or: [
+                { category: video.category }
+            ]
+        }).limit(3);
+
+        res.json({
+            video,
+            relatedVideos,
+            relatedArticles,
+            relatedIdeas
+        });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
