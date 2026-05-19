@@ -27,14 +27,52 @@ ChartJS.register(
     LineElement, Title, Tooltip, Legend, Filler, ArcElement
 );
 
+const DEMO_PORTFOLIO = {
+    totalValue: 485000,
+    investedAmount: 320000,
+    totalProfit: 165000,
+    totalProfitPercent: '18.4'
+};
+
+const DEMO_HOLDINGS = [
+    { id: '1', name: 'Nifty 50 Index Fund', type: 'Index Fund/ETF', qty: 500, buyPrice: 100, currentPrice: 240, profit: 70000, profitPercent: '140.00' },
+    { id: '2', name: 'S&P 500 ETF', type: 'Index Fund/ETF', qty: 100, buyPrice: 300, currentPrice: 500, profit: 20000, profitPercent: '66.67' },
+    { id: '3', name: 'Reliance Industries', type: 'Stock', qty: 20, buyPrice: 2000, currentPrice: 3000, profit: 20000, profitPercent: '50.00' },
+    { id: '4', name: 'HDFC Bank', type: 'Stock', qty: 30, buyPrice: 1400, currentPrice: 1880, profit: 14400, profitPercent: '34.29' },
+    { id: '5', name: 'TCS', type: 'Stock', qty: 10, buyPrice: 3000, currentPrice: 3500, profit: 5000, profitPercent: '16.67' },
+    { id: '6', name: 'Infosys', type: 'Stock', qty: 20, buyPrice: 1250, currentPrice: 1450, profit: 4000, profitPercent: '16.00' },
+    { id: '7', name: 'ICICI Bank', type: 'Stock', qty: 30, buyPrice: 800, currentPrice: 950, profit: 4500, profitPercent: '18.75' },
+    { id: '8', name: 'Parag Parikh Flexi Cap', type: 'Mutual Fund', qty: 600, buyPrice: 40, currentPrice: 62, profit: 13200, profitPercent: '55.00' },
+    { id: '9', name: 'SBI Bluechip Fund', type: 'Mutual Fund', qty: 400, buyPrice: 50, currentPrice: 68, profit: 7200, profitPercent: '36.00' },
+    { id: '10', name: 'Sovereign Gold Bond', type: 'Gold', qty: 4, buyPrice: 5000, currentPrice: 6500, profit: 6000, profitPercent: '30.00' },
+    { id: '11', name: 'Corporate Debt Fund', type: 'Debt/Bonds', qty: 100, buyPrice: 100, currentPrice: 106, profit: 600, profitPercent: '6.00' },
+    { id: '12', name: 'Government G-Sec Fund', type: 'Debt/Bonds', qty: 50, buyPrice: 100, currentPrice: 102, profit: 100, profitPercent: '2.00' }
+];
+
+const DEMO_TRANSACTIONS = [
+    { id: '1', type: 'Buy', asset: 'Nifty 50 Index Fund', amount: 50000, date: '2026-05-10', status: 'Completed' },
+    { id: '2', type: 'Buy', asset: 'S&P 500 ETF', amount: 30000, date: '2026-05-08', status: 'Completed' },
+    { id: '3', type: 'Buy', asset: 'Reliance Industries', amount: 40000, date: '2026-05-05', status: 'Completed' },
+    { id: '4', type: 'Buy', asset: 'HDFC Bank', amount: 42000, date: '2026-05-02', status: 'Completed' },
+    { id: '5', type: 'Buy', asset: 'Sovereign Gold Bond', amount: 20000, date: '2026-04-28', status: 'Completed' }
+];
+
+const DEMO_ALLOCATION = {
+    labels: ['Equity Mutual Funds', 'Stocks', 'Index Funds & ETFs', 'Gold Investment', 'Fixed Income & Bonds'],
+    datasets: [{
+        data: [13.3, 43, 35, 5.4, 3.3],
+        backgroundColor: ['#007DA3', '#38BDF8', '#0284C7', '#FBBF24', '#F87171'],
+        borderWidth: 0,
+    }]
+};
+
 const Dashboard = () => {
     const [loading, setLoading] = useState(true);
-    const [portfolio, setPortfolio] = useState(null);
-    const [holdings, setHoldings] = useState([]);
-    const [transactions, setTransactions] = useState([]);
-    const [allocation, setAllocation] = useState(null);
+    const [portfolio, setPortfolio] = useState(DEMO_PORTFOLIO);
+    const [holdings, setHoldings] = useState(DEMO_HOLDINGS);
+    const [transactions, setTransactions] = useState(DEMO_TRANSACTIONS);
+    const [allocation, setAllocation] = useState(DEMO_ALLOCATION);
     const [goals, setGoals] = useState([]);
-    const [news, setNews] = useState([]);
     const [recommendation, setRecommendation] = useState(null);
     const [chartTimeframe, setChartTimeframe] = useState('1M');
     
@@ -45,21 +83,29 @@ const Dashboard = () => {
             setLoading(true);
             try {
                 const dashRes = await getDashboardData();
-                const { portfolio, holdings, transactions, allocation, goals: apiGoals } = dashRes.data;
+                const { portfolio: apiPortfolio, holdings: apiHoldings, transactions: apiTransactions, allocation: apiAllocation, goals: apiGoals } = dashRes.data;
 
-                setPortfolio(portfolio);
-                setHoldings(holdings);
-                setTransactions(transactions);
-                setAllocation(allocation);
-                setGoals(apiGoals);
-
-                const newsRes = await getNews().catch(() => ({ data: [] }));
-                setNews(newsRes.data);
+                if (apiHoldings && apiHoldings.length > 0) {
+                    setPortfolio(apiPortfolio);
+                    setHoldings(apiHoldings);
+                    setTransactions(apiTransactions);
+                    setAllocation(apiAllocation);
+                } else {
+                    setPortfolio(DEMO_PORTFOLIO);
+                    setHoldings(DEMO_HOLDINGS);
+                    setTransactions(DEMO_TRANSACTIONS);
+                    setAllocation(DEMO_ALLOCATION);
+                }
+                setGoals(apiGoals || []);
 
                 const recRes = await getRecommendations('Moderate').catch(() => ({ data: { summary: "Diversify your portfolio across different asset classes to balance risk and reward." } }));
                 setRecommendation(recRes.data || null);
             } catch (err) {
                 console.error("Dashboard fetch error:", err);
+                setPortfolio(DEMO_PORTFOLIO);
+                setHoldings(DEMO_HOLDINGS);
+                setTransactions(DEMO_TRANSACTIONS);
+                setAllocation(DEMO_ALLOCATION);
             } finally {
                 setLoading(false);
             }
@@ -68,12 +114,20 @@ const Dashboard = () => {
     }, []);
 
     const trendData = {
-        labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [{
             label: 'Portfolio Value',
-            data: [portfolio?.investedAmount || 0, (portfolio?.investedAmount || 0) * 1.02, (portfolio?.investedAmount || 0) * 1.05, (portfolio?.investedAmount || 0) * 1.03, (portfolio?.investedAmount || 0) * 1.08, (portfolio?.totalValue || 0)],
+            data: [
+                portfolio?.investedAmount || 320000, 
+                (portfolio?.investedAmount || 320000) * 1.08, 
+                (portfolio?.investedAmount || 320000) * 1.15, 
+                (portfolio?.investedAmount || 320000) * 1.22, 
+                (portfolio?.investedAmount || 320000) * 1.35, 
+                (portfolio?.investedAmount || 320000) * 1.42, 
+                portfolio?.totalValue || 485000
+            ],
             borderColor: '#007DA3',
-            backgroundColor: 'rgba(0, 125, 163, 0.1)',
+            backgroundColor: 'rgba(0, 125, 163, 0.06)',
             fill: true,
             tension: 0.4,
             pointRadius: 4,
@@ -92,51 +146,24 @@ const Dashboard = () => {
     return (
         <Box sx={{ px: { xs: 2, md: 4 }, py: 4, bgcolor: '#F9FAFB', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
             
-            {/* Live News Ticker */}
-            {news.length > 0 && (
-                <Box className="news-ticker-container">
-                    <Box className="news-ticker-wrapper">
-                        {news.map((item, i) => (
-                            <Box key={i} className="news-item">
-                                <Box className="news-dot" />
-                                <Typography variant="caption" sx={{ fontWeight: 700, letterSpacing: 0.5 }}>
-                                    {item.title} — {item.source}
-                                </Typography>
-                            </Box>
-                        ))}
-                    </Box>
-                </Box>
-            )}
-
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-                <Box>
-                    <Typography variant="h4" sx={{ fontWeight: 900, color: '#1e293b', letterSpacing: -1.5 }}>
-                        Welcome back, {userName.split(' ')[0]}!
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 600 }}>
-                        Here is what's happening with your portfolio today.
+                <Box sx={{ mb: 1 }}>
+                    <Typography variant="h4" sx={{ fontWeight: 900, color: '#007DA3', letterSpacing: '-0.025em', fontSize: { xs: '2rem', md: '2.5rem' } }}>
+                        Dashboard Overview
                     </Typography>
                 </Box>
-                <Button 
-                    variant="contained" 
-                    startIcon={<AutoAwesome />}
-                    sx={{ bgcolor: '#007DA3', borderRadius: '12px', fontWeight: 700, px: 3 }}
-                    onClick={() => window.location.href='/chatbot'}
-                >
-                    AI Insights
-                </Button>
             </Box>
 
             {/* Premium Portfolio Summary Cards */}
             <Grid container spacing={3} sx={{ mb: 4 }}>
                 <Grid item xs={12} sm={6} md={3}>
-                    <Card className="gradient-card-blue" sx={{ borderRadius: 4, boxShadow: '0 10px 20px rgba(0, 125, 163, 0.2)' }}>
+                    <Card sx={{ borderRadius: '6px', bgcolor: '#fff', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', transition: 'all 0.2s ease', '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 4px 12px rgba(0,125,163,0.08)', borderColor: 'rgba(0,125,163,0.3)' } }}>
                         <CardContent sx={{ p: 3 }}>
-                            <Typography className="premium-stat-label">Net Worth</Typography>
-                            <Typography className="premium-stat-value">₹{portfolio?.totalValue.toLocaleString()}</Typography>
+                            <Typography variant="subtitle2" sx={{ color: '#64748b', fontWeight: 700, mb: 1, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>Net Worth</Typography>
+                            <Typography variant="h4" sx={{ color: '#007DA3', fontWeight: 900 }}>₹{portfolio?.totalValue.toLocaleString()}</Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', mt: 1, gap: 0.5 }}>
-                                <NorthEast sx={{ fontSize: 14, color: '#69f0ae' }} />
-                                <Typography variant="caption" sx={{ fontWeight: 700, color: '#69f0ae' }}>
+                                <NorthEast sx={{ fontSize: 14, color: '#10B981' }} />
+                                <Typography variant="caption" sx={{ fontWeight: 700, color: '#10B981' }}>
                                     +{portfolio?.totalProfitPercent}% All-time
                                 </Typography>
                             </Box>
@@ -144,10 +171,10 @@ const Dashboard = () => {
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
-                    <Card sx={{ borderRadius: 4, bgcolor: '#fff', border: '1px solid #f1f5f9' }}>
+                    <Card sx={{ borderRadius: '6px', bgcolor: '#fff', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', transition: 'all 0.2s ease', '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 4px 12px rgba(0,125,163,0.08)', borderColor: 'rgba(0,125,163,0.3)' } }}>
                         <CardContent sx={{ p: 3 }}>
-                            <Typography className="premium-stat-label" sx={{ color: '#64748b' }}>Invested</Typography>
-                            <Typography className="premium-stat-value" sx={{ color: '#1e293b' }}>₹{portfolio?.investedAmount.toLocaleString()}</Typography>
+                            <Typography variant="subtitle2" sx={{ color: '#64748b', fontWeight: 700, mb: 1, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>Invested</Typography>
+                            <Typography variant="h4" sx={{ color: '#1e293b', fontWeight: 900 }}>₹{portfolio?.investedAmount.toLocaleString()}</Typography>
                             <Typography variant="caption" sx={{ fontWeight: 700, color: '#94a3b8' }}>
                                 Total Capital Deployed
                             </Typography>
@@ -155,21 +182,21 @@ const Dashboard = () => {
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
-                    <Card className="gradient-card-green" sx={{ borderRadius: 4, boxShadow: '0 10px 20px rgba(5, 150, 105, 0.2)' }}>
+                    <Card sx={{ borderRadius: '6px', bgcolor: '#fff', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', transition: 'all 0.2s ease', '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 4px 12px rgba(0,125,163,0.08)', borderColor: 'rgba(0,125,163,0.3)' } }}>
                         <CardContent sx={{ p: 3 }}>
-                            <Typography className="premium-stat-label">Total Profit</Typography>
-                            <Typography className="premium-stat-value">₹{portfolio?.totalProfit.toLocaleString()}</Typography>
-                            <Typography variant="caption" sx={{ fontWeight: 700, opacity: 0.8 }}>
+                            <Typography variant="subtitle2" sx={{ color: '#64748b', fontWeight: 700, mb: 1, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>Total Profit</Typography>
+                            <Typography variant="h4" sx={{ color: '#10B981', fontWeight: 900 }}>₹{portfolio?.totalProfit.toLocaleString()}</Typography>
+                            <Typography variant="caption" sx={{ fontWeight: 700, color: '#94a3b8' }}>
                                 Realized & Unrealized
                             </Typography>
                         </CardContent>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
-                    <Card sx={{ borderRadius: 4, bgcolor: '#fff', border: '1px solid #f1f5f9' }}>
+                    <Card sx={{ borderRadius: '6px', bgcolor: '#fff', border: '1px solid #e2e8f0', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', transition: 'all 0.2s ease', '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 4px 12px rgba(0,125,163,0.08)', borderColor: 'rgba(0,125,163,0.3)' } }}>
                         <CardContent sx={{ p: 3 }}>
-                            <Typography className="premium-stat-label" sx={{ color: '#64748b' }}>Active Assets</Typography>
-                            <Typography className="premium-stat-value" sx={{ color: '#1e293b' }}>{holdings.length}</Typography>
+                            <Typography variant="subtitle2" sx={{ color: '#64748b', fontWeight: 700, mb: 1, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>Active Assets</Typography>
+                            <Typography variant="h4" sx={{ color: '#1e293b', fontWeight: 900 }}>{holdings.length}</Typography>
                             <Typography variant="caption" sx={{ fontWeight: 700, color: '#94a3b8' }}>
                                 Diversified across {allocation?.labels?.length || 0} classes
                             </Typography>

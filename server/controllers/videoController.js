@@ -1,6 +1,7 @@
 const Video = require('../models/Video');
 
 const getVideos = async (req, res) => {
+    // Fetch videos with search, level, and category filters (re-seeded)
     try {
         const { search, category, level, sort, page = 1, limit = 10 } = req.query;
         let query = {};
@@ -9,6 +10,8 @@ const getVideos = async (req, res) => {
             query.$or = [
                 { title: { $regex: search, $options: 'i' } },
                 { description: { $regex: search, $options: 'i' } },
+                { advisor: { $regex: search, $options: 'i' } },
+                { category: { $regex: search, $options: 'i' } },
                 { tags: { $in: [new RegExp(search, 'i')] } }
             ];
         }

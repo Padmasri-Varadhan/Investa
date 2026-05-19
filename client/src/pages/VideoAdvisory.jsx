@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography, Button, Dialog, DialogContent, IconButton, Stack, CircularProgress } from '@mui/material';
-import { PlayCircle, Close, FilterList, Refresh } from '@mui/icons-material';
+import { 
+    Box, 
+    Grid, 
+    Typography, 
+    Button, 
+    Dialog, 
+    DialogContent, 
+    IconButton, 
+    Stack, 
+    CircularProgress,
+    TextField,
+    InputAdornment
+} from '@mui/material';
+import { Close, Search, Clear } from '@mui/icons-material';
 import { getVideos } from '../services/api';
 import VideoCard from '../components/VideoCard';
 
@@ -12,20 +24,43 @@ const VideoAdvisory = () => {
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(true);
     const [videoLoading, setVideoLoading] = useState(true);
+    const [searchInput, setSearchInput] = useState('');
+    const [search, setSearch] = useState('');
 
     const itemsPerPage = 6;
+
+
+
+    // Debounce search input
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setSearch(searchInput);
+            setPage(1); // Reset page on search change
+        }, 300);
+        return () => clearTimeout(handler);
+    }, [searchInput]);
 
     useEffect(() => {
         const fetchVideos = async () => {
             setLoading(true);
             try {
                 const params = { page, limit: itemsPerPage };
-                if (tab !== 'all') params.level = tab;
+                if (search.trim()) {
+                    params.search = search.trim();
+                }
+                
+                if (tab !== 'all') {
+                    const categoryMap = {
+                        'investing': 'Investing',
+                        'planning': 'Planning',
+                        'alternative_assets': 'Alternative Assets'
+                    };
+                    params.category = categoryMap[tab] || tab;
+                }
                 
                 const res = await getVideos(params);
                 const incoming = res.data.data || [];
                 if (page === 1) {
-                    // Deduplicate on initial load by _id
                     const unique = Array.from(new Map(incoming.map(v => [v._id, v])).values());
                     setVideos(unique);
                 } else {
@@ -43,7 +78,7 @@ const VideoAdvisory = () => {
             }
         };
         fetchVideos();
-    }, [page, tab]);
+    }, [page, tab, search]);
 
     const handleLoadMore = () => {
         if (page < totalPages) {
@@ -51,63 +86,80 @@ const VideoAdvisory = () => {
         }
     };
 
-    const handleTabChange = (level) => {
-        if (tab !== level) {
-            setTab(level);
-            setPage(1);
-        }
+
+
+    const handleClearSearch = () => {
+        setSearchInput('');
     };
 
     return (
-        <Box sx={{ maxWidth: '1600px', mx: 'auto', px: { xs: 2, md: 4 }, py: 6, bgcolor: '#F9FAFB', minHeight: '100vh' }}>
-            <Box sx={{ mb: 4 }}>
-                <Typography
-                    variant="h4"
-                    sx={{
-                        fontWeight: 900,
-                        color: '#007DA3',
-                        mb: 1,
-                        letterSpacing: -1,
-                        fontSize: { xs: '1.75rem', md: '2.5rem' }
-                    }}
-                >
-                    Video Advisory
-                </Typography>
-            </Box>
-
-            {/* Level Controls */}
-            <Box sx={{ mb: 6, display: 'flex', gap: 2, overflowX: 'auto', pb: 1 }}>
-                {['all', 'beginner', 'intermediate', 'advanced'].map(level => (
-                    <Button
-                        key={level}
-                        onClick={() => handleTabChange(level)}
+        <Box sx={{ maxWidth: '1440px', mx: 'auto', px: { xs: 2.5, md: 5 }, py: 6, bgcolor: '#F8FAFC', minHeight: '100vh' }}>
+            {/* Header Section */}
+            <Stack 
+                direction={{ xs: 'column', md: 'row' }} 
+                justifyContent="space-between" 
+                alignItems={{ xs: 'flex-start', md: 'center' }} 
+                spacing={3} 
+                sx={{ mb: 5 }}
+            >
+                <Box>
+                    <Typography
+                        variant="h4"
                         sx={{
-                            px: 3, py: 1,
-                            borderRadius: '24px',
-                            textTransform: 'none',
-                            fontWeight: 700,
-                            bgcolor: tab === level ? '#007DA3' : 'white',
-                            color: tab === level ? 'white' : '#4B5563',
-                            border: '1px solid #E5E7EB',
-                            boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-                            transition: 'all 0.3s ease',
-                            '&:hover': { bgcolor: tab === level ? '#005b7a' : '#F9FAFB' }
+                            fontWeight: 900,
+                            color: '#007DA3',
+                            letterSpacing: '-0.025em',
+                            fontSize: { xs: '2rem', md: '2.5rem' }
                         }}
                     >
-                        {level.toUpperCase()}
-                    </Button>
-                ))}
-            </Box>
+                        Video Advisory
+                    </Typography>
+                </Box>
 
-            {/* Video Grid */}
+                {/* Modern Search Bar */}
+                <TextField
+                    placeholder="Search by title, topic or creator..."
+                    variant="outlined"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    sx={{
+                        width: { xs: '100%', md: '400px' },
+                        '& .MuiOutlinedInput-root': {
+                            borderRadius: '16px',
+                            bgcolor: 'white',
+                            '& fieldset': { borderColor: '#E2E8F0', borderWidth: '1.5px' },
+                            '&:hover fieldset': { borderColor: '#CBD5E1' },
+                            '&.Mui-focused fieldset': { borderColor: '#007DA3', borderWidth: '2px' }
+                        }
+                    }}
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <Search sx={{ color: '#94A3B8' }} />
+                            </InputAdornment>
+                        ),
+                        endAdornment: searchInput && (
+                            <InputAdornment position="end">
+                                <IconButton onClick={handleClearSearch} size="small" edge="end">
+                                    <Clear sx={{ color: '#94A3B8' }} />
+                                </IconButton>
+                            </InputAdornment>
+                        )
+                    }}
+                />
+            </Stack>
+
+
+
+            {/* Video Grid Layout */}
             {loading && page === 1 ? (
-                <Box sx={{ textAlign: 'center', py: 12 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', py: 15 }}>
                     <CircularProgress sx={{ color: '#007DA3' }} />
                 </Box>
             ) : videos.length > 0 ? (
-                <Grid container spacing={4} justifyContent="flex-start">
+                <Grid container spacing={3.5} justifyContent="flex-start">
                     {videos.map(video => (
-                        <Grid item key={video._id || video.id} xs={12} sm={6} lg={6} xl={6} sx={{ display: 'flex' }}>
+                        <Grid item key={video._id || video.id} xs={12} sm={6} md={4} sx={{ display: 'flex' }}>
                             <VideoCard
                                 video={video}
                                 onPlay={(v) => {
@@ -118,14 +170,14 @@ const VideoAdvisory = () => {
                         </Grid>
                     ))}
                 </Grid>
-
             ) : (
-                <Box sx={{ textAlign: 'center', py: 12 }}>
-                    <Typography variant="h5" sx={{ color: '#9CA3AF', fontWeight: 600 }}>No videos available in this category</Typography>
+                <Box sx={{ textAlign: 'center', py: 15, bgcolor: 'white', borderRadius: '24px', border: '1px dashed #E2E8F0' }}>
+                    <Typography variant="h6" sx={{ color: '#475569', fontWeight: 700, mb: 1 }}>No videos found</Typography>
+                    <Typography variant="body2" sx={{ color: '#94A3B8' }}>Try adjusting your keywords or filters to explore other categories.</Typography>
                 </Box>
             )}
 
-            {/* Load More Button */}
+            {/* Load More Trigger */}
             {page < totalPages && (
                 <Stack direction="row" justifyContent="center" sx={{ mt: 8 }}>
                     <Button
@@ -135,17 +187,17 @@ const VideoAdvisory = () => {
                         disabled={loading}
                         sx={{
                             bgcolor: 'white',
-                            color: '#1F2937',
-                            fontWeight: 800,
-                            px: 4, py: 1.5,
-                            borderRadius: '12px',
-                            border: '1px solid #E5E7EB',
+                            color: '#334155',
+                            fontWeight: 700,
+                            px: 5, py: 1.5,
+                            borderRadius: '14px',
+                            border: '1px solid #E2E8F0',
                             textTransform: 'none',
-                            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                            '&:hover': { bgcolor: '#F9FAFB', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }
+                            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
+                            '&:hover': { bgcolor: '#F8FAFC', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.08)' }
                         }}
                     >
-                        {loading ? 'Loading...' : 'Load More Content'}
+                        {loading ? 'Loading content...' : 'Load More Videos'}
                     </Button>
                 </Stack>
             )}
@@ -156,19 +208,28 @@ const VideoAdvisory = () => {
                 onClose={() => setPlaying(null)}
                 maxWidth="lg"
                 fullWidth
-                PaperProps={{ sx: { borderRadius: '24px', overflow: 'hidden', bgcolor: 'black' } }}
+                PaperProps={{ sx: { borderRadius: '28px', overflow: 'hidden', bgcolor: '#000' } }}
             >
                 {playing && (
-                    <DialogContent sx={{ p: 0, position: 'relative', bgcolor: 'black', overflow: 'hidden' }}>
+                    <DialogContent sx={{ p: 0, position: 'relative', bgcolor: '#000', overflow: 'hidden' }}>
                         <IconButton
                             onClick={() => setPlaying(null)}
-                            sx={{ position: 'absolute', top: 20, right: 20, zIndex: 10, color: 'white', bgcolor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(4px)', '&:hover': { bgcolor: 'rgba(0,0,0,0.8)' } }}
+                            sx={{ 
+                                position: 'absolute', 
+                                top: 20, 
+                                right: 20, 
+                                zIndex: 10, 
+                                color: 'white', 
+                                bgcolor: 'rgba(15, 23, 42, 0.6)', 
+                                backdropFilter: 'blur(8px)', 
+                                '&:hover': { bgcolor: 'rgba(15, 23, 42, 0.9)' } 
+                            }}
                         >
                             <Close />
                         </IconButton>
                         <Box sx={{ position: 'relative', aspectRatio: '16/9', bgcolor: '#000', width: '100%' }}>
                             {videoLoading && (
-                                <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 5, bgcolor: 'black' }}>
+                                <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 5, bgcolor: '#000' }}>
                                     <CircularProgress sx={{ color: '#007DA3' }} />
                                 </Box>
                             )}
@@ -185,12 +246,22 @@ const VideoAdvisory = () => {
                                 style={{ position: 'relative', zIndex: 1 }}
                             ></iframe>
                         </Box>
-                        <Box sx={{ p: 4, bgcolor: '#1F2937' }}>
-                            <Typography variant="h5" sx={{ color: 'white', fontWeight: 800, mb: 1 }}>{playing.title}</Typography>
-                            <Typography variant="body1" sx={{ color: '#9CA3AF', fontWeight: 500 }}>
-                                ADVISOR: {playing.advisor || 'Investa Expert'} • {playing.duration} • {playing.level?.toUpperCase() || playing.riskLevel?.toUpperCase() || 'BEGINNER'} LEVEL
+                        <Box sx={{ p: 4.5, bgcolor: '#0F172A' }}>
+                            <Typography variant="h5" sx={{ color: 'white', fontWeight: 800, mb: 1.5, fontSize: { xs: '1.25rem', md: '1.75rem' } }}>
+                                {playing.title}
                             </Typography>
-                            <Typography variant="body2" sx={{ color: '#9CA3AF', mt: 2, lineHeight: 1.6 }}>
+                            <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 3 }}>
+                                <Box sx={{ bgcolor: 'rgba(255, 255, 255, 0.1)', px: 2, py: 0.5, borderRadius: '8px', fontSize: '0.75rem', fontWeight: 700, color: '#94A3B8' }}>
+                                    {playing.advisor}
+                                </Box>
+                                <Typography variant="body2" sx={{ color: '#64748B', fontWeight: 600 }}>
+                                    {playing.duration} • {playing.views} Views
+                                </Typography>
+                                <Box sx={{ bgcolor: '#007DA3', px: 2, py: 0.5, borderRadius: '8px', fontSize: '0.75rem', fontWeight: 800, color: 'white' }}>
+                                    {playing.level?.toUpperCase()}
+                                </Box>
+                            </Stack>
+                            <Typography variant="body2" sx={{ color: '#94A3B8', lineHeight: 1.7, fontSize: '0.95rem' }}>
                                 {playing.description}
                             </Typography>
                         </Box>

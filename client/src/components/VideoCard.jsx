@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Box, Button } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Box, Button, Stack } from '@mui/material';
 import { PlayArrow, ArrowForward } from '@mui/icons-material';
 
 const VideoCard = ({ video, onPlay }) => {
@@ -23,7 +23,7 @@ const VideoCard = ({ video, onPlay }) => {
     };
 
     const handleImageError = () => {
-        const idMatch = video.thumbnail.match(/\/vi\/([^/]+)/);
+        const idMatch = video.thumbnail?.match(/\/vi\/([^/]+)/);
         const id = idMatch ? idMatch[1] : null;
         if (!id) return;
 
@@ -39,43 +39,79 @@ const VideoCard = ({ video, onPlay }) => {
         }
     };
 
+    const getLevelColors = (level) => {
+        const lvl = level?.toLowerCase();
+        if (lvl === 'advanced') {
+            return { bg: 'rgba(239, 68, 68, 0.05)', color: '#EF4444', border: '1px solid rgba(239, 68, 68, 0.25)' };
+        } else if (lvl === 'intermediate') {
+            return { bg: 'rgba(245, 158, 11, 0.05)', color: '#D97706', border: '1px solid rgba(245, 158, 11, 0.25)' };
+        } else {
+            return { bg: 'rgba(16, 185, 129, 0.05)', color: '#10B981', border: '1px solid rgba(16, 185, 129, 0.25)' };
+        }
+    };
+
+    const getAdvisorBadge = (advisor) => {
+        const isZerodha = advisor?.toLowerCase().includes('zerodha');
+        return (
+            <Box sx={{ 
+                width: 28, 
+                height: 28, 
+                borderRadius: '50%', 
+                background: isZerodha ? 'linear-gradient(135deg, #ED5F35, #F13B35)' : 'linear-gradient(135deg, #10B981, #007DA3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: '0.65rem',
+                fontWeight: 900,
+                boxShadow: '0 2px 4px rgba(15, 23, 42, 0.1)',
+                border: '1.5px solid white'
+            }}>
+                {isZerodha ? 'ZV' : 'IM'}
+            </Box>
+        );
+    };
+
+    const lvlColors = getLevelColors(video.level);
+
     return (
         <Card
             sx={{
-                height: '100%',
+                width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 bgcolor: 'white',
-                borderRadius: '24px',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                borderRadius: '20px',
+                border: '1px solid rgba(226, 232, 240, 0.8)',
+                boxShadow: '0 4px 15px -2px rgba(15, 23, 42, 0.03), 0 2px 6px -1px rgba(15, 23, 42, 0.02)',
                 overflow: 'hidden',
-                transition: 'all 0.3s ease-in-out',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
-                    '& .play-overlay': { opacity: 1 }
+                    transform: 'translateY(-6px)',
+                    boxShadow: '0 20px 30px -8px rgba(15, 23, 42, 0.06), 0 10px 15px -5px rgba(15, 23, 42, 0.03)',
+                    borderColor: 'rgba(0, 125, 163, 0.2)',
+                    '& .play-overlay': { opacity: 1 },
+                    '& .card-thumbnail': { transform: 'scale(1.04)' }
                 }
             }}
         >
+            {/* Thumbnail Wrapper */}
             <Box 
                 sx={{ 
                     position: 'relative', 
                     aspectRatio: '16/9', 
-                    minHeight: '180px', 
                     width: '100%', 
                     cursor: 'pointer',
-                    bgcolor: '#E5E7EB', // Base gray
-                    background: 'linear-gradient(135deg, #007DA3 0%, #004e66 100%)', // Finance gradient
+                    bgcolor: '#F1F5F9',
+                    overflow: 'hidden',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'
                 }} 
                 onClick={() => onPlay && onPlay(video)}
             >
-                {/* Fallback Icon (Visible if image fails or is transparent) */}
-                <PlayArrow sx={{ color: 'rgba(255,255,255,0.4)', fontSize: 60, position: 'absolute' }} />
-                
                 <CardMedia
+                    className="card-thumbnail"
                     component="img"
                     sx={{ 
                         height: '100%', 
@@ -83,22 +119,23 @@ const VideoCard = ({ video, onPlay }) => {
                         objectFit: 'cover',
                         position: 'relative',
                         zIndex: 1,
-                        display: imgSrc ? 'block' : 'none'
+                        transition: 'transform 0.4s ease'
                     }}
                     src={imgSrc}
                     alt={video.title}
                     onError={handleImageError}
                 />
-                <Box sx={{ position: 'absolute', top: 12, left: 12, display: 'flex', gap: 1 }}>
-                    <Box sx={{ bgcolor: 'rgba(255,255,255,0.95)', px: 1.5, py: 0.5, borderRadius: '8px', fontSize: '0.7rem', fontWeight: 800, color: '#007DA3', backdropFilter: 'blur(4px)', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-                        {video.category?.toUpperCase() || 'ADVISORY'}
+                
+                {/* Duration Badge */}
+                <Box sx={{ position: 'absolute', bottom: 12, right: 12, zIndex: 2 }}>
+                    <Box sx={{ bgcolor: 'rgba(15, 23, 42, 0.75)', px: 1, py: 0.3, borderRadius: '6px', fontSize: '0.7rem', fontWeight: 700, color: 'white', backdropFilter: 'blur(4px)' }}>
+                        {video.duration || '00:00'}
                     </Box>
                 </Box>
-                <Box sx={{ position: 'absolute', bottom: 12, right: 12 }}>
-                    <Box sx={{ bgcolor: 'rgba(0,0,0,0.7)', px: 1.2, py: 0.4, borderRadius: '6px', fontSize: '0.7rem', fontWeight: 700, color: 'white', backdropFilter: 'blur(4px)' }}>
-                        {video.duration || '12:45'}
-                    </Box>
-                </Box>
+
+
+
+                {/* Hover Play Button Overlay */}
                 <Box 
                     className="play-overlay"
                     sx={{ 
@@ -107,9 +144,10 @@ const VideoCard = ({ video, onPlay }) => {
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        bgcolor: 'rgba(0,0,0,0.4)',
+                        bgcolor: 'rgba(15, 23, 42, 0.25)',
                         opacity: 0,
-                        transition: 'all 0.3s ease'
+                        transition: 'all 0.3s ease',
+                        zIndex: 3
                     }}
                 >
                     <Box sx={{ 
@@ -120,77 +158,94 @@ const VideoCard = ({ video, onPlay }) => {
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        boxShadow: '0 10px 15px -3px rgba(0,0,0,0.2)',
+                        boxShadow: '0 10px 20px -3px rgba(15, 23, 42, 0.25)',
                         transform: 'scale(1)',
-                        transition: 'transform 0.3s ease',
-                        '&:hover': { transform: 'scale(1.1)' }
+                        transition: 'transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                        '&:hover': { transform: 'scale(1.12)' }
                     }}>
                         <PlayArrow sx={{ color: '#007DA3', fontSize: 28 }} />
                     </Box>
                 </Box>
             </Box>
-            <CardContent sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+
+            {/* Card Info Content */}
+            <CardContent sx={{ p: 2.5, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <Typography 
                     variant="subtitle1" 
                     sx={{ 
                         fontWeight: 800, 
-                        color: '#111827', 
-                        mb: 1,
+                        color: '#0F172A', 
+                        mb: 1.2,
                         display: '-webkit-box',
                         WebkitLineClamp: 2,
                         WebkitBoxOrient: 'vertical',
                         overflow: 'hidden',
-                        minHeight: '2.8rem',
-                        lineHeight: 1.4
+                        minHeight: '2.5rem',
+                        lineHeight: 1.3,
+                        fontSize: '0.975rem',
+                        letterSpacing: '-0.01em'
                     }}
                 >
                     {video.title}
                 </Typography>
+                
                 <Typography 
                     variant="body2" 
                     sx={{ 
-                        color: '#6B7280', 
-                        fontSize: '0.875rem',
+                        color: '#64748B', 
+                        fontSize: '0.825rem',
                         display: '-webkit-box',
                         WebkitLineClamp: 2,
                         WebkitBoxOrient: 'vertical',
                         overflow: 'hidden',
-                        minHeight: '2.6rem',
-                        lineHeight: 1.5
+                        minHeight: '2.4rem',
+                        lineHeight: 1.45,
+                        mb: 2.5
                     }}
                 >
-                    {video.description || `${video.advisor} • Expert Advisory`}
+                    {video.description}
                 </Typography>
 
-                {/* Meta Info Row */}
-                <Box sx={{ display: 'flex', gap: 2, mt: 2, mb: 3 }}>
-                    <Typography variant="caption" sx={{ color: '#9CA3AF', fontWeight: 700, fontSize: '0.65rem' }}>
-                        {video.advisor || 'Expert Advisor'} • {video.views || '12K'} VIEWS
-                    </Typography>
-                </Box>
-
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 'auto', pt: 2, borderTop: '1px solid #F1F5F9' }}>
-                    <Box sx={{ 
-                        bgcolor: (video.level === 'advanced' || video.riskLevel === 'High') ? '#FEE2E2' : '#FEF3C7', 
-                        color: (video.level === 'advanced' || video.riskLevel === 'High') ? '#DC2626' : '#B45309', 
-                        px: 1.5, py: 0.5, borderRadius: '6px', fontSize: '0.7rem', fontWeight: 800 
-                    }}>
-                        {(video.level || video.riskLevel || 'beginner').toUpperCase()} {video.level ? 'LEVEL' : 'RISK'}
-                    </Box>
-                    <Button 
-                        size="small" 
-                        endIcon={<ArrowForward sx={{ fontSize: '16px !important' }} />} 
-                        sx={{ 
-                            textTransform: 'none', 
-                            fontWeight: 800,
-                            color: '#007DA3',
-                            p: 0,
-                            '&:hover': { bgcolor: 'transparent', opacity: 0.8 }
-                        }}
-                        onClick={() => onPlay && onPlay(video)}
-                    >
-                        Watch
-                    </Button>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 'auto', pt: 2, borderTop: '1px solid rgba(241, 245, 249, 0.8)' }}>
+                    <Stack direction="row" spacing={1} alignItems="center">
+                        {getAdvisorBadge(video.advisor)}
+                        <Stack spacing={0}>
+                            <Typography variant="caption" sx={{ color: '#0F172A', fontWeight: 800, fontSize: '0.725rem' }}>
+                                {video.advisor || 'Investa Advisor'}
+                            </Typography>
+                            <Typography variant="caption" sx={{ color: '#94A3B8', fontWeight: 600, fontSize: '0.65rem' }}>
+                                {video.views || '10K'} VIEWS
+                            </Typography>
+                        </Stack>
+                    </Stack>
+                    
+                    <Stack direction="row" spacing={1.5} alignItems="center">
+                        <Box sx={{ 
+                            bgcolor: lvlColors.bg, 
+                            color: lvlColors.color, 
+                            border: lvlColors.border,
+                            px: 1.2, py: 0.4, borderRadius: '6px', fontSize: '0.65rem', fontWeight: 800 
+                        }}>
+                            {(video.level || 'beginner').toUpperCase()}
+                        </Box>
+                        
+                        <Button 
+                            size="small" 
+                            endIcon={<ArrowForward sx={{ fontSize: '14px !important' }} />} 
+                            sx={{ 
+                                textTransform: 'none', 
+                                fontWeight: 800,
+                                fontSize: '0.775rem',
+                                color: '#007DA3',
+                                p: 0,
+                                minWidth: 'auto',
+                                '&:hover': { bgcolor: 'transparent', opacity: 0.8 }
+                            }}
+                            onClick={() => onPlay && onPlay(video)}
+                        >
+                            Watch
+                        </Button>
+                    </Stack>
                 </Box>
             </CardContent>
         </Card>

@@ -15,7 +15,7 @@ async function run() {
     const videos = JSON.parse(fs.readFileSync(path.join(__dirname, 'videos.json'), 'utf-8'));
     
     await Video.insertMany(videos);
-    console.log("Deleted old videos and seeded 200 new ones.");
+    console.log(`Deleted old videos and seeded ${videos.length} new ones.`);
     process.exit(0);
 }
 run();
