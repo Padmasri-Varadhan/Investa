@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use environment variable for API URL (falls back to localhost for development)
-const API_BASE_URL = 'http://localhost:5001/api';
+const API_BASE_URL = 'https://investa-jrwm.onrender.com/';
 
 // Create axios instance with default config
 const api = axios.create({
