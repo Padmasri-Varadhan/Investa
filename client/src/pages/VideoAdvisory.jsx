@@ -18,7 +18,7 @@ import VideoCard from '../components/VideoCard';
 
 const VideoAdvisory = () => {
     const [playing, setPlaying] = useState(null);
-    const [tab, setTab] = useState('all');
+    const [tab] = useState('all');
     const [videos, setVideos] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
